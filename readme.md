@@ -96,3 +96,57 @@
 - git log
 - git log --oneline
 - git commit --amend -> i로 편집 모드 변경 -> 수정 -> esc로 커맨드 모드 변경 -> :wq로 종료 -> 변경 완료
+
+
+# 7월 12일 수업 내용 정리
+## Remote Repository
+
+- 원격 저장소(Remote Repository) : 코드와 버전 관리 이력을 온라인 상의 특정 위치에 저장하여 여러 개발자가 협업하고 코드를 공유할 수 있는 저장 공간(GitLab, GitHub, Bitbucket 등)
+- 로컬&원격 저장소
+    - 로컬 저장소와 원격 저장소 둘의 관계는 remote
+
+### Remote Repository 사용법
+- git remote add origin(추가하는 원격 저장소 별칭, 관행) remote_repo_url : 로컬 저장소 한 개에 여러 원격 저장소 추가
+- git remote -v : 원격 저장소 위치 확인(fetch, push, git pull = git fetch + git merge)
+- push : 로컬에서 원격으로
+- git push origin master : origin이라는 이름의 원격 저장소에 master라는 브랜치로 commit 목록 업로드
+- 터미널 메시지를 통해 push가 성공했다는 것을 확인
+- 원격 저장소에 commit 목록이 잘 push되었는지 확인
+- 로컬 저장소에 commit 생성
+- 로컬 head, 원격 head가 같은 commit에 있으면 최신 정보가 동기화 된 것이다.
+- Github의 repository에서 commits을 누르고 view commit details : 원격 저장소의 commit 정보를 자세하게 확인 가능
+- 원격 저장소에는 commit이 올라가는 것(commit 이력이 없다면 push할 수 없다.)
+- pull & clone : 원격 저장소에서 로컬 저장소로 옮기기
+- git pull origin master : 원격 저장소의 변경사항만을 받아옴(업데이트)
+- git clone remote_repo_url : 원격 저장소 전체를 복제(다운로드, clone으로 받은 프로젝트는 이미 git init이 되어 있음, .git 폴더가 중복될 수 있음을 주의)
+- mv -f first-repo git_advanced : 폴더 이름 바꾸기(CLI에서)
+- repository에서 setting - collaborators를 통해 같이 해당 repository를 작업할 동료를 지정할 수 있다.
+
+## Git revert & reset
+- gitignore : Git에서 특정 파일이나 디렉토리를 추적하지 않도록 설정
+- .gitignore 파일 생성(git init 이전에 생성해야 한다)
+- a.txt, b.txt 파일 생성
+- gitignore에 a.txt 작성
+- git init
+- git status
+- 이미 git의 관리를 받은 이력이 있는 파일이나 디렉토리는 나중에 
+- gitignore 목록 생성 서비스 : 운영체제, 프레임워크, 프로그래밍 언어 등 개발 환경에 따라 gitignore 목록을 만들어주는 [사이트](https://www.toptal.com/developers/gitignore/)
+
+### GitHub 활용하기
+- TIL을 통해 내가 학습하는 것을 기록
+- 개인, 팀 프로젝트 코드를 공유
+    - 개발 면접 지원 시 본인의 GitHub주소를 공유해 어떤 프로젝트들을 진행했고, 어떤 코드를 작성했는지 공유하고 평가 받기 위해 사용
+- 오픈 소스 프로젝트에 기여
+#### TIL(Today I Learned)
+- 매일 내가 배운 것을 마크다운으로 정리해서 문서화하는 것
+- 단순히 배운 것만을 필기하는 것이 아닌 스스로 더 나아가 어떤 학습을 했는지를 기록하는 것
+
+- 문서화의 중요성 : 신입 개발자에게 요구되는 가장 중요한 덕목 [링크](https://d2.naver.com/news/3435170)
+- TIL 만들기
+    - TIL이라는 이름의 GitHub Repository 생성
+    - 로컬 저장소 설정
+    - REAMME.md 생성 및 지금까지의 수업 내용을 정리하고 commit을 생성
+    - TIL 원격 저장소를 추가
+    - commit 목록을 push
+
+## [부록] Git Undoing
