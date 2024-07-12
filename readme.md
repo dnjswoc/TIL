@@ -28,7 +28,7 @@
     - ex. [구글](https://www.google.com)
     - ex.
     ![mountain](https://picsum.photos/200/300)
-        - (./이미지 파일명)을 통해서 다운로드 받은 이미지를 삽입할 수 있다.
+        - (./이미지 파일명)을 통해서 다운로드 받은 이미지를 삽입할 수 있다.(상대경로 잘 확인!)
 5. 텍스트
     - 굵게 : **사용, ex. **굵게**
     - 기울임 : *사용, ex. *기울임*
@@ -109,6 +109,7 @@
 ### Remote Repository 사용법
 - git remote add origin(추가하는 원격 저장소 별칭, 관행) remote_repo_url : 로컬 저장소 한 개에 여러 원격 저장소 추가
 - git remote -v : 원격 저장소 위치 확인(fetch, push, git pull = git fetch + git merge)
+- git remote rm 원격 저장소 이름 : 현재 로컬 저장소에 등록된 원격 저장소 삭제(연결만 끊어짐)
 - push : 로컬에서 원격으로
 - git push origin master : origin이라는 이름의 원격 저장소에 master라는 브랜치로 commit 목록 업로드
 - 터미널 메시지를 통해 push가 성공했다는 것을 확인
@@ -123,7 +124,6 @@
 - mv -f first-repo git_advanced : 폴더 이름 바꾸기(CLI에서)
 - repository에서 setting - collaborators를 통해 같이 해당 repository를 작업할 동료를 지정할 수 있다.
 
-## Git revert & reset
 - gitignore : Git에서 특정 파일이나 디렉토리를 추적하지 않도록 설정
 - .gitignore 파일 생성(git init 이전에 생성해야 한다)
 - a.txt, b.txt 파일 생성
@@ -152,5 +152,41 @@
 - READMD.md 파일이란?
     - 프로젝트에 대한 설명, 사용 방법, 문서화된 정보 등을 포함하는 역할
     - Markdown 형식으로 작성되며, 프로젝트의 사용자, 개발자, 혹은 기여자들에게 프로젝트에 대한 전반적인 이해
+#### GitHub Profile 꾸미기
+- [profile](https://github.com/dnjswoc)에서 꾸민다.
+
+
+## Git revert & reset
+- Git revert : 특정 commit을 없애는 것
+- git revert (commit id)
+- 작동 원리 : 재설정, 단일 commit을 실행 취소하는 것, 프로젝트 기록에서 commit을 없었던 일로 처리 후 그 결과를 새로운 commit으로 추가함(누가 뭘 없앴는지를 마지막 commit으로 기록됨, 없었던 일로 처리되지만 기록에서 commit이 사라지지는 않음)
+- 변경 사항을 안전하게 실행 취소할 수 있도록 도와주는 순방향 실행 취소 작업
+- commit 기록에서 commit을 삭제하거나 분리하는 대신, 지정된 변경 사항을 반전시키는 새 commit을 생성
+- git에서 기록이 손실되는 것을 방지하며 기록의 무결성과 협업의 신뢰성을 높임
+- 공백을 사용해 여러 commit을 한꺼번에 실행 취소 가능
+- ".."을 사용해 범위를 지정하여 여러 commit을 한꺼번에 실행 취소 가능
+- commit 메시지 작성을 위한 편집기를 열지 않음(자동으로 commit 진행)
+- 자동으로 commit하지 않고, staging area에만 올림(이후에는 직접 commit 해야 함)
+- 이 옵션은 여러 commit을 revert 할 때 하나의 commit으로 묶는 것이 가능
+
+- git reset : 특정 commit으로 돌아갈 때 사용
+- git reset
+- 되돌리기, 시계를 마치 과거로 돌리는 듯한 행위, 특정 commit으로 되돌아 갔을 때, 되돌아간 commit 이후의 commit은 모두 삭제
+- reset의 옵션
+    - --soft : 삭제된 commit의 기록을 staging area에 남김(commit)
+    - --mixed : 삭제된 commit의 기록을 working directory에 남김(기본 옵션 값, add)
+    - --hard : 삭제된 commit의 기록을 남기지 않음
+
+- git reflog : HEAD가 이전에 가리켰던 모든 commit을 보여줌
+- reset의 --hard 옵션을 통해 지워진 commit도 reflog로 조회하여 복구 가능
+- git reflog
+- git restore : Modified 상태의 파일 되돌리기, 원래 모습대로 되돌리는 작업, working directory에서 파일을 수정한 뒤, 파일의 수정 사항을 취소, 수정한 내용은 되돌릴 수 없다
+#### staging area에 올라간 파일 unstage하기
+- git rm --cached : staging area에서 working directory로 되돌리기(git 저장소에 commit이 없는 경우, to unstage and remove paths only from the staing area)
+- git restore --staged : staging area에서 working directory로 되돌리기(git 저장소에 commit이 있는 경우, the contents are restored from HEAD)
+- 파일 내용을 수정 전으로 되돌리기 : git restore
+- staging area에 올라간 파일을 unstage하기
+    - git rm --cached
+    - git restore --staged
 
 ## [부록] Git Undoing
