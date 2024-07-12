@@ -177,16 +177,17 @@
     - --mixed : 삭제된 commit의 기록을 working directory에 남김(기본 옵션 값, add)
     - --hard : 삭제된 commit의 기록을 남기지 않음
 
+
+
+## [부록] Git Undoing
 - git reflog : HEAD가 이전에 가리켰던 모든 commit을 보여줌
 - reset의 --hard 옵션을 통해 지워진 commit도 reflog로 조회하여 복구 가능
 - git reflog
 - git restore : Modified 상태의 파일 되돌리기, 원래 모습대로 되돌리는 작업, working directory에서 파일을 수정한 뒤, 파일의 수정 사항을 취소, 수정한 내용은 되돌릴 수 없다
-#### staging area에 올라간 파일 unstage하기
+### staging area에 올라간 파일 unstage하기
 - git rm --cached : staging area에서 working directory로 되돌리기(git 저장소에 commit이 없는 경우, to unstage and remove paths only from the staing area)
 - git restore --staged : staging area에서 working directory로 되돌리기(git 저장소에 commit이 있는 경우, the contents are restored from HEAD)
 - 파일 내용을 수정 전으로 되돌리기 : git restore
 - staging area에 올라간 파일을 unstage하기
     - git rm --cached
     - git restore --staged
-
-## [부록] Git Undoing
