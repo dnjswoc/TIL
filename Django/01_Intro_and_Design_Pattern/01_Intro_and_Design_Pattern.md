@@ -48,11 +48,11 @@
 
 
 - Client(클라이언트)
-    - 서비스를 요청하는 주체(웹 사용자의 인터넷이 연결된 장치, 웹 브라우저)
+    - 서비스를 **요청**하는 주체(웹 사용자의 인터넷이 연결된 장치, 웹 브라우저)
 
 
 - Server(서버)
-    - 클라이언트의 요청에 응답하는 주체(웹 페이지, 앱을 저장하는 컴퓨터)
+    - 클라이언트의 **요청**(페이지, 로직, 파일 등)에 응답하는 주체(웹 페이지, 앱을 저장하는 컴퓨터)
 
 - 우리가 웹 페이지를 보게 되는 과정
 
@@ -156,7 +156,7 @@
 
 1. 가상 환경 venv 생성
     - venv라는 이름의 가상환경 생성
-    - 임의 이름으로 생성이 가능하나 관례적으로 venv 이름을 사용
+    - 임의 이름으로 생성이 가능하나 관례적으로 venv 이름을 사용(가상 환경 안의 파일 수정 절대 금지)
         ```
         $ python -m venv venv
         ```
@@ -259,7 +259,7 @@
 ### Django 프로젝트
 - Django 프로젝트 생성 및 서버 실행
     1. 프로젝트 생성
-        - $ django-admin startproject firstpjt.
+        - $ django-admin startproject firstpjt .
 
     2. 서버 실행
         - $ python manage.py runserver
@@ -334,7 +334,7 @@
 
 
 2. 앱 등록
-    - 반드시 앱을 생성(1)한 후에 등록(2) 해야 함(등록 후 생성은 불가)
+    - 반드시 **앱을 생성(1)한 후에 등록(2)** 해야 함(등록 후 생성은 불가)
         ```python
         # settings.py
 
@@ -359,13 +359,15 @@
 
     - __init__.py
         - 해당 폴더를 패키지로 인식하도록 설정하는 파일
+        - 수업 과정에서 수정할 일 없음
 
     - asgi.py
         - 비동기식 웹 서버와의 연걸 관련 설정
-    - 수업 과정에서 수정할 일 없음
+        - 수업 과정에서 수정할 일 없음
 
     - wsgi.py
         - 웹 서버와의 연결 관련 설정
+        - 수업 과정에서 수정할 일 없음
 
     - manage.py
         - Django 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인 유틸리티
@@ -382,16 +384,17 @@
         - DB와 관련된 Model을 정의
         - MTV 패턴의 M
 
-    - views.py
-        - HTTP 요청을 처리하고 해당 요청에 대한 응답을 반환(url, model, template과 연계)
+    - views.py(실질적으로 로직이 작성되는 곳)
+        - HTTP 요청을 처리하고 해당 요청에 대한 **응답을 반환**(url, model, template과 연계)
         - MTV 패턴의 V
 
     - apps.py
         - 앱의 정보가 작성된 곳
+        - 수업 과정에서 수정할 일 없음
 
     - tests.py
         - 프로젝트 테스트 코드를 작성하는 곳
-    - 수업 과정에서 수정할 일 없음
+        - 수업 과정에서 수정할 일 없음
 
 
 
@@ -430,8 +433,9 @@
     ```
     - view 함수가 정의되는 곳
     - 특정 경로에 있는 template과 request 객체를 결합해 응답 객체를 반환
-    - 모든 view 함수는 첫번째 인자로 요청 객체를 필수적으로 받음
+    - 모든 view 함수는 첫번째 인자로 요청 객체(위치인자)를 필수적으로 받음
     - 매개변수 이름이 request가 아니어도 되지만 그렇게 작성하지 않음
+    - 이름 참조까지만 하는 것이다.(프로젝트가 실행되면서 호출되는 것을 방지하기 위해 인자를 쓰지 않는다.)
 
 
 3. Template
@@ -506,7 +510,7 @@
     - 네
     - 하지만 Django가 제공하는 Frontend 기능은 다른 전문적인 Frontend Framework들에 비해서는 매우 미흡함
     - 엄밀히 말하자면 Full Stack 영역에서 Backend에 속한다고 볼 수 있음
-    - Ful Stack 혹은 Backend Framework라 부름
+    - Full Stack 혹은 Backend Framework라 부름
 
 
 
@@ -590,3 +594,56 @@ render(request, template_name, context)
 - Django의 설계 철학
     - [https://docs.djangoproject.com/ko/4.2/misc/deisgn-philosophies/](https://docs.djangoproject.com/ko/4.2/misc/deisgn-philosophies/)
 
+
+
+
+#### django 시작하기
+
+```bash
+    # 1. 프로젝트 시작하자마자 gitignore 생성하기
+    $ code .gitignore
+
+    # 2. 가상환경 만들기
+    $ python -m venv venv
+
+    # 3. 가상환경 활성화 하기
+    $ source venv/Scripts/Activate
+    
+    # 4. 프로젝트 진행에 필요한 라이브러리 설치하기
+    $ pip install django
+
+    # 5. 현재 버전을 다음에도 똑같이 유지하기 위해 기록
+    $ pip freeze > requirements.txt
+```
+
+2. django 프로젝트 생성하기
+```bash
+# 장고야 프로젝트 시작해줘 my_pjt를 현재폴더에.
+$ django-admin startprogject my_pjt .
+
+# 1. 서버 켜기
+$ python manage.py runserver
+
+# 2. 서버 끄기
+$ crtl + c
+```
+
+
+3. 앱 생성 및 등록하기
+```bash
+# 가능(근데 안씀)
+$ django-admin startapp my_app
+
+# manage.py에게 일 시킨다
+# 1. 앱 생성
+$ python manage.py startapp my_app
+
+# 2. 앱 등록
+$ 
+```
+
+> 프로젝트는 프로젝트 생성 명령어로 만듦
+    - 이때, app은 없었다
+> 그리고 나서, 추가로 app을 생성
+    - 이건 프로젝트랑 완전 별개 폴더(패키지)이다.
+> 프로젝트가 방금 만들어진 app의 존재를 알 수 없다.
