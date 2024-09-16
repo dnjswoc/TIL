@@ -1,4 +1,4 @@
-# Template & URLs
+# 2024년 9월 19일(목) 수업 내용 정리 - Template & URLs
 
 - Template System
 

@@ -1,4 +1,4 @@
-# Intro & Design Pattern
+# 2024년 9월 13일(금) 수업 내용 정리 - Intro & Design Pattern
 
 - Web Application
 
