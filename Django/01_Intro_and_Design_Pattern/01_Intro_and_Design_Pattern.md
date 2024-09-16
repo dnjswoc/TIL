@@ -612,8 +612,12 @@ render(request, template_name, context)
     # 4. 프로젝트 진행에 필요한 라이브러리 설치하기
     $ pip install django
 
+    # 4-1. 혹은 requirements.txt에 작성된 목록을 설치하려면
+    $ pip install -r requirements.txt
+
     # 5. 현재 버전을 다음에도 똑같이 유지하기 위해 기록
     $ pip freeze > requirements.txt
+
 ```
 
 2. django 프로젝트 생성하기
