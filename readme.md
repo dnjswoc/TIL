@@ -2,10 +2,14 @@
 
 ## 1. Python(2024.07.15. ~ 2024.07.26.)
 
-- Python 기초 문법
-- 함수와 제어문
-- 데이터 구조
-- OOP
+- [Python 기초 문법 1](./python/01_Basic_Syntax/Basic_Syntax_1/Basic_Syntax_1.md)
+- [Python 기초 문법 2](./python/01_Basic_Syntax/Basic_Syntax_2/Basic_Syntax_2.md)
+- [함수와 제어문 1](./python/02_Functions/Functions_1/Functions_1.md)
+- [함수와 제어문 2](./python/02_Functions/Functions_2/Functions_2.md)
+- [데이터 구조 1](./python/03_Data_Structure/Data_Structure_1/Data_Structure_1.md)
+- [데이터 구조 2](./python/03_Data_Structure/Data_Structure_2/Data_Structure_2.md)
+- [OOP 1](./python/04_OOP&Exception/OOP&Exception_1/OOP&Exception_1.md)
+- [OOP 2](./python/04_OOP&Exception/OOP&Exception_2/OOP&Exception_2.md)
 
 ## 2. Algorithm 기본(2024.07.29. ~ 2024.08.16.)
 
