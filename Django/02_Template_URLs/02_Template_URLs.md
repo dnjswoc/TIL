@@ -65,15 +65,15 @@
 
 
 - DTL Syntax
-  1. Variable
+  1. Variable - 변수
   2. Filters
   3. Tags
-  4. Comments
+  4. Comments - 주석
 
 
 1. Variable
-  - render 함수의 세 번째 인자로 딕셔너리 데이터를 사용
-  - 딕셔너리 key에 해당하는 문자열이 template에서 사용 가능한 변수명이 됨
+  - render 함수의 세 번째 인자로 **딕셔너리 데이터**를 사용
+  - **딕셔너리 key**에 해당하는 문자열이 template에서 사용 가능한 변수명이 됨
   - dot(',')를 사용하여 변수 속성에 접근할 수 있음
 
     ![alt text](./images/image_2.png)
@@ -145,7 +145,7 @@
   ![alt text](./images/image_12.png)
 
   - 자식(하위) 템플릿이 부모 템플릿을 확장한다는 것을 알림
-    - 반드시 자식 템플릿이 최상단에 작성되어야 함(2개 이상 사용 불가)
+    - **반드시 자식 템플릿이 최상단에 작성되어야 함(2개 이상 사용 불가)**
 
 
 - 'block' **tag**
@@ -167,6 +167,8 @@
 - 데이터를 보내고 가져오기(Sending and Retrieving form data)
   - HTML **'form'** element를 통해 사용자와 애플리케이션 간의 상호작용 이해하기
 
+  - 사용자 입력이 들어가는 부분은 form 태그를 이용한다.
+
 
 - HTML 'form'은 HTTP 요청을 서버에 보내는 가장 편리한 방법
 
@@ -184,6 +186,8 @@
 - 'form' **element**
   - 사용자로부터 할당된 데이터를 서버로 전송
     - 웹에서 사용자 정보를 입력하는 여러 방식(text, password, checkbox 등)을 제공
+
+    - input name : 사용자 입력 데이터의 key를 사용
 
 
 - fake Naver 실습
@@ -208,12 +212,14 @@
 - action과 method
 
   - action
-    - 입력 데이터가 전송될 URL을 지정(목적지)
+    - 입력 데이터가 전송될 URL을 지정(목적지, URL의 ? 앞부분)
     - 만약 이 속성을 지정하지 않으면 데이터는 현재 form이 있는 페이지의 URL로 보내짐
 
   - method
     - 데이터를 어떤 방식으로 보낼 것인지 정의
     - 데이터의 HTTP request methods (GET, POST)를 지정
+      - GET : 기본값(써주는 것을 권장)
+      - POST : 로그인(URL에 노출되지 않도록)
 
 
 - 'input' **element**
@@ -228,8 +234,11 @@
 
 
 - Query String Parameters
+
   - 사용자의 입력 데이터를 URL 주소에 파라미터를 통해 서버로 보내는 방법
-  - 문자열은 앰퍼샌드('&')로 연결된 key=value 쌍으로 구성되며, 기본 URL과는 물음표('?')로 구분됨
+
+  - 문자열은 앰퍼샌드('&')로 연결된 key=value 쌍으로 구성되며, 기본 URL과는 **물음표('?')로 구분됨**
+- 
   - 예시
     ![alt text](./images/image_22.png)
 
@@ -475,3 +484,36 @@
     - 검색 엔진 로봇이나 웹 트래픽 분석 도구에서는 이 두 주소를 서로 다른 페이지로 보기 때문
   - 그래서 Django는 검색 엔진이 혼동하지 않게 하기 위해 무조건 붙이는 것을 선택한 것
   - 그러나 모든 프레임워크가 이렇게 동작하는 것은 아니니 주의
+
+
+---
+1. urls.py 작업
+  - 프로젝트 urls.py와 앱 urls.py 따로 작업
+  
+2. views.py 함수 작업
+  - return할 html파일의 함수 작성
+
+3. templates안에 html 파일 생성
+  - extends 태그를 통한 상속으로 간단하게 작성 가능
+  - 가장 최상단 폴더에 base.html을 만들었다면
+    - 프로젝트 settings.py에 존재하는 TEMPLATES 에서 DIRS를 고쳐줘야 base.html 위치를 찾을 수 있음
+
+      ```python
+      TEMPLATES = [
+      {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 이제 templates 찾을 때, 여기도 찾도록
+        'DIRS': [BASE_DIR/ 'templates'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.  messages',
+              ],
+          },
+        },
+      ]
+
+      ```
