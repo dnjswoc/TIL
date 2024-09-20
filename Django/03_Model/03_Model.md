@@ -39,6 +39,7 @@
   # articles/models.py
 
   class Article(models.Model):
+    # models.Model : 상위 클래스를 상속 받는다
     title = models.CharField(max_length = 10)
     content = models.TextField()
   ```
@@ -73,6 +74,7 @@
 ## Model Field
 
 - Model Field
+
   - DB 테이블의 **필드(열)**을 정의하며, 해당 필드에 저장되는 **데이터 타입(Field types)**과 **제약조건(Field options)**을 정의
 
 
@@ -101,7 +103,7 @@
 
 
 - CharField()
-  - 제한된 길이의 문자열을 저장(필드의 최대 길이를 결정하는 max_length는 필수 옵션)
+  - **제한된 길이의 문자열을 저장**(필드의 최대 길이를 결정하는 max_length는 필수 옵션)
 
 
 - TextField()
