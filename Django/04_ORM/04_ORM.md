@@ -162,24 +162,124 @@
 
 ### Read
 
+- 대표적인 조회 메서드
+
+  ```markdown
+  - Return new QuerySets
+
+    - all()
+
+    - filter()
+
+  - Do not return QuerySets
+
+    - get()
+  ```
+
+
+- all()
+
+  - 전체 데이터 조회
+
+    ![alt text](./images/image_12.png)
+
+
+
+- filter()
+
+  - 주어진 매개변수와 일치하는 객체를 포함하는 QuerySet 반환
+
+    ![alt text](./images/image_13.png)
+
+
+
+- get()
+
+  - 주어진 매개변수와 일치하는 객체를 반환
+
+    ![alt text](./images/image_14.png)
+
+
+
+- get() 특징
+
+  ```markdown
+  - 객체를 찾을 수 없으면 DoesNotExis 예외를 발생시키고, 둘 이상의 객체를 찾으면 MultipleObjectsReturned 예외를 발생시킴
+
+  - 위와 같은 특징을 가지고 있기 때문에 **primary key와 같이 고유성(uniqueness)을 보장하는 조회에서 사용**해야 함
+  ```
+
+
 
 ### Update
 
+- 데이터 수정
+
+  - 인스턴스 변수를 변경 후 save 메서드 호출
+
+    ![alt text](./images/image_15.png)
 
 ### Delete
 
+- 데이터 삭제
+
+  - 삭제하려는 데이터 조회 후 delete 메서드 호출
+
+    ![alt text](./images/image_16.png)
 
 
 
 ## ORM with view
 
+- Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용하기
+
+
 ### 전체 게시글 조회
+
+- 2가지 Read(조회)
+
+  ```markdown
+  1. 전체 게시글 조회
+
+  2. 단일 게시글 조회
+  ```
+
+- 전체 게시글 조회
+
+  ![alt text](./images/image_17.png)
+
+  ![alt text](./images/image_18.png)
 
 
 ## 참고
 
 ### Field lookups
 
+- Field lookups
+
+  ```markdown
+  - Query에서 조건을 구성하는 방법
+
+  - QuerySet 메서드 filter(), exclude() 및 get()에 대한 키워드 인자로 지정됨
+
+    ![alt text](./images/image_19.png)
+  ```
+
 
 ### ORM, QuerySet API를 사용하는 이유
 
+- ORM, QuerySet API를 사용하는 이유
+
+  ```markdown
+  1. 데이터베이스 추상화
+
+    - 개발자는 특정 데이터베이스 시스템에 종속되지 않고 일관된 방식으로 데이터를 다룰 수 있음
+
+  2. 생산성 향상
+
+    - 복잡한 SQL 쿼리를 직접 작성하는 대신 Python 코드로 데이터베이스 작업을 수행할 수 있음
+
+  3. 객체 지향적 접근
+
+    - 데이터베이스 테이블을 Python 객체로 다룰 수 있어 객체 지향 프로그래밍의 이점을 활용할 수 있음
+  ```
