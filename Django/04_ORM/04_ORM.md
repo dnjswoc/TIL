@@ -206,7 +206,7 @@
   ```markdown
   - 객체를 찾을 수 없으면 DoesNotExis 예외를 발생시키고, 둘 이상의 객체를 찾으면 MultipleObjectsReturned 예외를 발생시킴
 
-  - 위와 같은 특징을 가지고 있기 때문에 **primary key와 같이 고유성(uniqueness)을 보장하는 조회에서 사용**해야 함
+  - 위와 같은 특징을 가지고 있기 때문에 primary key와 같이 고유성(uniqueness)을 보장하는 조회에서 사용해야 함
   ```
 
 
@@ -283,3 +283,10 @@
 
     - 데이터베이스 테이블을 Python 객체로 다룰 수 있어 객체 지향 프로그래밍의 이점을 활용할 수 있음
   ```
+
+
+- QuerySet API 관련 문서
+
+  - [https://docs.djangoproject.com/en/4.2/ref/models/querysets/](https://docs.djangoproject.com/en/4.2/ref/models/querysets/)
+
+  - [https://docs.djangoproject.com/en/4.2/topics/db/queries](https://docs.djangoproject.com/en/4.2/topics/db/queries)
