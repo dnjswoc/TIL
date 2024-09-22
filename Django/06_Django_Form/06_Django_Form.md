@@ -340,4 +340,12 @@
 
   ![alt text](./images/image_33.png)
 
+  ![alt text](./images/image_34.png)
+
+
+
 ### 필드를 수동으로 렌더링
+
+-  필드를 수동으로 렌더링 하기
+
+    ![alt text](./images/image_35.png)
