@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block style %}
+  h1 {
+    text-align: center;
+  }
+
+  .title{
+    font-weight: bold;
+  }
+
+  .author{
+    color: grey;
+  }
+
+  .describe {
+    font-size: 13px;
+  }
+
+
+{% endblock style %}
+
+
+
+{% block title %}
+  베스트 셀러 목록
+{% endblock title %}
+
+{% block content %}
+  <h1>베스트 셀러 목록</h1>
+  {% for item in result %}
+    <div
+    {% if item.num == 1 %}
+    style="background-color: lightblue;"
+    {% elif item.num == 2 %}
+    style="background-color: lightyellow;"
+    {% elif item.num == 3 %}
+    style="background-color: lightpink;"
+    {% endif %}>
+    <p class='title'>{{ item.title }}</p>
+    <p class='author'>저자 : {{ item.author }}</p>
+    <p class='describe'>설명 : {{ item.bestDuration }}</p>
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock content %}

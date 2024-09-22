@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block style %}
+    .h1_1 {
+        text-align: center;
+        background-color: rgb(255, 255, 128);
+    }
+
+    .h1_2 {
+        text-align: center;
+        background-color: skyblue;
+    }
+
+    p {
+        text-align: center;
+    }
+
+{% endblock style %}
+
+
+
+{% block title %}
+    도서 조회 시스템
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1 class='h1_1'>도서 조회 시스템</h1>
+    <p>도서 관리 시스템은 도서를 효율적으로 관리하고, 신간 및 베스트 셀러를 추천하는 서비스입니다.</p>
+    <p></p>
+    <h1 class='h1_2'>서비스 소개</h1>
+    <p>도서 관리 시스템은 도서관이나 도서 판매 업체에서 사용할 수 있는 편리한 도서 관리 솔루션입니다.
+        이 시스템을 통해 도서 정보를 등록, 수정, 삭제할 수 있으며, 도서의 신간 정보를 확인하거나 베스트
+        셀러 목록을 확인하여 독자들에게 추천할 수 있습니다. 간단하고 직관적인 사용자 인터페이스로 편리한 도서 관리를 지원합니다.
+    </p>
+{% endblock content %}
+
