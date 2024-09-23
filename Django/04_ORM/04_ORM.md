@@ -261,9 +261,10 @@
   - Query에서 조건을 구성하는 방법
 
   - QuerySet 메서드 filter(), exclude() 및 get()에 대한 키워드 인자로 지정됨
+  ```
 
     ![alt text](./images/image_19.png)
-  ```
+  
 
 
 ### ORM, QuerySet API를 사용하는 이유
