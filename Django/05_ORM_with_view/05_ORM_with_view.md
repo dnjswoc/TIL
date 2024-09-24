@@ -53,6 +53,11 @@
 
   ![alt text](./images/image_01.png)
 
+  ```python
+  # get 바로 뒤의 pk는 테이블의 pk를 의미하고, 다음의 pk는 입력받은 pk 값을 의미한다.
+  article = Article.objects.get(pk=pk)
+  ```
+
 
 - 단일 게시글 페이지 링크 작성
 
@@ -86,6 +91,12 @@
   ![alt text](./images/image_07.png)
 
   ![alt text](./images/image_08.png)
+
+  ```python
+  # 유효성 검사를 위해 바로 save하지 않는 2번 선택
+    article = Article(title=title, content=content)
+    article.save()
+  ```
 
   ![alt text](./images/image_09.png)
 
