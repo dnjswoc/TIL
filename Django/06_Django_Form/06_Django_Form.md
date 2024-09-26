@@ -289,6 +289,8 @@
 
     ![alt text](./images/image_26.png)
 
+      - a 태그는 GET 요청이므로 else 아래 코드가 실행된다.
+
   - render에서 new 템플릿을 create 템플릿으로 변경
 
     ![alt text](./images/image_27.png)
