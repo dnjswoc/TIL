@@ -113,7 +113,7 @@
 
     ![alt text](./images/image_07.png)
 
-  - static tag를 사용ㅇ해 이미지 파일에 대한 경로 제공
+  - static tag를 사용해 이미지 파일에 대한 경로 제공
 
     ![alt text](./images/image_08.png)
 

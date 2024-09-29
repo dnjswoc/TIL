@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="image">
+  {% endif %}
+  <h1>{{ article.pk }}번째 글</h1>
+  <p>제목 : {{ article.title }}</p>
+  <p>내용 : {{ article.content }}</p>
+  <p>작성일 : {{ article.created_at }}</p>
+  <p>수정일 : {{ article.updated_at }}</p>
+  <a href="{% url "articles:update" article.pk %}">[UPDTAE]</a>
+  <br>
+  <a href="{% url "articles:index" %}">[BACK]</a>
+</body>
+</html>
