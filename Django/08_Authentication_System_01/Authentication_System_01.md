@@ -335,6 +335,8 @@
 
   - 로그인 인증에 사용할 데이터를 입력 받는 built-in form
 
+  - 로그인 인증 데이터는 DB에 저장하는 것이 아니므로 ModelForm이 아니라 form을 사용한다.
+
 
 - 로그인 페이지 작성
 
@@ -347,17 +349,19 @@
 
   ![alt text](./images/image_20.png)
 
+    - Form의 인자 순서는 request가 첫번째로 오고, 그 다음에 data(request.POST)가 온다
+
 
 - login(request, user)
 
-  - AuthenticationForm을 통해 인증된 사용자를 로그인 하는 함수
+  - AuthenticationForm을 통해 인증된 사용자를 로그인(세션 데이터 생성) 하는 함수
 
 
 - get_user()
 
   - AuthenticationForm의 인스턴스 메서드
 
-  - 유효성 검사를 통과했을 경우 로그인 한 사용자 객체를 반환
+  - **유효성 검사를 통과했을 경우** 로그인 한 사용자 객체를 반환
 
 
 - 세션 데이터 확인하기
