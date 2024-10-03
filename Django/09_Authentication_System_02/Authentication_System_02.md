@@ -92,7 +92,7 @@
 
 - get_user_model()
 
-  - "현재 프로젝트에서 활성화된 사용자 모델(active user model)"을 반환하는 함수
+  - **"현재 프로젝트에서 활성화된 사용자 모델(active user model)"을 반환**하는 함수
 
 
 - User 모델을 직접 참조하지 않는 이유
