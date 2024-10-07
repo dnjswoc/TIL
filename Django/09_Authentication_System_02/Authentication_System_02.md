@@ -408,6 +408,27 @@ $ git push origin master
 # master : branch의 개념
 ```
 
+
+
+
+# branch
+
+
+```bash
+# 브랜치 목록 확인
+$ git branch
+# 브랜치 생성
+# 브랜치 생성한 작업영역의 최신버전을 따라서 만들어진다.
+$ git branch {branch_name}
+# 브랜치 삭제(대문자 D XXX)
+$ git branch -d {branch_name}
+# Merge()
+$ git merge {branch_name}
+# Merge 그래프 확인(first commit : root node)
+$ git log --oneline --graph
+```
+
+
 ### git branch
 - 나뭇가지처럼 여러 갈래로 작업 공간을 나누어 독립적으로 작업할 수 있도록 도와주는 git의 도구
 
@@ -423,3 +444,37 @@ $ git push origin master
   3. 브랜치는 완전하게 도립 되어있어서 작업 내용이 master 브랜치에 아무런 영향을 끼치지 못한다.
   4. 이후 에러가 해결됐다면? 그 내용을 master 브랜치에 반영할 수 있다.
 
+### git branch
+- 브랜치 조회, 생성, 삭제 등 브랜치와 관련된 git 명령어
+
+|명령어|기능|
+|:---|:---|
+|git branch|브랜치 목록 확인|
+|git branch -r|원격 저장소의 브랜치 목록 확인|
+|git branch <브랜치 이름>|새로운 브랜치 생성|
+|git branch -d <브랜치 이름>|브랜치 삭제(병합된 브랜치만 삭제 가능)|
+|git branch -D <브랜치 이름>|브랜치 삭제(강제 삭제)|
+<br>
+
+### git switch
+
+|명령어|기능|
+|:---|:---|
+|git switch <다른 브랜치 이름>|브랜치 목록 확인|
+|git switch -c <브랜치 이름>|원격 저장소의 브랜치 목록 확인|
+|git switch -c <브랜치 이름> <commit ID>|새로운 브랜치 생성|
+<br>
+
+### Merge
+
+1. 새로 만든 브랜치가 원본으로 바라보고 있던 작업영역에서 혼자 commit을 하고, 원본에는 변동이 없을 때 FF(Fast Foward, 빨리감기) merge
+  - 이때는 commit message를 만들 필요가 없다.
+
+2. 원본도 변동이 있고, 새로 만든 브랜치도 원본이 있을 때는 3 way merge
+  - 새로운 버전을 만들어야 하므로 commit을 해야하고 commit message를 작성한다.
+
+
+```bash
+# 원격과 local의 차이점 확인 가능
+$ git fetch origin master
+```
