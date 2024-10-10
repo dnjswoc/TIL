@@ -1,4 +1,4 @@
-# 2024년 10월 10일(목) 수업 내용 정리 - SQL
+# 2024년 10월 10일(목) 수업 내용 정리 - SQL 1
 
 
 - Database
@@ -17,24 +17,6 @@
   - Grouping data
 
 
-- Managing Tables
-
-  - Create a table
-  - Modifying table fields
-  - Delete a table
-
-
-- Modifying Data
-
-  - Insert data
-  - Update data
-  - Delete data
-
-
-- Multi table queries
-
-  - Join
-  - Joining tables
 
 
 ## Database
@@ -922,24 +904,170 @@
   - row_count는 조회하는 최대 레코드 수를 지정
 
 
+- LIMIT & OFFSET 예시
+
+  ```SQL
+  SELECT
+    ..
+  FROM
+    ..
+  LIMIT 2, 5;
+  ```
+
+  ![alt text](./images/image_39.png)
+
+
+- LIMIT 활용 1
+
+  - 테이블 tracks에서 TrackId, Name, Bytes 필드 데이터를 Bytes 기준 내림차순으로 7개만 조회
+
+    ![alt text](./images/image_40.png)
+
+    ```sql
+    SELECT
+      TrackId, Name, Bytes
+    FROM
+      tracks
+    ORDER BY Bytes DESC
+    LIMIT 7;
+    ```
+
+  
+- LIMIT 활용 2
+
+  - 테이블 tracks에서 TrackId, Name, Bytes 필드 데이터 Bytes 기준 내림차순으로 4번째부터 7번째 데이터만 조회
+
+    ![alt text](./images/image_41.png)
+
+    ```sql
+    SELECT
+      TrackId, Name, Bytes
+    FROM
+      tracks
+    ORDER BY
+      Bytes DESC
+    LIMIT 3, 4;
+    -- LIMIT 4 OFFSET 3;
+    ```
+
+
+
+
 ### Grouping data
 
 
-# offline~
-## Managing Tables
-### Create a table
-### Modifying table fields
-### Delete a table
+#### GROUP BY
+
+- **GROUP BY** clause
+
+  - 레코드를 그룹화하여 요약본 생성('집계 함수'와 함께 사용)
+
+
+- Aggregation Functions(집계 함수)
+
+  - 값에 대한 계산을 수행하고 단일한 값을 반환하는 함수
+
+  - SUM, AVG, MAX, MIN, COUNT
+
+
+- GROUP BY syntax
+
+  ```sql
+  SELECT
+    c1,c2,..., cn, aggregate_function(ci)
+  FROM
+    table_name
+  GROUP BY
+    c1, c2, ..., cn;
+  ```
+
+  - FROM 및 WHERE 절 뒤에 배치
+
+  - GROUP BY 절 뒤에 그룹화 할 필드 목록을 작성
+
+
+- GROUP BY 예시
+
+  1. Country 필드를 그룹화
+
+    ```sql
+    SELECT
+      Country
+    FROM
+      customers
+    GROUP BY
+      Country;
+    ```
+
+    ![alt text](./images/image_42.png)
+
+
+  2. COUNT 함수가 각 그룹에 대한 집계된 값을 계산
+
+    ```SQL
+    SELECT
+      Country, COUNT(*)
+    FROM
+      customers
+    GROUP BY
+      Country;
+    ```
+
+    ![alt text](./images/image_43.png)
+
+
+- GROUP BY 활용 1
+
+  - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Bytes의 평균 값을 내림차순 조회
+
+    ![alt text](./images/image_44.png)
+
+    ```sql
+    SELECT
+      Composer,
+      AVG(Bytes) AS avgOfBytes
+    FROM
+      tracks
+    GROUP BY
+      Composer
+    ORDER BY
+      avgOfBytes DESC;
+    ```
+
+
+- GROUP BY 활용 2
+
+  - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Milliseconds의 평균 값이 10 미만인 데이터 조회(단, Milliseconds 필드는 60,000으로 나눠 분 단위 값의 평균으로 계산)
+
+    ![alt text](./images/image_45.png)
+
+    ![alt text](./images/image_46.png)
+
+  - **HAVING** clause
+
+    - 집계 항목에 대한 세부 조건을 지정
+
+    - 주로 GROUP BY와 함께 사용되며 GROUP BY가 없다면 WHERE 처럼 동작
+
+      ![alt text](./images/image_47.png)
 
 
 
-## Modifying Data
-### Insert data
-### Update data
-### Delete data
+- SELECT statement 실행 순서
 
+  - FROM ⇨ WHERE ⇨ GROUP BY ⇨ HAVING ⇨ SELECT ⇨ ORDER BY ⇨ LIMIT
 
+  1. 테이블에서(FROM)
 
-## Multi table queries
-### Join
-### Joining tables
+  2. 특정 조건에 맞추어(WHERE)
+
+  3. 그룹화 하고(GROUP BY)
+
+  4. 만약 그룹 중에서 조건이 있다면 맞추고(HAVING)
+
+  5. 조회하여(SELECT)
+
+  6. 정렬하고(ORDER BY)
+
+  7. 특정 위치의 값을 가져옴(LIMIT)
+
