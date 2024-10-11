@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>DETAIL</h2>
+  <h3>{{ article.pk }} 번째 글</h3>
+  <p>작성자 : {{ article.user.username }}</p>
+  {% comment %} <p>작성자 : {{ article.user.pk }}</p>
+  <p>작성자 : {{ article.user.email }}</p>
+  <p>작성자 : {{ article.user.is_staff }}</p>
+  <p>작성자 : {{ article.user.is_active }}</p>
+  <p>작성자 : {{ article.user.last_name }}</p>
+  <p>작성자 : {{ article.user.first_name }}</p> {% endcomment %}
+  <hr>
+  <p>제목: {{ article.title }}</p>
+  <p>내용: {{ article.content }}</p>
+  <p>작성 시각: {{ article.created_at }}</p>
+  <p>수정 시각: {{ article.updated_at }}</p>
+  <hr>
+
+  {% comment %} 
+    현재 로그인 유저랑 게시글 작성자랑 일치할때만, 
+    아래 링크와 버튼이 보이도록 해주면 된다.
+  {% endcomment %}
+  {% if request.user == article.user %}
+    <a href="{% url 'articles:update' article.pk %}">UPDATE</a><br>
+    <form action="{% url 'articles:delete' article.pk %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="DELETE">
+    </form>
+  {% endif %}
+
+
+
+
+  <h4>댓글 목록</h4>
+  <ul>
+    {% for comment in comments %}
+      <li>
+        <p>{{ comment.user.username }} | {{ comment.content }}</p>
+        {% comment %}
+          작성자만 댓글 삭제 버튼을 볼 수 있도록 조건 분기
+        {% endcomment %}
+        {% if request.user == comment.user %}
+          <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="DELETE">
+          </form>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <hr>
+  <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type="submit">
+  </form>    
+  <a href="{% url 'articles:index' %}">[back]</a>  
+</body>
+</html>
