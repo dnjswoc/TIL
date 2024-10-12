@@ -95,8 +95,77 @@
     ![alt text](./images/image_05.png)
 
 
+3. 예약 정보 조회
+
+  - 의사와 환자가 예약 모델을 통해 각각 본인의 진료 내역 확인
+
+    ![alt text](./images/image_06.png)
+
+
+4. 추가 예약 생성
+
+  - 1번 의사에게 새로운 환자 예약 생성
+
+    ![alt text](./images/image_07.png)
+
+
+5. 예약 정보 조회
+
+  - 1번 의사의 예약 정보 조회
+
+    ![alt text](./images/image_08.png)
+
+
+#### Django에서는 'ManyToManyField'로 중개 모델을 자동으로 생성
+
+
+
 
 ### ManyToMany Field
+
+- ManyToManyField()
+
+  - M:N 관계 설정 모델 필드
+
+
+- Django ManyToManyField
+
+  - 환자 모델에 ManyToManyField 작성
+
+    - 의사 모델에 작성해도 상관 없으며 참조/역참조 관계만 잘 기억할 것
+
+    ![alt text](./images/image_09.png)
+
+  - 데이터베이스 초기화 후 Migration 진행 및 shell_plus 실행
+
+  - 생성된 중개 테이블 hospitals_patient_doctors 확인
+
+    ![alt text](./images/image_10.png)
+
+  - 의사 1명과 환자 2명 생성
+
+    ![alt text](./images/image_11.png)
+
+  - 예약 생성 (환자가 예약)
+
+    ![alt text](./images/image_12.png)
+
+  - 예약 생성 (의사가 예약)
+
+    ![alt text](./images/image_13.png)
+
+  - 중개 테이블에서 예약 현황 확인
+
+    ![alt text](./images/image_14.png)
+
+  - 예약 취소하기 (삭제)
+
+  - 이전에는 Reservation을 찾아서 지워야 했다면, 이제는 .remove()로 삭제 가능
+
+    ![alt text](./images/image_15.png)
+
+
+#### 만약 예약 정보에 병의 증상, 예약일 등 추가 정보가 포함되어야 한다면?
 
 
 
