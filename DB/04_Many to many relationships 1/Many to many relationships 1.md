@@ -171,6 +171,10 @@
 
 ### 'through' argument
 
+- 'through' argument
+  
+  - 중개 테이블에 **'추가 데이터'**를 사용해 M:N 관계를 형성하려는 경우에 사용
+
 
 
 
