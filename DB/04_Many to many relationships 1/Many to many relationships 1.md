@@ -197,6 +197,12 @@
 
     - image
 
+  - 예약 생성 방법 - 2
+
+    - Patient 또는 Doctor의 인스턴스를 통한 예약 생성 (**through_defaults**)
+
+    - image
+
 
 
 
