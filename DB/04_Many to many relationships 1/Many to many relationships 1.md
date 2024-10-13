@@ -182,26 +182,49 @@
 
     - 이제는 예약 정보에 "증상"과 "예약일"이라는 추가 데이터가 생김
 
-    - image
-
+      ![alt text](./images/image_16.png)
+      
 
   - 데이터베이스 초기화 후 Migration 진행 및 shell_plus 실행
 
   - 의사 1명과 환자 2명 생성
 
-    - image
+    ![alt text](./images/image_17.png)
 
   - 예약 생성 방법 - 1
 
     - Reservation class를 통한 예약 생성
 
-    - image
+      ![alt text](./images/image_18.png)
 
   - 예약 생성 방법 - 2
 
     - Patient 또는 Doctor의 인스턴스를 통한 예약 생성 (**through_defaults**)
 
-    - image
+      ![alt text](./images/image_19.png)
+
+  - 생성된 예약 확인
+
+    ![alt text](./images/image_20.png)
+
+  - 생성과 마찬가지로 의사와 환자 모두 각각 예약 삭제 가능
+
+    ![alt text](./images/image_21.png)
+
+
+
+- M:N 관계 주요 사항
+
+      - M:N 관계로 맺어진 두 테이블에는 물리적인 변화가 없음
+
+      - ManyToManyField는 중개 테이블을 자동으로 생성
+
+      - ManyToManyField는 M:N 관계를 맺는 두 모델 어디에 위치해도 상관 없음
+
+        - 대신 필드 작성 위치에 따라 참조와 역참조 방향을 주의할 것
+
+      - N:1은 완전한 종속의 관계였지만 M:N은 종속적인 관계가 아니며
+        '의사에게 진찰받는 환자 & 환자를 진찰하는 의사' 이렇게 2가지 형태 모두 표현 가능
 
 
 
@@ -209,17 +232,126 @@
 
 ## ManyToManyField
 
+- ManyToManyField(to, **options)
+
+ - M:N 관계 설정 시 사용하는 모델 필드
+
+
+- ManyToManyField 특징
+
+      - 양방향 관계
+
+        - 어느 모델에서든 관련 객체에 접근할 수 있음
+
+      - 중복 방지
+
+       - 동일한 관계는 한 번만 저장됨
 
 
 
+- ManyToManyField의 대표 인자 3가지
 
+      1. related_name
+
+      2. symmetrical
+
+      3. through
+
+
+
+1. 'related_name' arguments
+
+  - 역참조 시 사용하는 manager naem을 변경
+
+    ![alt text](./images/image_22.png)
+
+
+2. 'symmetrical' arguments
+
+  - 관계 설정 시 대칭 유무 설정
+
+  - ManyToManyField가 동일한 모델을 가리키는 정의에서만 사용
+
+  - 기본 값 : True
+
+    ![alt text](./images/image_23.png)
+
+  - True일 경우
+
+    - source 모델의 인스턴스가 target 모델의 인스턴스를 참조하면 자동으로 target 모델 인스턴스도 source 모델 인스턴스를 자동으로 참조하도록 함(대칭)
+
+    - 즉, 내가 당신의 친구라면 자동으로 당신도 내 친구가 됨
+
+  - False일 경우
+
+    - True와 반대(대칭되지 않음)
+
+      ![alt text](./images/image_24.png)
+
+
+3. 'through' arguments
+
+  - 사용하고자 하는 중개모델을 지정
+
+  - 일반적으로 "추가 데이터를 M:N 관계와 연결하려는 경우"에 활용
+
+    ![alt text](./images/image_25.png)
+
+
+
+- M:N에서의 대표 조작 methods
+
+  - add()
+
+    - 관계 추가
+
+    - "지정된 객체를 관련 객체 집합에 추가"
+
+  - remove()
+
+    - 관계 제거
+
+    - "관련 객체 집합에서 지정된 모델 객체를 제거"
+
+    
 
 
 ## 좋아요 기능 구현
 
 
-
 ### 모델 관계 설정
+
+- Many to many relationships
+
+  - 한 테이블의 0개 이상의 레코드가 다른 테이블의 0개 이상의 레코드와 관련된 경우
+
+  - **양쪽 모두에서 N:1 관계를 가짐**
+
+
+- Article(M) - User(N)
+
+  - 0개 이상의 게시글은 0명 이상의 회원과 관련
+
+  - 게시글은 회원으로부터 0개 이상의 좋아요를 받을 수 있고, 회원은 0개 이상의 게시글에 좋아요를 누를 수 있음
+
+
+- 모델 관계 설정
+
+  - Article 클래스에 ManyToManyField 작성
+
+    ![alt text](./images/image_26.png)
+
+  - Migration 진행 후 에러 발생
+
+    ![alt text](./images/image_27.png)
+
+  - related_name 작성 후 Migration 재진행
+
+    ![alt text](./images/image_28.png)
+
+  - 생성된 중개 테이블 확인
+
+    ![alt text](./images/image_29.png)
 
 
 
