@@ -354,5 +354,55 @@
     ![alt text](./images/image_29.png)
 
 
+- 역참조 매니저 충돌 1
+
+      - N:1
+
+        - "유저가 작성한 게시글"
+
+        - user.article_set.all()
+
+      - M:N
+
+        - "유저가 좋아요 한 게시글"
+
+        - user.article_set.all()
+
+
+- 역참조 매니저 충돌 2
+
+      - like_users 필드 생성 시 자동으로 역참조 매니저 .article_set가 생성됨
+
+      - 그러나 이전 N:1(Article-User) 관계에서 이미 같은 이름의 매니저를 사용 중
+
+        - user.article_set.all() → 해당 유저가 작성한 모든 게시글 조회
+
+      - 'user가 작성한 글 (user.article_set)'과
+        'user가 좋아요를 누른 글 (user.article_set)'을 구분할 수 없게 됨
+
+      ⇨ user와 관계된 ForeignKey 혹은 ManyToManyField 둘 중 하나에 related_name 작성 필요
+
+
+
+- User - Article 간 사용 가능한 전체 related manager
+
+      - article.user
+
+        - 게시글을 작성한 유저 - N:1
+
+      - user.article_set
+
+        - 유저가 작성한 게시글(역참조) - N:1
+
+      - article.like_users
+
+        - 게시글을 좋아요 한 유저 - M:N
+
+      - user.like_articles
+
+        - 유저가 좋아요 한 게시글(역참조) - M:N
+
+        
+
 
 ### 기능 구현
