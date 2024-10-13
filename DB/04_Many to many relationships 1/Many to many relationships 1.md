@@ -402,7 +402,27 @@
 
         - 유저가 좋아요 한 게시글(역참조) - M:N
 
-        
+
 
 
 ### 기능 구현
+
+- url 작성
+
+  ![alt text](./images/image_30.png)
+
+- view 함수 작성
+
+  ![alt text](./images/image_31.png)
+
+- index 템플릿에서 각 게시글에 좋아요 버튼 출력
+
+  ![alt text](./images/image_32.png)
+
+- 좋아요 버튼 출력 확인
+
+  ![alt text](./images/image_33.png)
+
+- 좋아요 버튼 클릭 후 테이블 확인
+
+  ![alt text](./images/image_34.png)
