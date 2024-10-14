@@ -437,11 +437,109 @@
 
 ### select_related & prefetch_related
 
+- 문제 상황
+
+  - [http://127.0.0.1:8000/articles/index-4/](http://127.0.0.1:8000/articles/index-4/)
+
+    - "111 queries including 110 similar and 100 duplicates"
+
+      ![alt text](./images/image_34.png)
+
+  - 문제 원인
+
+    - "게시글" + "각 게시글의 댓글 목록" + "댓글의 작성자"를 단계적으로 평가
+
+      ![alt text](./images/image_35.png)
+
+
+- prefetch_related 적용
+
+  - 문제 해결 1단계
+
+    - 게시글을 조회하면서 참조된 댓글까지 한번에 조회
+
+      ![alt text](./images/image_36.png)
+
+    - "111 queries including 110 similar and 100 duplicates" → **"102 queries including 100 similar and 100 duplicates"**
+
+      ![alt text](./images/image_37.png)
+
+
+- select_related & prefetch_related 적용
+
+  - 문제 해결 2단계
+
+    - "게시글" + "각 게시글의 댓글 목록" + "댓글의 작성자"를 한번에 조회
+
+      ![alt text](./images/image_38.png)
+
+    - "102 queries including 100 similar and 100 duplicates" → **"2 queries"**
+
+      ![alt text](./images/image_39.png)
+
+
+- 섣부른 최적화는 악의 근원
+
+       "작은 효율성에 대해서는,
+        말하자면 97% 정도에 대해서는, 잊어버려라.
+        섣부른 최적화는 모든 악의 근원이다."
+                    - 도널드 커누스(Donald E.Knuth)
+
+
+
 
 ## 참고
 
 ### 'exists' method
 
+- .exists()
+
+      - QuerySet에 결과가 하나 이상 존재하는지 여부를 확인하는 메서드
+
+      - 결과가 포함되어 있으면 True를 반환하고
+        결과가 포함되어 있지 않으면 False를 반환
+
+
+- .exists() 특징
+
+      - 데이터베이스에 최소한의 쿼리만 실행하여 효율적
+
+      - 전체 QuerySet을 평가하지 않고 결과의 존재 여부만 확인
+
+      ⇨ 대량의 QerySet에 있는 특정 객체 검색에 유용
+
+
+- exists 적용 예시
+
+  ![alt text](./images/image_40.png)
+
+  ![alt text](./images/image_41.png)
+
+
+
+
 ### 한꺼번에 dump 하기
 
+- 모든 모델을 한꺼번에 dump 하기
+
+  ![alt text](./images/image_42.png)
+  
+
+
 ### loaddata 인코딩 에러
+
+- loaddata 시 encoding codec 관련 에러가 발생하는 경우
+
+  - 2가지 방법 중 택 1
+
+    1. dumpdata 시 추가 옵션 작성
+
+        ![alt text](./images/image_43.png)
+
+    2. 메모장 활용
+
+        1. 메모장으로 json 파일 열기
+
+        2. "다른 이름으로 저장" 클릭
+
+        3. 인코딩을 UTF8로 선택 후 저장
