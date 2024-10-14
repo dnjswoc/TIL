@@ -300,9 +300,140 @@
 
       ![alt text](./images/image_21.png)
 
+
+- annotate 적용
+
+  - 문제 해결
+
+    - 게시글을 조회하면서 **댓글 개수까지 한번에 조회**해서 가져오기
+
+      ![alt text](./images/image_22.png)
+
+    - "11 queries including 10 similar" → **"1 query"**
+
+      ![alt text](./images/image_23.png)
+
+
+
 ### select_related
 
+- select_related
+
+      - SQL의 INNER JOIN을 사용
+
+      - 1:1 또는 N:1 참조 관계에서 사용
+
+        - ForeignKey나 OneToOneField 관계에 대해 JOIN을 수행
+
+      - 단일 쿼리로 관련 객체를 함께 가져와 성능을 향상
+
+
+- select_related 예시
+
+  ![alt text](./images/image_24.png)
+
+  - 의미
+
+    - Book 모델과 연관된 Publisher 모델의 데이터를 함께 가져옴
+
+    - ForeignKey 관계인 'publisher'를 JOIN하여 단일 쿼리 만으로 데이터를 조회
+
+  - 결과
+
+    - Book 객체를 조회할 때 연관된 Publisher 정보도 함께 로드
+
+    - book.publisher.name과 같은 접근이 추가적인 데이터베이스 쿼리 없이 가능
+
+
+- 문제 상황
+
+  - [http://127.0.0.1:8000/articles/index-2/](http://127.0.0.1:8000/articles/index-2/)
+
+    - "11 queries including 10 similar and 8 duplicates"
+
+      ![alt text](./images/image_25.png)
+
+  - 문제 원인
+
+    - 각 게시글마다 작성한 유저명까지 반복 평가
+
+      ![alt text](./images/image_26.png)
+
+
+- select_related 적용
+
+  - 문제 해결
+
+    - 게시글을 조회하면서 **유저 정보까지 한번에 조회**해서 가져오기
+
+      ![alt text](./images/image_27.png)
+
+    - "11 queries including 10 similar and 8 duplicates" → **"1 query"**
+
+      ![alt text](./images/image_28.png)
+  
+
+
+
 ### prefetch_related
+
+- prefetch_related
+
+      - SQL이 아닌 Python을 사용한 JOIN을 진행
+
+        - 관련 객체들을 미리 가져와 메모리에 저장하여 성능을 향상
+
+      - M:N 또는 N:1 역참조 관계에서 사용
+
+        - ManyToManyField나 역참조 관계에서 대해 별도의 쿼리를 실행
+
+
+- prefetch_related 예시
+
+  ![alt text](./images/image_29.png)
+
+  - 의미
+
+    - Book과 Author는 ManyToMany 관계로 가정
+
+    - Book 모델과 연관된 모든 Author 모델의 데이터를 미리 가져옴
+
+    - Django가 별도의 쿼리로 Author 데이터를 가져와 관계를 설정
+
+  - 결과
+
+    - Book 객체들을 조회한 후, 연관된 모든 Author 정보가 미리 로드 됨
+
+    - for author in book.authors.all()와 같은 반복이 추가적인 데이터베이스 쿼리 없이 실행됨
+
+
+- 문제 상황
+
+  - [http://127.0.0.1:8000/articles/index-3/](http://127.0.0.1:8000/articles/index-3/)
+
+    - "11 queries including 10 similar"
+
+      ![alt text](./images/image_30.png)
+
+  - 문제 원인
+
+    - 각 게시글 출력 후 게시글의 댓글 목록까지 개별적으로 모두 평가
+
+      ![alt text](./images/image_31.png)
+
+
+- prefetch_related 적용
+
+  - 문제 해결
+
+    - 게시글을 조회하면서 **참조된 댓글까지 한번에 조회**해서 가져오기
+
+      ![alt text](./images/image_32.png)
+
+    - "11 queries including 10 similar" → **"2 queries"**
+
+      ![alt text](./images/image_33.png)
+
 
 ### select_related & prefetch_related
 
