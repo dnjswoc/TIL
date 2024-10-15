@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>신규 레스토랑 등록</h1>
+  <form action="{% url "restaurants:create" %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="등록">
+  </form>
+  <a href="{% url "restaurants:index" %}">[돌아가기]</a>
+</body>
+</html>
