@@ -381,15 +381,218 @@
   ![alt text](./images/image_21.png)
 
 
+
 ### Serializer
+
+- Serialization("직렬화")
+
+  - 여러 시스템에서 활용하기 위해 데이터 구조나 객체 상태를 나중에 재구성할 수 있는 포맷으로 변환하는 과정
+
+  - 어떠한 언어나 환경에서도 나중에 다시 쉽게 사용할 수 있는 포맷으로 변환하는 과정
+
+
+- Serialization
+
+  - 데이터 구조나 객체 상태를 나중에 재구성할 수 있는 포맷으로 변환하는 과정
+
+    ![alt text](./images/image_22.png)
+
+    ![alt text](./images/image_23.png)
+
+    ![alt text](./images/image_24.png)
+
+
+- Serializer
+
+  - Serialization을 진행하여 Serialized data를 반환해주는 클래스
+
+
+- ModelSerializer
+
+  - Django 모델과 연결된 Serializer 클래스
+
+  - 일반 Serializer와 달리 사용자 입력 데이터를 받아 자동으로 모델 필드에 맞추어 Serialization을 진행
+
+
+- ModelSerializer class 사용 예시
+
+  - Article 모델을 토대로 직렬화를 수행하는 ArticleSerializer 정의
+
+  - 게시글 데이터 목록 제공
+
+    ![alt text](./images/image_25.png)
+
+
+
 
 ## CRUD with ModelSerializer
 
+- URL과 HTTP requests methods 설계
+
+  ||GET|POST|PUT|DELETE|
+  |:--:|:--:|:--:|:--:|:--:|
+  |articles/|전체 글 조회|글 작성|||
+  |articles/1/|1번 글 조회||1번 글 수정|1번 글 삭제|
+  <br>
+
+
+
 ### GET method - 조회
+
+- GET - List
+
+  - 게시글 데이터 목록 조회하기
+
+  - 게시글 데이터 목록을 제공하는 ArticleListSerializer 정의
+
+    ![alt text](./images/image_26.png)
+
+  - url 및 view 함수 작성
+
+    ![alt text](./images/image_27.png)
+
+  - [http://127.0.0.1:8000/api/v1/articles/](http://127.0.0.1:8000/api/v1/articles/) 응답 확인
+
+    ![alt text](./images/image_28.png)
+
+
+- ModelSerializer의 인자 및 속성
+
+  ![alt text](./images/image_29.png)
+
+  - many 옵션
+
+    - Serialize 대상이 QuerySet인 경우 입력
+
+  - data 속성
+
+    - Serialized data 객체에서 실제 데이터를 추출
+
+
+- 과거 view 함수와의 응답 데이터 비교
+
+  - 똑같은 데이터를
+
+    - 과거 : HTML에 출력되도록 페이지와 함께 응답했던 view 함수,
+
+    - 현재 : JSON 데이터로 serialization 하여 페이지 없이 응답하는 view 함수
+
+      ![alt text](./images/image_30.png)
+
+
+
+- 'api_view' decorator
+
+  - DRF view 함수에서는 **필수로 작성**되며 view 함수를 실행하기 전 HTTP 메서드를 확인
+
+  - 기본적으로 GET 메서드만 허용되며 다른 메서드 요청에 대해서는 405 Method Not Allowed로 응답
+
+  - DRF view 함수가 응답해야 하는 HTTP 메서드 목록을 작성
+
+
+- GET - Detail
+
+  - 단일 게시글 데이터 조회하기
+
+    - 각 게시글의 상세 정보를 제공하는 ArticleSerializer 정의
+
+    ![alt text](./images/image_31.png)
+
+  - url 및 view 함수 작성
+
+    ![alt text](./images/image_32.png)
+
+  - [http://127.0.0.1:8000/api/v1/articles/1/](http://127.0.0.1:8000/api/v1/articles/1/) 응답 확인
+
+    ![alt text](./images/image_33.png)
+
+
+
 ### POST method - 생성
+
+- POST
+
+  - 게시글 데이터 생성하기
+
+    1. 데이터 생성이 성공했을 경우 201 Created 응답
+
+    2. 데이터 생성이 실패했을 경우 400 Bad request 응답
+
+  - article_list view 함수 구조 변경 (method에 따른 분기 처리)
+
+    ![alt text](./images/image_34.png)
+
+  - POST [http://127.0.0.1:8000/api/v1/articles/](http://127.0.0.1:8000/api/v1/articles/) 응답 확인
+
+    ![alt text](./images/image_35.png)
+
+  - 새로 생성된 게시글 데이터 확인
+    
+    - GET [http://127.0.0.1:8000/api/v1/articles/21/](http://127.0.0.1:8000/api/v1/articles/21/)
+
+    ![alt text](./images/image_36.png)
+
+
+
 ### DELETE method - 삭제
+
+- DELETE
+
+  - 게시글 데이터 삭제하기
+
+    - 요청에 대한 데이터 삭제가 성공했을 경우는 204 No Content 응답
+
+    ![alt text](./images/image_37.png)
+
+  - DELETE [http://127.0.0.1:8000/api/v1/articles/21/](http://127.0.0.1:8000/api/v1/articles/21/) 응답 확인
+
+    ![alt text](./images/image_38.png)
+
+
+
 ### PUT method - 수정
+
+- PUT
+
+  - 게시글 데이터 수정하기
+
+    - 요청에 대한 데이터 수정이 성공했을 경우는 200 OK 응답
+
+    ![alt text](./images/image_39.png)
+
+  - PUT [http://127.0.0.1:8000/api/v1/articles/1/](http://127.0.0.1:8000/api/v1/articles/1/) 응답 확인
+
+    ![alt text](./images/image_40.png)
+
+  - GET [http://127.0.0.1:8000/api/v1/articles/1/](http://127.0.0.1:8000/api/v1/articles/1/) 수정된 데이터 확인
+
+    ![alt text](./images/image_41.png)
+
+
+- 'partial' argument
+
+  - "부분 업데이트"를 허용하기 위한 인자
+
+  - 예를 들어 partial 인자 값이 False일 경우 게시글 title만을 수정하려고 해도 반드시 content 값도 요청 시 함께 전송해야 함
+
+  - 기본적으로 serializer는 모든 필수 필드에 대한 값을 전달 받기 때문
+
+    - 즉, 수정하지 않는 다른 필드 데이터도 모두 전송해야 하며 그렇지 않으면 유효성 검사에서 오류가 발생
+
+    ![alt text](./images/image_42.png)
+
+
 
 ## 참고
 
 ### raise_exception
+
+- raise_exception
+
+  - is_valid()의 선택 인자
+
+  - 유효성 검사를 통과하지 못할 경우 ValidationError 예외를 발생시킴
+
+  - DRF에서 제공하는 기본 예외 처리기에 의해 자동으로 처리되며 기본적으로 HTTP 400 응답을 반환
+
+    ![alt text](./images/image_43.png)
