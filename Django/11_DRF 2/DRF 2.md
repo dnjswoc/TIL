@@ -26,12 +26,22 @@
   - 올바르게 404 응답하기
   - 복잡한 ORM 활용
 
-  
+
 
 
 ## DRF with N:1 Relation
 
 ### 사전 준비
+
+- Comment 모델 정의
+
+  - Comment 클래스 정의 및 데이터베이스 초기화
+
+    ![alt text](./images/image_00.png)
+
+  - Migration 및 fixtures 데이터 로드
+
+    ![alt text](./images/image_01.png)
 
 ### GET method
 
