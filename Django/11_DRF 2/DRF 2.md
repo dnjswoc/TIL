@@ -283,9 +283,42 @@
     ![alt text](./images/image_29.png)
 
 
+- "설계 우선" 접근법
+
+  - OAS의 핵심 이점
+
+  - API를 먼저 설계하고 명세를 작성한 후, 이를 기반으로 코드를 구현하는 방식
+
+  - API의 일관성을 유지하고, API 사용자는 더 쉽게 API를 이해하고 사용할 수 있음
+
+  - 또한, OAS를 사용하면 API가 어떻게 작동하는지를 시각적으로 보여주는 문서를 생성할 수 있으며, 이는 API를 이해하고 테스트하는 데 매우 유용
+
+  - 이런 목적으로 사용되는 도구가 Swagger-UI 또는 ReDoc
+
+
 
 ## 참고
 
 ### 올바르게 404 응답하기
+
+- Django shortcuts functions
+
+  - render()
+  
+  - redirect()
+
+  - **get_object_or_404()**
+
+  - **get_list_or_404()**
+
+
+- get_object_or_404()
+
+  - 모델 manager objects에서 get()을 호출하지만, 해당 객체가 없을 땐 기존 DoesNotExist 예외 대신 **Http404를 raise** 함
+
+
+- get_object_or_404 적용
+
+  
 
 ### 복잡한 ORM 활용
