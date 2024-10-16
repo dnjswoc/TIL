@@ -209,14 +209,66 @@
 
     ![alt text](./images/image_23.png)
 
+
+
 ### 읽기 전용 필드
+
+- 읽기 전용 필드를 사용하는 이유
+
+      - 사용자에게 입력으로는 받지 않지만 제공은 해야 하는 경우
+
+      - 새로운 필드 값을 만들어 제공해야 하는 경우
+
+      - 특징 및 주의 사항
+
+        - 유효성 검사에서 제외됨
+
+        - 단, 유효성 검사에서 제외된다고 해서 반드시 "생성" 로직에서만 사용이 국한되는 것은 아님
+
+
+- read_only_fields 속성과 read_only 인자의 사용처
+
+      - read_only_fields
+
+        - 기존 외래 키 필드 값을 그대로 응답 데이터에 제공하기 위해 지정하는 경우
+
+      - read_only
+
+        - 기존 외래 키 필드 값의 결과를 다른 값으로 덮어쓰는 경우
+
+        - 새로운 응답 데이터 값을 제공하는 경우
 
 
 
 
 ## API 문서화
 
+- OpenAPI Specification(OAS)
+
+  - RESTful API를 설명하고 시각화하는 표준화된 방법
+
+  - API에 대한 세부사항을 기술할 수 있는 공식 표준
+
+
+![alt text](./images/image_24.png)
+
+  - OAS 기반 API에 대한 문서를 생성하는 데 도움을 주는 오픈소스 프레임워크
+
+
+
 ### 문서화 활용
+
+- drf-spectacular 라이브러리
+
+  - DRF 위한 OpenAPI 3.0 구조 생성을 도와주는 라이브러리
+
+  - 설치 및 등록
+
+    ![alt text](./images/image_25.png)
+
+  - 관련 설정 코드 입력 (OpenAPI 구조 자동 생성 코드)
+
+    ![alt text](./images/image_26.png)
 
 
 
