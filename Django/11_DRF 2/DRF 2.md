@@ -319,6 +319,46 @@
 
 - get_object_or_404 적용
 
-  
+  ![alt text](./images/image_30.png)
+
+
+- get_list_or_404()
+
+  - 모델 manager objects에서 filter()의 결과를 반환하고, 해당 객체 목록이 없을 땐 **Http404를 raise** 함
+
+
+- get_list_or_404 적용
+
+  ![alt text](./images/image_31.png)
+
+
+- 적용 전/후 비교
+
+  - 존재하지 않는 게시글 조회 시 이전에는 상태 코드 500을 응답했지만 현재는 404를 응답
+
+    ![alt text](./images/image_32.png)
+
+
+- 왜 사용해야 할까?
+
+      - 클라이언트에게 "서버에 오류가 발생하여 요청을 수행할 수 없다(500)"라는
+        원인이 정확하지 않은 에러를 제공하기 보다는,
+        적절한 예외 처리를 통해 클라이언트에게 보다 정확한 에러 현황을
+        전달하는 것도 매우 중요한 개발 요소 중 하나이기 때문
+
+
 
 ### 복잡한 ORM 활용
+
+- 복잡한 ORM 활용 시 권장 방식
+
+  - 복잡한 query나 로직은 View 함수에서 진행
+
+    - 여러 모델을 조인하거나 복잡한 집계가 필요한 경우 View 함수에서 처리
+
+    - 필요한 경우 View 함수에서 select_related()나 prefetch_related()를 사용하여 query를 최적화
+
+
+  - Serializer는 기본적인 데이터 변환을 담당
+
+    - Serializer만으로는 복잡한 query를 처리하기 어려움
