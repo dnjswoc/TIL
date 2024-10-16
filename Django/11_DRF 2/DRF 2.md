@@ -270,6 +270,18 @@
 
     ![alt text](./images/image_26.png)
 
+  - swagger, redoc 페이지 제공을 위한 url 작성
+
+    ![alt text](./images/image_27.png)
+
+  - [http://127.0.0.1:8000/api/schema/swagger-ui/](http://127.0.0.1:8000/api/schema/swagger-ui/) 페이지 확인
+
+    ![alt text](./images/image_28.png)
+
+  - [http://127.0.0.1:8000/api/schema/redoc/](http://127.0.0.1:8000/api/schema/redoc/) 페이지 확인
+
+    ![alt text](./images/image_29.png)
+
 
 
 ## 참고
