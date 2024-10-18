@@ -374,30 +374,251 @@
     ![alt text](./images/image_16.png)
 
 
+- DOM 핵심
+
+  - 문서의 요소들을 객체로 제공하여 다른 프로그래밍 언어에서 접근하고 조작할 수 있는 방법을 제공하는 API
+
+
+
 ### document 객체
+
+- 'document' 객체
+
+  - 웹 페이지 객체
+
+  - DOM Tree의 진입점
+
+  - 페이지를 구성하는 모든 객체 요소를 포함
+
+    ![alt text](./images/image_17.png)
+
+
+- 'document' 객체 예시
+
+  - HTML의 title 변경하기
+
+    ![alt text](./images/image_18.png)
+
+
 
 
 ## DOM 선택
 
+- DOM 조작 시 기억해야 할 것
+
+  ![alt text](./images/image_19.png)
+
+  - 조작 순서
+
+    1. 조작하고자 하는 요소를 **선택** (또는 탐색)
+
+    2. 선택된 요소의 콘텐츠 또는 속성을 **조작**
+
+
+
 ### 선택 메서드
+
+- 선택 메서드
+
+      - document.querySelector()
+
+        - 요소 한 개 선택
+      
+      - document.querySelectorAll()
+
+        - 요소 여러 개 선택
+
+
+- document.**querySelector(selector)**
+
+      - 제공한 선택자와 일치하는 element 한 개 선택
+
+      ⇨ 제공한 선택자를 만족하는
+        첫 번째 element 객체를 반환 (없다면 null 반환)
+
+
+- document.**querySelectorAll(selector)**
+
+      - 제공한 선택자와 일치하는 여러 element를 선택
+
+      ⇨ 제공한 선택자를 만족하는 NodeList를 반환
+
+
+- DOM 선택 실습
+
+  ![alt text](./images/image_20.png)
+
 
 
 ## DOM 조작
 
+- DOM 조작
+
+      1. 속성(attribute) 조작
+
+        - 클래스 속성 조작
+
+        - 일반 속성 조작
+
+      2. HTML 콘텐츠 조작
+
+      3. DOM 요소 조작
+
+      4. 스타일 조작
+
+
+
 ### 속성 조작
+
+- 속성 조작
+
+      1. 클래스 속성 조작
+
+      2. 일반 속성 조작
+
+
+- 클래스 속성 조작
+
+  - 'classList' **property**
+
+    - 요소의 클래스 목록을 DOM TokenList(유사 배열) 형태로 반환
+
+
+1. classList 메서드
+
+  - element.classList.**add()**
+
+    - 지정한 클래스 값을 추가
+
+  - element.classList.**remove()**
+
+    - 지정한 클래스 값을 제거
+
+  - element.classList.**toggle()**
+
+    - 클래스가 존재한다면 제거하고 false를 반환(존재하지 않으면 클래스를 추가하고 true를 반환)
+
+
+- 클래스 속성 조작 실습
+
+  - add()와 remove() 메서드를 사용해 지정한 클래스 값을 추가 혹은 제거
+
+    ![alt text](./images/image_21.png)
+
+    ![alt text](./images/image_22.png)
+
+
+2. 일반 속성 조작 메서드
+
+  - Element.**getAttribute()**
+
+    - 해당 요소에 지정된 값을 반환 (조회)
+
+  - Element.**setAttribute(name, value)**
+
+    - 지정된 요소의 속성 값을 설정
+
+    - 속성이 이미 있으면 기존 값을 갱신 (그렇지 않으면 지정된 이름과 값으로 새 속성이 추가)
+
+  - Element.**removeAttribute()**
+
+    - 요소에서 지정된 이름을 가진 속성 제거
+
+
+- 일반 속성 조작 실습
+
+  ![alt text](./images/image_23.png)
+
+
 
 ### HTML 콘텐츠 조작
 
+- HTML 콘텐츠 조작
+
+  - 'textContent' **property**
+
+    - 요소의 텍스트 콘텐츠를 표현
+
+      ![alt text](./images/image_24.png)
+
+
+- HTML 콘텐츠 조작 실습
+
+  ![alt text](./images/image_25.png)
+
+
+
 ### DOM 요소 조작
 
+- DOM 요소 조작 메서드
+
+  - document.**createElement(tagName)**
+
+    - 작성한 tagName의 HTML 요소를 생성하여 반환
+
+  - Node.**appendChild()**
+
+    - 한 Node를 특정 부모 Node의 자식 NodeList 중 마지막 자식으로 삽입
+
+    - 추가된 Node 객체를 반환
+
+  - Node.**removeChild()**
+
+    - DOM에서 자식 Node를 제거
+
+    - 제거된 Node를 반환
+
+
+- DOM 요소 조작 실습
+
+  ![alt text](./images/image_26.png)
+
+
+
 ### style 조작
+
+- style 조작
+
+  - 'style' **property**
+
+    - 해당 요소의 모든 style 속성 목록을 포함하는 속성
+
+
+- style 조작 실습
+
+  ![alt text](./images/image_27.png)
+
 
 
 ## 참고
 
 ### DOM 속성 확인 Tip
 
+- DOM 속성 확인 Tip
+
+  - 개발자도구 - Elements - Properties
+
+  - 선택한 해당 요소의 모든 DOM 속성 확인 가능
+
+    ![alt text](./images/image_28.png)
+
+
+
 ### 용어 정리
+
+- Node
+
+  - DOM의 기본 구성 단위
+
+  - DOM 트리의 각 부분은 Node라는 객체로 표현됨
+
+    - Document Node ⇒ HTML 문서 전체를 나타내는 노드
+
+    - Element Node ⇒ HTML 요소를 나타내는 노드 (예를 들어 \<p>)
+
+    - Text Node ⇒ HTML 텍스트 (Element Node의 내 텍스트 컨텐츠를 나나탬)
+
+    - Attribute Node ⇒ HTML 요소의 속성을 나타내는 노드
 
 ### 세미콜론
 
