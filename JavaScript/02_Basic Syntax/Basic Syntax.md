@@ -16,9 +16,9 @@
 
 - 반복문
 
-  - for_in
-  - for_of
-  - for_in과 for_of
+  - for...in
+  - for...of
+  - for...in과 for...of
 
 
 - 참고
@@ -255,20 +255,179 @@
   - 복잡한 로직이나 대다수의 경우에는 가독성이 떨어질 수 있으므로 적절한 상황에서만 사용할 것
 
     ![alt text](./images/image_15.png)
-    
+
 
 
 
 ## 반복문
 
-### for_in
+- 반복문 종류
 
-### for_of
+      - while
 
-### for_in과 for_of
+      - for
+
+      - for...in
+
+      - for...of
+
+
+- while
+
+  - 조건문이 참이면 문장을 계속해서 수행
+
+    ![alt text](./images/image_16.png)
+
+
+- while 예시
+
+  ![alt text](./images/image_17.png)
+
+
+- for
+
+  - 특정한 조건이 거짓으로 판별될 때까지 반복
+
+    ![alt text](./images/image_18.png)
+
+
+- for 예시
+
+  ![alt text](./images/image_19.png)
+
+
+- for 동작 원리
+
+  ![alt text](./images/image_20.png)
+
+
+
+
+### for...in
+
+- for...in
+
+  - 객체의 열거 가능한 속성(property)에 대해 반복
+
+    ![alt text](./images/image_21.png)
+
+
+- for...in 예시
+
+  ![alt text](./images/image_22.png)
+
+
+
+### for...of
+
+- for...of
+
+  - 반복 가능한 객체(배열, 문자열 등)에 대해 반복
+
+    ![alt text](./images/image_23.png)
+
+
+- for...of 예시
+
+  ![alt text](./images/image_24.png)
+
+
+
+### for...in과 for...of
+
+- for...in과 for...of 비교 (배열과 객체)
+
+  ![alt text](./images/image_25.png)
+
+
+- 배열 반복과 for...in
+
+  - 객체 관점에서 배열의 인덱스는 "정수 이름을 가진 열거 가능한 속성"
+
+  - for...in은 정수가 아닌 이름과 속성을 포함하여 열거 가능한 모든 속성을 반환
+
+  - 내부적으로 for...in은 배열의 반복자가 아닌 속성 열거를 사용하기 때문에 특정 순서에 따라 인덱스를 반환하는 것을 보장할 수 없음
+
+  - for...in은 인덱스의 순서가 중요한 **배열에서는 사용하지 않음**
+
+  - 배열에서는 **for 문, for...of를 사용**
+
+  - 객체 관점에서 배열의 인덱스는 정수 이름을 가진 속성이기 때문에 인덱스가 출력됨 (순서 보장 X)
+
+    ![alt text](./images/image_26.png)
+
+
+
+- 반복문 사용 시 const 사용 여부
+
+  - for 문
+
+    - for (let i = 0; i < arr.length; i++) { ... }의 경우에는 최초 정의한 i를 "재할당" 하면서 사용하기 때문에 **const를 사용하면 에러 발생**
+
+  - for...in, for...of
+
+    - 재할당이 아니라, 매 반복마다 다른 속성 이름이 변수에 저장되는 것이므로 **const를 사용해도 에러가 발생하지 않음**
+
+    - 단, const 특징에 따라 블록 내부에서 변수를 수정할 수 없음
+
+
+
+- 반복문 종합
+
+  |키워드|특징|스코프|
+  |:--:|:--:|:--:|
+  |while|.|블록 스코프|
+  |for|.|블록 스코프|
+  |for...in|object 순회|블록 스코프|
+  |for...of|iterable 순회|블록 스코프|
+  <br>
+
+
 
 ## 참고
 
 ### NaN 예시
 
+- NaN을 반환하는 경우 예시
+
+  1. 숫자로서 읽을 수 없음 (Number(undefined))
+
+  2. 결과가 허수인 수학 계산식 (Math.sqrt(-1))
+
+  3. 피연산자가 NaN (7 ** NaN)
+
+  4. 정의할 수 없는 계산식 (0 * Infinity)
+
+  5. 문자열을 포함하면서 덧셈이 아닌 계산식 ('가' / 3)
+
+
+
 ### null & undefined
+
+- '값이 없음'에 대한 표현이 null과 undefined 2가지인 이유
+
+  1. 역사적 맥락
+
+      - JavaScript가 처음 만들어질 때, null은 '객체가 없음'을 나타내기 위해 도입
+
+      - undefined는 나중에 추가되어 '값이 할당되지 않음'을 나타내게 됨
+
+  2. null의 타입이 "object"인 이유
+
+      - 초기 버전에서 값의 타입을 나타내는 32비트 시스템을 사용
+
+      - 타입 태그로 하위 3비트를 사용했는데, '000'은 객체를 나타냄
+
+      - null은 모든 비트가 0인 특별한 값(null pointer)으로 표현되었고, 이로 인해 객체로 잘못 해석
+
+        ![alt text](./images/image_27.png)
+
+  3. ECMAScript의 표준화
+
+      - ECMAScript의 명세에서는 null을 원시 자료형으로 정의
+
+      - 그러나 typeof null의 결과는 역사적인 이유로 "object"를 유지
+
+      - ECMAScript 5 개발 중 이 문제를 수정하려는 시도가 있었지만, 기존 웹 사이트들의 호환성 문제로 인해 받아들여지지 않음
+
+        ![alt text](./images/image_28.png)
