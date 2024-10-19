@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>INDEX PAGE</h1>
+
+<div class="container mt-3 mb-3">
+  <div class="row">
+    {% for movie in movies %}
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <h5 class="card-header">{{ movie.title }}</h5>
+          <div class="card-body">
+            <p class="card-text">
+              <a href="{% url 'movies:detail' movie.pk %}" class="btn btn-link">DETAIL</a>
+              {% if request.user in movie.like_users.all %}
+              <a href="{% url "movies:likes" movie.pk %}"><button type="button" class="btn btn-outline-danger">좋아요 취소</button></a>
+              {% else %}
+              <a href="{% url "movies:likes" movie.pk %}"><button type="button" class="btn btn-outline-secondary">좋아요</button></a>
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p>아직 등록된 영화가 없습니다.</p>
+    {% endfor %}
+  </div>
+</div>
+<hr>
+
+{% endblock content %}

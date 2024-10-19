@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>DETAIL PAGE</h1>
+
+<div class="border border-dark-subtle p-3 rounded-3 mt-3 mb-5" style="--bs-border-opacity: .5;">
+  <h4>{{movie.title}}</h4>
+  <p>{{movie.description}}</p>
+</div>
+
+<hr>
+<h4>댓글 목록</h4>
+
+{% for comment in comments %}
+<div class="card">
+  <span class="card-body d-flex justify-content-between">
+    {{ comment.content }}
+    <span>
+      작성자 : <a href="{% url "accounts:profile" comment.user.username %}">{{ comment.user.username }}</a>
+      <form action="{% url "movies:comments_delete" movie.pk comment.pk %}" method="POST">
+        {% csrf_token %}
+        {% if request.user == comment.user %}
+        <input type="submit" value="Delete">        
+        {% endif %}
+      </form>
+    </span>
+  </span>
+</div>
+<br>
+{% empty %}
+  <p>아직 댓글이 없네요...</p>
+{% endfor %}
+
+<hr>
+
+<form action="{% url "movies:comments_create" movie.pk %}" method="POST">
+  {% csrf_token %}
+  {{ comment_form }}
+  <input type="submit" value="Submit">
+</form>
+<br>
+{% if request.user == movie.user %}
+<p>
+  <a href="{% url "movies:update" movie.pk %}"><button type="button" class="btn btn-success">Update</button></a>
+  <a href="{% url "movies:delete" movie.pk %}"><button type="button" class="btn btn-danger">DELETE</button></a>
+</p>
+{% endif %}
+
+
+
+<a href="{% url "movies:index" %}"><button type="button" class="btn btn-dark">BACK</button></a>
+{% endblock content %}

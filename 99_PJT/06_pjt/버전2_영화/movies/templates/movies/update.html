@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="{% url "movies:update" movie.pk%}" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button type="button" class="btn btn-primary">수정 완료</button>
+  <a href="{% url "movies:detail" movie.pk%}"><button type="button" class="btn btn-warning">뒤로가기</button></a>
+</form>
+  
+{% endblock content %}
+

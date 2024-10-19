@@ -1,0 +1,29 @@
+[
+{
+    "model": "movies.comment",
+    "pk": 4,
+    "fields": {
+        "content": "´ñ±Û 1",
+        "movie": 8,
+        "user": 2
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 5,
+    "fields": {
+        "content": "´ñ±Û 2",
+        "movie": 8,
+        "user": 2
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 7,
+    "fields": {
+        "content": "´ñ±Û 4",
+        "movie": 8,
+        "user": 3
+    }
+}
+]

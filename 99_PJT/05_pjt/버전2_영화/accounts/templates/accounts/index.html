@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>hello, {{ user.username }}</p>
+
+  <a href="{% url "accounts:login" %}">[LOGIN]</a>
+  <form action="{% url "accounts:logout" %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="LOGOUT">
+  </form>
+  <a href="{% url "accounts:signup" %}">[SIGNUP]</a>
+  <a href="{% url "accounts:update" %}">[UPDATE]</a>
+  {% comment %} <form action="{% url "accounts:delete" %}" method="POST"> {% endcomment %}
+    {% comment %} {% csrf_token %}
+    <input type="submit" value="DELETE">
+  </form> {% endcomment %}
+
+  {% for user in users %}
+    <p>{{ user.username }}</p>
+    <hr>
+  {% endfor %}
+{% endblock content %}
+

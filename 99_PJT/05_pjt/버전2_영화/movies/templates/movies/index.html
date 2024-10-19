@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block style %}
+  .card-body {
+    height: 170px;
+  }
+{% endblock style %}
+
+
+
+{% block content %}
+<h1>INDEX PAGE</h1>
+
+
+<div class="row">
+  {% for movie in movies %}
+  <div class="col-12 col-md-6 mb-3">
+    <div class="card">
+      <h5 class="card-header">  {{movie.title}}</h5>
+      <div class="card-body">
+        <p class="card-text">  {{movie.description}}</p>
+        <a href="{% url "movies:detail" movie.pk %}" class="btn btn-primary">Detail</a>
+      </div>
+    </div>
+  </div>
+    {%empty%}
+    <ul>
+      <li>등록된 영화가 없습니다. 영화를 <a href="{% url "movies:create" %}">CREATE</a>해주세요.</li>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock content %}

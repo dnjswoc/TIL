@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>DETAIL PAGE</h1>
+<div class="card">
+  <div class="card-header">
+    <h3>{{movie.title}}</h3>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">{{movie.description}}</p>
+    <hr>
+    <a href="{% url "movies:update" movie.pk %}" class="btn btn-secondary">UPDATE</a>
+    <a href="{% url "movies:delete" movie.pk %}" class="btn btn-danger">DELETE</a>
+  </div>
+</div>
+<hr>
+<a href="{% url "movies:index" %}" class="btn btn-primary">BACK</a>
+
+  
+{% endblock content %}
+
