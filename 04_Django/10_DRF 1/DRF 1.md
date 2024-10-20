@@ -295,7 +295,7 @@
 
     ![alt text](./images/image_11.png)
 
-  - Django는 더 이상 Template 부분에 대한 역할을 담당하지 않게 되며, Front-end와 Back-end가 분리되어 구성됨
+  - Django는 **더 이상 Template 부분에 대한 역할을 담당하지 않게 되며**, Front-end와 Back-end가 분리되어 구성됨
 
     ![alt text](./images/image_12.png)
 
@@ -462,16 +462,16 @@
 
   - many 옵션
 
-    - Serialize 대상이 QuerySet인 경우 입력
+    - Serialize 대상이 **QuerySet인 경우 입력**
 
   - data 속성
 
-    - Serialized data 객체에서 실제 데이터를 추출
+    - Serialized data 객체에서 **실제 데이터를 추출**
 
 
 - 과거 view 함수와의 응답 데이터 비교
 
-  - 똑같은 데이터를
+  - 똑같은 데이터를(QuerySet API는 여전히 사용)
 
     - 과거 : HTML에 출력되도록 페이지와 함께 응답했던 view 함수,
 
@@ -485,7 +485,7 @@
 
   - DRF view 함수에서는 **필수로 작성**되며 view 함수를 실행하기 전 HTTP 메서드를 확인
 
-  - 기본적으로 GET 메서드만 허용되며 다른 메서드 요청에 대해서는 405 Method Not Allowed로 응답
+  - **기본적으로 GET 메서드만 허용**되며 다른 메서드 요청에 대해서는 405 Method Not Allowed로 응답
 
   - DRF view 함수가 응답해야 하는 HTTP 메서드 목록을 작성
 
@@ -514,9 +514,9 @@
 
   - 게시글 데이터 생성하기
 
-    1. 데이터 생성이 성공했을 경우 201 Created 응답
+    1. 데이터 생성이 성공했을 경우 **201 Created 응답**
 
-    2. 데이터 생성이 실패했을 경우 400 Bad request 응답
+    2. 데이터 생성이 실패했을 경우 **400 Bad request 응답**
 
   - article_list view 함수 구조 변경 (method에 따른 분기 처리)
 
@@ -540,7 +540,7 @@
 
   - 게시글 데이터 삭제하기
 
-    - 요청에 대한 데이터 삭제가 성공했을 경우는 204 No Content 응답
+    - 요청에 대한 데이터 삭제가 성공했을 경우는 **204 No Content 응답**
 
     ![alt text](./images/image_37.png)
 
