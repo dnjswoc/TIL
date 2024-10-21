@@ -347,6 +347,8 @@
 
   - 이 표현을 Document Object Model, 또는 줄여 DOM 이라고 부름
 
+    ![alt text](./images/image_34.png)
+
 
 - DOM(The Document Object Model)
 
