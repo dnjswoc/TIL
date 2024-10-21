@@ -335,6 +335,19 @@
   ![alt text](./images/image_12.png)
 
 
+- Document structure
+
+  - HTML 문서는 상자들이 중첩된 형태로 볼 수 있음
+
+    ![alt text](./images/image_33.png)
+
+  - 브라우저가 문서를 표현하기 위해 사용하는 데이터 구조는 우측 이미지와 같은 모양을 가짐
+
+  - 각 상자는 객체이며 개발자는 이 객체와 상호작용하여 어떤 HTML 태그를 나타내는지, 어떤 콘텐츠가 포함되어 있는지 등을 알아낼 수 있음
+
+  - 이 표현을 Document Object Model, 또는 줄여 DOM 이라고 부름
+
+
 - DOM(The Document Object Model)
 
   - 웹 페이지(Document)를 구조화된 객체로 제공하여 프로그래밍 언어가 페이지 구조에 접근할 수 있는 방법을 제공
