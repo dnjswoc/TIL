@@ -283,6 +283,8 @@
 
   ![alt text](./images/image_17.png)
 
+  - 재할당이 되기 때문에 let으로 변수 선언
+
 
 - for
 
