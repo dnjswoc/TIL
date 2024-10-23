@@ -133,8 +133,52 @@
       - $y = \phi(w^T + b)$ ⇒ $y = \phi(x_0w_0 + x_1w_1 + x_2w_2 + \cdots + x_nw_n + b)$
 
         ![alt text](./images/image_09.png)
+
+    - 선형 모델(단층 퍼셉트론)의 한계
+
+      - XOR연산과 같은 복잡한 관계를 모델로 나타낼 수 없음
+
+      - 즉, 현실 세계에 존재하는 데이터들의 복잡한 관계를 충분히 표현할 수 있음
+
+        ![alt text](./images/image_10.png)
+
+  - Multi Layer Perceptron (MLP)
+
+    - 다층 퍼셉트론
+
+      - 입력 레이어와 출력 레이어만 존재하는 단일 퍼셉트론에 **'은닉층'**이라는 중간 레이어 추가
+
+      - 즉, 여러 개의 레이어를 쌓음으로써 단일 퍼셉트론으로 표현할 수 없는 복잡한 연산을 수행할 수 있음
+
+        ![alt text](./images/image_11.png)
       
 
 - Loss(Reward)
+
+  - 손실 함수 (loss function)
+
+    - **모델의 출력값과 실제 데이터의 정답 사이의 오차**를 계산하는 함수
+
+    - AI 모델을 학습한다는 것은 주어진 데이터에 대한 정답에 근사한 예측을 할 수 있는 모델을 만드는 것
+
+    - 즉, 손실을 최대한 작은 값으로 줄이는 것이 AI 모델 학습의 목표
+
+      ![alt text](./images/image_12.png)
+
+  - 손실 함수 (loss function) 종류 예시
+
+    - Regression Task
+
+      - $MSE = \frac{1}{N}\displaystyle\sum_{i=1}^{N}\displaystyle\sum_{d=1}^{D}(y_i^d - \hat{y}_i^d)^2$
+
+    - Classification Task
+
+      - $CE = -\frac{1}{N}\displaystyle\sum_{i=1}^{N}\displaystyle\sum_{d=1}^{D}y_i^dlog$
+
+    - 회귀(regression)
+
+      - 범주가 아닌 연속적인 수치를 예측하는 태스크
+
+        - 예. 이미지 안의 고양이 마리 수 예측, 9월의 제품 A 판매량 예측
 
 - Algorithm
