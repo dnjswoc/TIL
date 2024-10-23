@@ -1,0 +1,38 @@
+<!-- spread-syntax.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1. 인자 확장 (함수 호출 시)
+    let numbers = [1, 2, 3]
+    let numbers2 = [1, 2]
+    function myFunc(x, y, z) {
+      return x + y + z
+    }
+
+    console.log(myFunc(numbers[0], numbers[1], numbers[2])) // 6
+    console.log(myFunc(...numbers)) // 6
+    // myFunc 함수가 덧셈 계산을 하는 함수이므로
+    // 인자의 개수가 모자라면 undefined로 처리되기 때문에 계산을 할 수 없어
+    // 결과가 NaN이 나온다.
+    console.log(myFunc(...numbers2))  // NaN
+
+
+    // 2. 나머지 매개변수 (함수 선언 시)
+    const myFunc2 = function (x, y, ...restParams) {
+      return [x, y, restParams]
+    }
+    console.log(myFunc2(1, 2, 3, 4, 5)) // [1, 2, [3, 4, 5]]
+    console.log(myFunc2(1, 2)) // [1, 2, []]
+  </script>
+</body>
+
+</html>
