@@ -234,6 +234,20 @@
 
 ### 배열 순회 종합
 
+- 배열 순회 종합
+
+  |방식|특징|비고|
+  |:--:|:--|:--:|
+  |for loop|- 배열의 인덱스를 이용하여 각 요소에 접근<br>- break, continue 사용 가능||
+  |for...of|- 배열 요소에 바로 접근 가능<br>- break, continue 사용 가능||
+  |forEach()|- 간결하고 가독성이 높음<br>- callback 함수를 이용하여 각 요소를 조작하기 용이<br>- break, continue 사용 불가|**사용<br>권장**|
+  <br>
+
+  ![alt text](./images/image_19.png)
+
+
+- 기타
+
 ### 배열 with '전개 구문'
 
 
