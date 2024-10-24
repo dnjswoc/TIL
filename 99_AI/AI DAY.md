@@ -182,3 +182,68 @@
         - 예. 이미지 안의 고양이 마리 수 예측, 9월의 제품 A 판매량 예측
 
 - Algorithm
+
+  - Loss의 편미분(partial derivatives)은 하나의 파라미터가 Loss에 미치는 영향을 알려줌
+
+  - Backpropagation : 모델의 가중치(weight) 업데이트
+
+  - Learning rate : 학습률
+
+  - Learning rate Scheduler : 학습 도중 learning rate(학습률)을 동적으로 조정
+
+
+
+#### AI 3번째 관점
+
+  - 계산 / 추론 (computation / inference)
+
+    - 함수를 주고, Output이 나오도록 계산
+
+  - 최적화 (Optimization)
+
+    - 한 세트의 (input, output)을 주고, 관계를 가장 잘 설명하는 함수 f(.)를 찾는 것
+
+
+#### 모델 평가의 중요성
+
+- 학습된 모델을 테스트함으로서 일반화 능력(Generalization)을 측정하는 과정
+
+- 평가를 통해 모델의 성능 개선 방향을 결정
+
+
+#### 훈련, 테스트셋
+
+- 모델의 일반화 성능형가(= 과적합, Overfitting)을 위해 데이터 분할 필요
+
+
+#### Overfitting
+
+- 학습된 모델이 새로운 데이터에 대한 일반화 성능이 떨어지는 현상
+
+- Train set에서 높은 성능, test set에서 낮은 성능
+
+- 대표적 Overfitting 치료법
+
+  - Data augmentation
+
+  - Regularization
+
+  - Model design change
+
+  - More training data
+
+
+#### 오픈소스 대규모 언어모델(LLM)
+
+- LLaMA, Vicuna, Falcon
+
+
+#### 자연어 처리 모델
+
+- 입력 문장의 토큰화 및 벡터화
+
+  - 토큰화 : 텍스트를 의미 있는 단위로 분리하는 과정
+
+  - 벡터화 : 토큰을 기계가 처리할 수 있는 수치 데이터로 변환하는 과정
+
+  - 예시. 입력 문장 : this movie has amazing diverse characters => Sequence Data
