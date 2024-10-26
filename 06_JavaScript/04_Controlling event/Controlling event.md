@@ -279,6 +279,74 @@
 
 2. input 이벤트 실습
 
+    - 사용자의 입력 값을 실시간으로 출력하기
+
+      ![alt text](./images/image_16.png)
+
+      ![alt text](./images/image_17.png)
+
+
+- 'currentTarget' 주의사항
+
+  - console.log()로 event 객체를 출력할 경우 currentTarget 키의 값은 null을 가짐
+
+  - currentTarget은 이벤트가 처리되는 동안에만 사용될 수 있기 때문
+
+  - 대신 console.log(event.currentTarget)을 사용하여 콘솔에서 확인 가능
+
+  - currentTarget 이후의 속성 값들은 **'target'을 참고해서 사용하기**
+
+    ![alt text](./images/image_18.png)
+
+
+3. click & input 이벤트 실습
+
+    - 사용자의 입력 값을 실시간으로 출력 '+' 버튼을 클릭하면 출력한 값의 CSS 스타일을 변경하기
+
+      ![alt text](./images/image_19.png)
+
+      ![alt text](./images/image_20.png)
+
+      ![alt text](./images/image_21.png)
+
+
+4. todo 실습
+
+    ![alt text](./images/image_22.png)
+
+    ![alt text](./images/image_23.png)
+
+    ![alt text](./images/image_24.png)
+
+    - todo 추가 기능 구현
+
+      1. 빈 문자열 입력 방지
+
+      2. 입력이 없을 경우 경고 대화상자를 띄움
+
+    ![alt text](./images/image_25.png)
+
+
+5. 로또 번호 생성기 실습
+
+    ![alt text](./images/image_26.png)
+
+    ![alt text](./images/image_27.png)
+
+    ![alt text](./images/image_28.png)
+
+
+- lodash
+
+  - 모듈성, 성능 및 추가 기능을 제공하는 JavaScript 유틸리티 라이브러리
+  
+  - array, object 등 자료구조를 다룰 때 사용하는 유용하고 간편한 함수들을 제공
+
+  - [https://lodash.com/](https://lodash.com/)
+
+  
+
+
 
 ### 이벤트 기본 동작 취소하기
 
