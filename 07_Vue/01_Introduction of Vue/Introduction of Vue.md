@@ -1,0 +1,229 @@
+# 2024년 10월 31일(수) 수업 내용 정리 - Introduction of Vue
+
+
+- Frontend Development
+
+  - Client-side frameworks
+  - SPA
+  - CSR
+
+
+- Vue
+
+  - What is Vue
+  - Component
+
+
+- Vue Application
+
+  - Vue Application 생성
+  - 반응형 상태
+  - Vue 기본 구조
+
+
+- Template Syntax
+
+
+
+- 참고
+
+  - ref 객체
+  - Ref Unwrap 주의사항
+  - SEO
+  - CSR과 SSR
+
+
+
+
+## Frontend Development
+
+- Frontend Development
+
+  - 웹 사이트와 웹 애플리케이션의 사용자 인터페이서(UI)와 사용자 경험(UX)을 만들고 디자인하는 것
+
+  - HTML, CSS, JavaScript 등을 활용하여 사용자가 직접 상호작용하는 부분을 개발
+
+  ![alt text](./images/image_00.png)
+
+
+
+### Client-side frameworks
+
+- Client-side frameworks
+
+  - 클라이언트 측에서 UI와 상호작용을 개발하기 위해 사용되는 JavaScript 기반 프레임워크
+
+    ![alt text](./images/image_01.png)
+
+
+- Client-side frameworks가 필요한 이유 1
+
+  - "웹에서 하는 일이 많아졌다"
+
+  - 단순히 무언가를 읽는 곳에서 → 무언가를 하는 곳으로
+
+  - 사용자는 이제 웹에서 문서만을 읽는 것이 아닌 음악을 스트리밍하고, 영화를 보고, 지구 반대편 사람들과 텍스트 및 영상 채팅을 통해 즉시 통신하고 있음
+
+  - 이처럼 현대적이고 복잡한 대화형 웹 사이트를 **"웹 애플리케이션(web applications)"**이라 부름
+
+  - JavaScript 기반의 Client-side frameworks가 등장함녀서 매우 동적인 대화형 애플리케이션을 훨씬 더 쉽게 구축할 수 있게 됨
+
+
+- Client-side frameworks가 필요한 이유 2
+
+  - "웹에서 하는 일이 많아졌다"
+
+  - "다루는 데이터가 많아졌다"
+
+  - 만약 친구가 이름을 변경했다면?
+
+  - 친구 목록, 타임라인, 스토리 등 친구의 이름이 출력되는 모든 곳이 함께 변경되어야 함
+
+  - 애플리케이션의 기본 데이터를 안정적으로 추적하고 업데이터(렌더링, 추가, 삭제 등)하는 도구가 필요
+
+  - **애플리케이션의 상태를 변경할 때마다 일치하도록 UI를 업데이트해야 함**
+
+    ![alt text](./images/image_02.png)
+
+
+- Vanilla JS만으로는 쉽지 않다.
+
+  ![alt text](./images/image_03.png)
+
+
+- Client-side frameworks의 필요성
+
+  1. 동적이고 반응적인 웹 애플리케이션 개발
+
+      - 실시간 데이터 업데이트
+
+  2. 코드 재사용성 증가
+
+      - 컴포넌트 기반 아키텍처
+      
+      - 모듈화된 코드 구조
+
+  3. 개발 생산성 향상
+
+      - 강력한 개발 도구 지원
+
+
+
+### SPA
+
+- Single Page Application(SPA)
+
+  - 단일 페이지에서 동작하는 웹 애플리케이션
+
+
+- SPA 작동 원리
+
+  - 최초 로드 시 필요한 모든 리소스 다운로드
+
+  - 이후 페이지 갱신에 대해 필요한 데이터만을 비동기적으로 전달 받아 화면의 필요한 부분만 동적으로 갱신
+
+    - AJAX와 같은 기술을 사용하여 필요한 데이터만 비동기적으로 로드
+
+    - 페이지 전체를 다시 로드할 필요 없이 필요한 데이터만 서버로부터 가져와서 화면에 표시
+
+  - JavaScript를 사용하여 클라이언트 측에서 동적으로 콘텐츠를 생성하고 업데이터
+
+    - CSR 방식
+
+
+
+### CSR
+
+- Client-side Rendering(CSR)
+
+  - 클라이언트에서 콘텐츠를 렌더링 하는 방식
+
+
+- CSR 작동 원리
+
+      1. 사용자가 웹사이트에 요청을 보냄
+
+      2. 서버는 최소한의 HTML과 JavaScript 파일을 클라이언트로 전송
+
+      3. 클라이언트는 HTML과 JavaScript를 다운로드 받음
+
+      4. 브라우저가 JavaScript를 실행하여 동적으로 페이지 콘텐츠를 생성
+
+      5. 필요한 데이터는 API를 통해 서버로부터 비동기적으로 가져옴
+
+  
+- CSR 작동 예시
+
+  ![alt text](./images/image_04.png)
+
+  1. 클라이언트는 서버로부터 최소한의 HTML 페이지와 해당 페이지에 필요한 JavaScript 응답 받음
+
+  2. 그런 다음 클라이언트 측에서 JavaScript를 사용하여 DOM을 업데이트하고 페이지를 렌더링
+
+  3. 이후 서버는 더 이상 HTML을 제공하지 않고 요청에 필요한 데이터만 응답
+
+  - Google Maps, Facebook, Instagram 등의 서비스에서 페이지 갱신 시 새로고침이 없는 이유
+
+
+- SPA와 CSR의 장점
+
+  1. 빠른 페이지 전환
+
+      - 페이지가 처음 로드된 후에는 필요한 데이터만 가져오면 되고 JavaScript는 전체 페이지를 새로 고칠 필요 없이 페이지의 일부를 다시 렌더링할 수 있기 때문
+
+      - 서버로 전송되는 데이터의 양을 최소화 (서버 부하 방지)
+
+  2. 사용자 경험
+
+      - 새로고침이 발생하지 않아 네이티브 앱과 유사한 사용자 경험을 제공
+
+  3. Frontend와 Backend의 명확한 분리
+
+      - Frontend는 UI 렌더링 및 사용자 상호 작용 처리를 담당 & Backend는 데이터 및 API 제공을 담당
+
+      - 대규모 애플리케이션을 더 쉽게 개발하고 유지 관리 가능
+
+
+- SPA와 CSR의 단점
+
+  1. 느린 초기 로드 속도
+
+      - 전체 페이지를 보기 전에 약간의 지연을 느낄 수 있음
+
+      - JavaScript가 다운로드, 구문 분석 및 실행될 때까지 페이지가 완전히 렌더링 되지 않기 때문
+
+  2. SEO(검색 엔진 최적화) 문제
+
+      - 페이지를 나중에 그려 나가는 것이기 때문에 검색에 잘 노출되지 않을 수 있음
+
+      - 검색엔진 입장에서 HTML을 읽어서 분석해야 하는데 아직 콘텐츠가 모두 존재하지 않기 때문
+
+
+## Vue
+
+### What is Vue
+
+### Component
+
+
+## Vue Application
+
+### Vue Application 생성
+
+### 반응형 상태
+
+### Vue 기본 구조
+
+
+## Template Syntax
+
+
+## 참고
+
+### ref 객체
+
+### Ref Unwrap 주의사항
+
+### SEO
+
+### CSR과 SSR
