@@ -579,7 +579,7 @@
 
   - axios로 처리한 비동기 로직은 항상 promise 객체를 반환
 
-  - 즉, then과 catch는 모두 항상 promise 객체를 반환
+  - 즉, **then과 catch는 모두 항상 promise 객체를 반환**
 
     - 계속해서 **chaining**을 할 수 있음
 
