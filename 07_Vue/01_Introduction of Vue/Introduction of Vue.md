@@ -367,20 +367,259 @@
 
     - 구조분해할당 문법으로 Vue 객체의 createApp 함수를 할당
 
+      ![alt text](./images/image_12.png)
+
+    - 모든 Vue 애플리케이션은 createApp 함수로 새 Application instance를 생성하는 것으로 시작함
+
+      ![alt text](./images/image_13.png)
+
+  - Root Component
+
+    - createApp 함수에는 객체(컴포넌트)가 전달됨
+
+    - 모든 App에는 다른 컴포넌트들을 하위 컴포넌트로 포함할 수 있는 Root(최상위) 컴포넌트가 필요(현재는 단일 컴포넌트)
+
+      ![alt text](./images/image_14.png)
+
+  - Mounting the App (앱 연결)
+
+    - HTML 요소에 Vue Application instance를 탑재(연결)
+
+    - 각 앱 인스턴스에 대해 mount()는 한 번만 호출할 수 있음
+
+      ![alt text](./images/image_15.png)
+
+
+      
+
 ### 반응형 상태
+
+- ref()
+
+  - 반응형 상태(데이터)를 선언하는 함수(Declaring Reactive State)
+
+
+- ref 함수
+
+  - .value속성이 있는 ref 객체로 래핑(wrapping)하여 반환하는 함수
+
+  - ref로 선언된 변수의 값이 변경되면, 해당 값을 사용하는 템플릿에서 자동으로 업데이트
+
+  - 인자는 어떠한 타입도 가능
+
+    ![alt text](./images/image_16.png)
+
+  - 템플릿의 참조에 접근하려면 setup 함수에서 선언 및 반환 필요
+
+  - 편의상 템플릿에서 ref를 사용할 때는 .value를 작성할 필요 없음(automatically unwrapped)
+
+    ![alt text](./images/image_17.png)
+
+
+- ref()
+
+  - 반응형 상태(데이터)를 선언하는 함수
+
+  - 반응형을 가지는 참조 변수를 만드는 것(ref === reactive reference)
+
+
 
 ### Vue 기본 구조
 
+- Vue 기본 구조
+
+  - createApp()에 전달되는 객체는 Vue 컴포넌트
+
+  - 컴포넌트의 상태는 setup() 함수 내에서 선언되어야 하며 **객체를 반환해야 함**
+
+    ![alt text](./images/image_18.png)
+
+
+- 템플릿 렌더링
+
+  - 반환된 객체의 속성은 템플릿에서 사용할 수 있음
+
+  - Mustache syntax(콧수염 구문)을 사용하여 메시지 값을 기반으로 동적 텍스트를 렌더링
+
+    ![alt text](./images/image_19.png)
+
+  - 콘텐츠는 식별자나 경로에만 국한되지 않으며 유효한 JavaScript 표현식을 사용할 수 있음
+
+    ![alt text](./images/image_20.png)
+
+
+- Event Listeners in Vue
+
+  - 'v-on' directive를 사용하여 DOM 이벤트를 수신할 수 있음
+
+    - 자세한 directive 학습은 다음 시간에 진행
+
+  - 함수 내에서 반응형 변수를 변경하여 구성 요소 상태를 업데이트
+
+    ![alt text](./images/image_21.png)
+
+
+
 
 ## Template Syntax
+
+- Template Syntax
+
+  - DOM을 기본 구성 요소 인스턴스의 데이터에 **선언적으로 바인딩(Vue Instance와 DOM을 연결)**할 수 있는 HTML 기반 **템플릿 구문(확장된 문법 제공)**을 사용
+
+
+- Template Syntax 종류
+
+      1. Text Interpolation
+
+      2. Raw HTML
+
+      3. Attribute Bindings
+
+      4. JavaScript Expressions
+
+
+1. Text Interpolation
+
+    ![alt text](./images/image_22.png)
+
+    - 데이터 바인딩의 가장 기본적인 형태
+
+    - 이중 중괄호 구문 (콧수염 구문)을 사용
+
+    - 콧수염 구문은 해당 구성 요소 인스턴스의 msg 속성 값으로 대체
+
+    - msg 속성이 변경될 때마다 업데이트 됨
+
+
+2. Raw HTML
+
+    ![alt text](./images/image_23.png)
+
+    - 콧수염 구문은 데이터를 일반 텍스트로 해석하기 때문에 실제 HTML을 출력하려면 v-html을 사용해야 함
+
+
+3. Attribute Bindings
+
+    ![alt text](./images/image_24.png)
+
+    - 콧수염 구문을 HTML 속성 내에서 사용할 수 없기 때문에 v-bind를 사용
+
+    - HTML의 id 속성 값을 vue의 dynamicId 속성과 동기화 되도록 함
+
+    - 바인딩 값이 null이나 undefined인 경우 렌더링 요소에서 제거됨
+
+
+4. JavaScript Expressions
+
+    ![alt text](./images/image_25.png)
+
+    - Vue는 모든 데이터 바인딩 내에서 JavaScript 표현식의 모든 기능을 지원
+
+    - Vue 템플릿에서 JavaScript 표현식을 사용할 수 있는 위치
+
+      1. 콧수염 구문 내부
+
+      2. 모든 directive의 속성 값("v-"로 시작하는 특수 속성)
+
+
+- Expressions 주의 사항
+
+  - 각 바인딩에는 하나의 단일 표현식만 포함될 수 있음
+    
+    - 표현식은 값으로 평가할 수 있는 코드 조각(return 뒤에 사용할 수 있는 코드여야 함)
+
+  - 작동하지 않는 경우
+
+    ![alt text](./images/image_26.png)
+
 
 
 ## 참고
 
 ### ref 객체
 
+- ref 객체가 필요한 이유
+
+  - 일반적인 변수가 아닌 객체 데이터 타입으로 사용하는 이유는?
+
+  - Vue는 템플릿에서 ref를 사용하고 나중에 ref의 값을 변경하면 자동으로 변경 사항을 감지하고 그에 따라 DOM을 업데이트 함("의존성 추적 기반의 반응형 시스템")
+
+  - Vue는 렌더링 중에 사용된 모든 ref를 추적하며, 나중에 ref가 변경되면 이를 추적하는 구성 요소에 대해 다시 렌더링
+
+  - 이를 위해서 참조 자료형의 객체 타입으로 구현한 것
+
+    - JavaScript에서는 일반 변수의 접근 또는 변형을 감지할 방법이 없기 때문
+
+    - [https://vuejs.org/guide/essentials/reactivity-fundamentals.html#why-refs](https://vuejs.org/guide/essentials/reactivity-fundamentals.html#why-refs)
+
+
+
+
+- 반응형 변수 vs 일반 변수
+
+  ![alt text](./images/image_27.png)
+
+
+
 ### Ref Unwrap 주의사항
+
+- 템플릿에서의 unwrap 시 주의사항
+
+  - "템플릿에서의 unwrap은 ref가 최상위 속성인 경우에만 적용가능"
+
+  - 다음 표현식은 어떻게 출력될까?
+
+    ![alt text](./images/image_28.png)
+
+  - object는 최상위 속성이지만 object.id는 그렇지 않음
+
+  - 표현식을 평가할 때 object.id가 unwrap 되지 않고 ref 객체로 남아 있기 때문
+
+  - 이 문제를 해결하기 위해서는 "id를 최상위 속성으로 분해"해야 함
+
+    ![alt text](./images/image_29.png)
+
+  - 단, ref가 "{{}}"의 최종 평가 값인 경우는 unwrap 가능
+
+    ![alt text](./images/image_30.png)
+
+
 
 ### SEO
 
+- SEO(Search Engine Optimization)
+
+  - google, bing과 같은 검색 엔진 등에 내 서비스나 제품 등이 효율적으로 검색 엔진에 노출되도록 개선하는 과정을 일컫는 작업
+
+  - 정보의 대상은 주로 HTML에 작성된 내용
+
+  - 검색
+
+    - 각 사이트가 운용하는 검색 엔진에 의해 이루어지는 작업
+
+  - 검색 엔진
+
+    - 웹 상에 존재하는 가능한 모든 정보들을 긁어 모으는 방식으로 동작
+
+  - 최근에는 SPA, 즉 CSR로 구성된 서비스의 비중이 증가
+
+  - SPA 서비스도 검색 대상으로 넓히기 위해 JS를 지원하는 방식으로 발전하는 중
+
+
+
 ### CSR과 SSR
+
+- CSR & SSR
+
+  - CSR과 SSR은 흑과 백이 아님
+
+  - 애플리 케이션의 목적, 규모, 성능 및 SEO 요구 사항에 따라 달라질 수 있음
+
+    - 내 서비스에 적합한 렌더링 방식을 적절하게 활용할 수 있어야 함
+
+  - SPA 서비스에서도 SSR을 지원하는 Framework가 발전하고 있음
+
+    - Vue의 Nuxt.js
+
+    - React의 Next.js
