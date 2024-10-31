@@ -199,16 +199,173 @@
       - 검색엔진 입장에서 HTML을 읽어서 분석해야 하는데 아직 콘텐츠가 모두 존재하지 않기 때문
 
 
+- SPA vs MPA / CSR vs SSR
+
+      - Multi Page Application (MPA)
+
+        - 여러 개의 HTML 파일이 서버로부터 각각 로드
+
+        - 사용자가 다른 페이지로 이동할 때마다 새로운 HTML 파일이 로드됨
+
+      - Server-side Rendering (SSR)
+
+        - 서버에서 화면을 렌더링 하는 방식
+
+        - 모든 데이터가 담긴 HTML을 서버에서 완성 후 클라이언트에게 전달
+
+
+
 ## Vue
 
 ### What is Vue
 
+
+  ![alt text](./images/image_05.png)
+
+- 사용자 인터페이스를 구축하기 위한 JavaScript 프레임워크
+
+
+- What is Vue?
+
+  - Evan You에 의해 발표(2014)
+
+    - 학사 - 미술, 미술사 / 석사 - 디자인 & 테크놀로지 전공
+    
+    - Angular 개발팀 출신
+
+  - 최신 버전은 "Vue 3" (2024)
+
+    - [https://vuejs.org/](https://vuejs.org/)
+
+  - Vue 2 문서에 접속하지 않도록 주의
+
+
+- Vue를 학습하는 이유
+
+  1. 낮은 학습 곡선
+
+      - 간결하고 직관적인 문법을 가지고 있어 빠르게 익힐 수 있음
+
+      - 잘 정리된 문서를 기반으로 어렵지 않게 학습할 수 있음
+
+  2. 확장성과 생태계
+
+      - 다양한 플러그인과 라이브러리를 제공하는 높은 확장성
+
+      - 전세계적으로 활성화된 커뮤니티를 기반으로 많은 개발자들이 새로운 기능을 개발하고 공유하고 있음
+
+  3. 유연성 및 성능
+
+      - 작은 규모의 프로젝트부터 대규모의 애플리케이션까지 다양한 프로젝트에 적합
+
+  4. 가장 주목받는 Client-side framework
+
+      ![alt text](./images/image_06.png)
+
+
+- SSAFY에서의 Vue
+
+  - Vue는 React나 Angular 대비 간결하고 직관적인 문법을 가지고 있어 학습이 상대적으로 원활
+
+    - 짧은 시간 내에 효율적으로 결과물을 만들어 낼 수 있음
+
+  - 거대하고 활발한 커뮤니티를 가지고 있어 풍부한 문서, 튜토리얼, 예제 및 다양한 리소스를 공유 받을 수 있음
+
+    - 최신 업데이트 및 트렌드를 공유함으로써 지속적인 학습을 촉진
+
+
+- Vue 체험하기
+
+  ![alt text](./images/image_07.png)
+
+  - 결과
+
+  ![alt text](./images/image_08.png)
+
+
+- Vue의 2가지 핵심 기능
+
+  1. 선언적 렌더링 (Declarative Rendering)
+
+      - 표준 HTML을 확장하는 Vue "템플릿 구문"을 사용하여 JavaScript 상태(데이터)를 기반으로 화면에 출력될 HTML을 선언적으로 작성
+
+  2. 반응성 (Reactivity)
+
+      - JavaScript 상태 변경을 추적하고, 변경사항이 발생하면 자동으로 DOM을 업데이트
+
+
+- Vue의 주요 특징 정리
+
+  1. 반응형 데이터 바인딩
+
+      - 데이터 변경 시 자동 UI 업데이트
+
+  2. 컴포넌트 기반 아키텍처
+
+      - 재사용 가능한 UI 조각
+
+  3. 간결한 문법과 직관적인 API
+
+      - 낮은 학습 곡선
+
+      - 높은 가독성
+
+  4. 유연한 스케일링
+
+      - 작은 프로젝트부터 대규모 애플리케이션까지 적합
+
+
+
 ### Component
+
+- Component
+
+  - 재사용 가능한 코드 블록
+
+
+- Component 특징
+
+  - UI를 독립적이고 재사용 가능한 일부분으로 분할하고 각 부분을 개별적으로 다룰 수 있음
+
+  - 자연스럽게 애플리케이션은 중첩된 Component의 트리 형태로 구성됨
+
+    ![alt text](./images/image_09.png)
+
+
+- Component 예시
+
+  - 웹 서비스는 여러 개의 Component로 이루어져 있음
+
+    ![alt text](./images/image_10.png)
+
+
 
 
 ## Vue Application
 
+- Vue를 사용하는 방법
+
+  1. 'CDN' 방식
+
+  2. 'NPM' 설치 방식
+
+      - CDN 방식 이후 진행
+
+
+
 ### Vue Application 생성
+
+- Vue Application 생성하기
+
+  - CDN 작성
+
+    ![alt text](./images/image_11.png)
+
+  - Application instance
+
+    - CDN에서 Vue를 사용하는 경우 Vue 객체를 불러오게 됨
+
+    - 구조분해할당 문법으로 Vue 객체의 createApp 함수를 할당
 
 ### 반응형 상태
 
