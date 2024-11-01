@@ -508,8 +508,26 @@
   - [https://vuejs.org/api/built-in-directives.html#v-model](https://vuejs.org/api/built-in-directives.html#v-model)
 
 
+
 ## 참고
 
 ### 접두어 $
 
+- '$' 접두어가 붙은 변수
+
+  - Vue 인스턴스 내에서 제공되는 내부 변수
+
+  - 사용자가 지정한 반응형 변수나 메서드와 구분하기 위함
+
+  - 주로 Vue 인스턴스 내부 상태를 다룰 때 사용
+
+
 ### IME
+
+- IME(Input Method Editor)
+
+  - 사용자가 입력 장치에서 기본적으로 사용할 수 없는 문자(비영어권 언어)를 입력할 수 있도록 하는 운영 체제 구성 프로그램
+
+  - 일반적으로 키보드 키보다 자모가 더 많은 언어에서 사용해야 함
+
+  - IME가 동작하는 방식과 Vue의 양방향 바인딩(v-model) 동작 방식이 상충하기 때문에 한국어 입력 시 예상대로 동작하지 않았던 것
