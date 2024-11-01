@@ -324,20 +324,188 @@
   - [https://vuejs.org/api/built-in-directives.html#v-bind](https://vuejs.org/api/built-in-directives.html#v-bind)
 
 
+
+
 ## Event Handling
+
 
 ### v-on
 
+- v-on
+
+  - DOM 요소에 이벤트 리스너를 연결 및 수신
+
+
+- v-on 구성
+
+  ![alt text](./images/image_24.png)
+
+  ![alt text](./images/image_25.png)
+
+  - handler 종류
+
+    1. Inline handlers : 이벤트가 트리거 될 때 실행될 JavaScript 코드
+
+    2. Method handlers : 컴포넌트에 정의된 메서드 이름
+
+  - v-on shorthand (약어)
+
+    - '@'
+
+      ![alt text](./images/image_26.png)
+
+
+#### 1.Inline handlers
+
+- Inline handlers는 주로 간단한 상황에 사용
+
+  ![alt text](./images/image_27.png)
+
+
+- Inline Handlers에서의 메서드 호출
+
+  - 메서드 이름에 직접 바인딩하는 대신 Inline Handlers에서 메서드를 호출할 수도 있음
+
+  - 이렇게 하면 기본 이벤트 대신 사용자 지정 인자를 전달할 수 있음
+
+    ![alt text](./images/image_28.png)
+
+
+- Inline Handlers에서의 event 인자에 접근하기
+
+  - Inline Handlers에서 원래 DOM 이벤트에 접근하기
+
+  - $event 변수를 사용하여 메서드에 전달
+
+    ![alt text](./images/image_29.png)
+
+
+#### 2. Method Handlers
+
+- Inline handlers로 불가능한 대부분의 상황에서 사용
+
+  ![alt text](./images/image_30.png)
+
+- Method Handlers는 이를 트리거하는 기본 DOM Event 객체를 자동으로 수신
+
+  ![alt text](./images/image_31.png)
+
+
+
 ### Modifiers
+
+- Event Modifiers
+
+  - Event Modifiers를 활용해 event.preventDefault()와 같은 구문을 메서드에서 작성하지 않도록 함
+
+  - stop, prevent, self 등 다양한 modifiers를 제공
+
+  - 메서드는 DOM 이벤트에 대한 처리보다는 데이터에 관한 논리를 작성하는 것에 집중할 것
+
+    ![alt text](./images/image_32.png)
+
+
+- Key Modifiers
+
+  - 키보드 이벤트를 수신할 때 특정 키에 관한 별도 modifiers를 사용할 수 있음
+
+  - 예시
+
+    - key가 Enter 일 때만 onSubmit 이벤트를 호출하기
+
+      ![alt text](./images/image_33.png)
+
+
+- v-on 종합
+
+  - [https://vuejs.org/api/built-in-directives.html#v-on](https://vuejs.org/api/built-in-directives.html#v-on)
+
+
 
 
 ## Form Input Bindings
 
+- Form Input Bindings (폼 입력 바인딩)
+
+  - form을 처리할 때 사용자가 input에 입력하는 값을 실시간으로 JavaScript 상태에 동기화해야 하는 경우 (**양방향 바인딩**)
+
+  - 양방향 바인딩 방법
+
+    1. v-bind와 v-on을 함께 사용
+
+    2. v-model 사용
+
+
+
 ### v-bind with v-on
+
+#### 1. v-bind와 v-on을 함께 사용
+
+1. v-bind을 사용하여 input 요소의 value 속성 값을 입력 값으로 사용
+
+2. v-on을 사용하여 input 이벤트가 발생할 때마다 input 요소의 value 값을 별도 반응형 변수에 저장하는 핸들러를 호출
+
+  ![alt text](./images/image_34.png)
+
+  ![alt text](./images/image_35.png)
+
+
 
 ### v-model
 
+- v-model
+
+  - form input 요소 또는 컴포넌트에서 양방향 바인딩을 만듦
+
+
+#### 2. v-model 사용
+
+- 사용자 입력 데이터와 반응형 변수를 실시간 동기화
+
+  ![alt text](./images/image_36.png)
+
+- IME가 필요한 언어(한국어, 중국어, 일본어 등)의 경우 v-model이 제대로 업데이트되지 않음
+
+- 해당 언어에 대해 올바르게 응답하려면 v-bind와 v-on 방법을 사용해야 함
+
+  ![alt text](./images/image_37.png)
+
+
+
 ### v-model 활용
+
+- v-model과 다양한 입력(input) 양식
+
+  - v-model은 단순 Text input 뿐만 아니라 Checkbox, Radio, Select 등 다양한 타입의 사용자 입력 방식과 함께 사용 가능
+
+
+- Checkbox 활용
+
+  1. 단일 체크박스와 boolean 값 활용
+
+    ![alt text](./images/image_38.png)
+
+  2. 여러 체크박스와 배열 활용
+
+    - 해당 배열에는 현재 선택된 체크박스의 값이 포함됨
+
+    ![alt text](./images/image_39.png)
+
+    ![alt text](./images/image_40.png)
+
+
+- Select 활용
+
+  - select에서 v-model 표현식의 초기 값이 어떤 option과도 일치하지 않는 경우 select 요소는 "선택되지 않은(unselected)" 상태로 렌더링 됨
+
+    ![alt text](./images/image_41.png)
+
+    ![alt text](./images/image_42.png)
+
+
+- v-model 종합
+
+  - [https://vuejs.org/api/built-in-directives.html#v-model](https://vuejs.org/api/built-in-directives.html#v-model)
 
 
 ## 참고
