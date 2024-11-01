@@ -216,7 +216,112 @@
 
   ![alt text](./images/image_14.png)
 
+
+
 ### Class and Style Bindings
+
+- Class and Style Bindings (클래스와 스타일 바인딩)
+
+  - class와 style은 모두 HTML 속성이므로 다른 속성과 마찬가지로 v-bind를 사용하여 동적으로 문자열 값을 할당할 수 있음
+
+  - Vue는 class및 style 속성 값을 v-bind로 사용할 때 **객체**또는 **배열**을 활용하여 작성할 수 있도록 함
+
+  - 단순히 문자열 연결을 사용하여 이러한 값을 생성하는 것은 번거롭고 오류가 발생하기가 쉽기 때문
+
+
+- Class and Style Bindings가 가능한 경우
+
+      1. Binding HTML Classes
+
+        1.1 Binding to Objects
+
+        1.2 Binding to Arrays
+
+      2. Binding Inline Styles
+
+        2.1 Binding to Objects
+
+        2.2 Binding to Arrays
+
+
+#### 1.1 Binding HTML Classes - Binding to Objects
+
+- 객체를 :class에 전달하여 클래스를 동적으로 전환할 수 있음
+
+- 예시 1
+
+  - isActive의 Boolean 값에 의해 active 클래스의 존재가 결정됨
+
+    ![alt text](./images/image_15.png)
+
+- 객체에서 더 많은 필드를 포함하여 여러 클래스를 전환할 수 있음
+
+- 예시 2
+
+  - :class directive를 일반 클래스 속성과 함께 사용 가능
+
+    ![alt text](./images/image_16.png)
+
+- 반드시 inline 방식으로 작성하지 않아도 됨
+
+- 반응형 변수를 활용해 객체를 한번에 작성하는 방법
+
+  ![alt text](./images/image_17.png)
+
+
+#### 1.2 Binding HTML Classes - Binding to Arrays
+
+- :class를 배열에 바인딩하여 클래스 목록을 적용할 수 있음
+
+- 예시 1
+
+  ![alt text](./images/image_18.png)
+
+- 배열 구문 내에서 객체 구문을 사용하는 경우
+
+- 예시 2
+
+  ![alt text](./images/image_19.png)
+
+
+#### 2.1 Binding Inline Styles - Binding to Objects
+
+- :style은 JavaScript 객체 값에 대한 바인딩을 지원(HTML style 속성에 해당)
+
+- 예시 1
+
+  ![alt text](./images/image_20.png)
+
+- 실제 CSS에서 사용하는 것처럼 :style은 kebab-cased 키 문자열도 지원(단, camelCase 작성을 권장)
+
+- 예시 2
+
+  ![alt text](./images/image_21.png)
+
+- 반드시 inline 방식으로 작성하지 않아도 됨
+
+- 반응형 변수를 활용해 객체를 한번에 작성하는 방법
+
+- 예시 3
+
+  ![alt text](./images/image_22.png)
+
+
+
+#### 2.2 Binding Inline Styles - Binding to Arrays
+
+- 여러 스타일 객체를 배열에 작성해서 :style을 바인딩할 수 있음
+
+- 작성한 객체를 병합되어 동일한 요소에 적옹
+
+- 예시 1
+
+  ![alt text](./images/image_23.png)
+
+
+- v-bind 종합
+
+  - [https://vuejs.org/api/built-in-directives.html#v-bind](https://vuejs.org/api/built-in-directives.html#v-bind)
 
 
 ## Event Handling
