@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>냥냥펀치</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const URL = 'https://api.thecatapi.com/v1/images/search'
+    const btn = document.querySelector('button')
+
+    const getCats = function () {
+      axios({
+        method: 'get',
+        url: URL
+      })
+        .then((response) => {
+          // console.log(response)
+          // console.log(response.data)
+          console.log(response.data[0].url)
+          // 1. 이미지 주소 저장
+          const imgUrl = response.data[0].url
+          // 2. img 태그 생성
+          const imgTag = document.createElement('img')
+          // 3. img태그의 src 속성 값 설정
+          imgTag.setAttribute('src', imgUrl)
+          // 4. body의 자식 태그로 img 태그 추가
+          document.body.appendChild(imgTag)
+        })
+        .catch((error) => {
+          console.log(error)
+          console.log('실패했다옹')
+        })
+      console.log('야옹야옹')
+    }
+
+    btn.addEventListener('click', getCats)
+  </script>
+</body>
+
+</html>
