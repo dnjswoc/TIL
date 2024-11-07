@@ -300,17 +300,152 @@
 
 
 
+- 이벤트 발신 및 수신하기
+
+  - ParentChild에서 someEvent라는 이름의 사용자 정의 이벤트를 발신
+
+    ![alt text](./images/image_28.png)
+
+  - ParentChild의 부모 Parent는 v-on을 사용하여 발신된 이벤트를 수신
+
+  - 수신 후 처리할 로직 및 콜백함수 호출
+
+    ![alt text](./images/image_29.png)
+
+  - 이벤트 수신 결과
+
+    ![alt text](./images/image_30.png)
+
+
+
 ### emit 이벤트 선언
+
+- emit 이벤트 선언
+
+  - defineEmits()를 사용하여 발신할 이벤트를 선언
+
+  - props와 마찬가지로 defineEmits()에 작성하는 인자의 데이터 타입에 따라 선언 방식이 나뉨 (배열, 객체)
+
+  - defineEmits()는 $emit 대신 사용할 수 있는 동등한 함수를 반환 (script에서는 $emit 메서드를 접근할 수 없기 때문)
+
+    ![alt text](./images/image_31.png)
+
+
+
+- 이벤트 선언 활용
+
+  - 이벤트 선언 방식으로 추가 버튼 작성 및 결과 확인
+
+    ![alt text](./images/image_32.png)
+
+
+
 
 ### 이벤트 전달
 
+- 이벤트 인자 (Event Arguments)
+
+  - 이벤트 발신 시 추가 인자를 전달하여 값을 제공할 수 있음
+
+
+
+- 이벤트 인자 전달 활용
+
+  - ParentChild에서 이벤트를 발신하여 Parent로 추가 인자 전달하기
+
+    ![alt text](./images/image_33.png)
+
+  - ParentChild에서 발신한 이벤트를 Parent에서 수신
+
+    ![alt text](./images/image_34.png)
+
+  - 추가 인자 전달 확인
+
+    ![alt text](./images/image_35.png)
+
+
+
 ### 이벤트 세부사항
 
+- Event Name Casing
+
+  - 선언 및 발신 시 (→ camelCase)
+
+    ![alt text](./images/image_36.png)
+
+  - 부모 컴포넌트에서 수신 시 (→ kebab-case)
+
+    ![alt text](./images/image_37.png)
+
+
+
 ### emit 이벤트 활용
+
+- emit 이벤트 실습
+
+  - 최하단 컴포넌트 ParentGrandChild에서 Parent 컴포넌트의 name 변수 변경 요청하기
+
+    ![alt text](./images/image_38.png)
+
+
+- emit 이벤트 실습 구현
+
+  - ParentGrandChild에서 이름 변경을 요청하는 이벤트 발신
+
+    ![alt text](./images/image_39.png)
+
+    ![alt text](./images/image_40.png)
+
+  - 이벤트 수신 후 이름 변경을 요청하는 이벤트 발신
+
+    ![alt text](./images/image_41.png)
+
+    ![alt text](./images/image_42.png)
+
+  - 이벤트 수신 후 이름 변수 변경 메서드 호출
+
+  - 해당 변수를 props으로 받는 모든 곳에서 자동 업데이트
+
+    ![alt text](./images/image_43.png)
+
+  - 버튼 클릭 후 결과 확인
+
+    ![alt text](./images/image_44.png)
+
+
 
 
 ## 참고
 
 ### 정적 & 동적 props 주의사항
 
+- 정적 & 동적 props 주의사항
+
+  - 첫 번째는 정적 props로 문자열 "1"을 전달
+
+  - 두 번째는 동적 props로 숫자 1을 전달
+
+    ![alt text](./images/image_45.png)
+
+
+
 ### Props & Emit 객체 선언 문법
+
+- Props 선언 시 "객체 선언 문법"을 권장하는 이유
+
+  - 컴포넌트를 가독성이 좋게 문서화하는 데 도움이 되며, 다른 개발자가 잘못된 유형을 전달할 때에 브라우저 콘솔에 경고를 출력하도록 함
+  
+  - 추가로 props에 대한 **유효성 검사**로써 활용 가능
+
+    ![alt text](./images/image_46.png)
+
+    - [https://vuejs.org/guide/components/props.html#prop-validation](https://vuejs.org/guide/components/props.html#prop-validation)
+
+
+- emit 이벤트도 "객체 선언 문법"으로 작성 가능
+
+  - emit 이벤트 또한 객체 구문으로 선언된 경우 유효성을 검사할 수 있음
+
+    ![alt text](./images/image_47.png)
+
+    - [https://vuejs.org/guide/components/events.html#events-validation](https://vuejs.org/guide/components/events.html#events-validation)
