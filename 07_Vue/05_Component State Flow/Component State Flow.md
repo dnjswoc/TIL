@@ -189,14 +189,116 @@
 
 ### Props 세부사항
 
+- Props 세부사항
+
+  1. Props Name Casing (Props 이름 컨벤션)
+
+  2. Static Props 와 Dynamic Props
+
+
+#### 1. Props Name Casing
+
+- 자식 컴포넌트로 전달 시 (→ kebab-case)
+
+  ![alt text](./images/image_16.png)
+
+- 선언 및 템플릿 참조 시 (→ camelCase)
+
+  ![alt text](./images/image_17.png)
+
+
+#### 2. Static props & Dynamic props
+
+- 지금까지 작성한 것은 Static(정적) props
+
+- v-bind를 사용하여 **동적으로 할당된 props**를 사용할 수 있음
+
+1. Dynamic props 정의
+
+    ![alt text](./images/image_18.png)
+
+
+2. Dynamic props 선언 및 출력
+
+    ![alt text](./images/image_19.png)
+
+3. Dynamic props 출력 확인
+
+    ![alt text](./images/image_20.png)
+
+
+
 ### Props 활용
+
+- 다른 디렉티브와 함께 사용
+
+  - v-for와 함께 사용하여 반복되는 요소를 props로 전달하기
+
+  - ParentItem 컴포넌트 생성 및 Parent의 하위 컴포넌트로 등록
+
+    ![alt text](./images/image_21.png)
+
+  - 데이터 정의 및 v-for 디렉티브의 반복 요소로 활용
+
+  - 각 반복 요소를 props로 내려 보내기
+
+    ![alt text](./images/image_22.png)
+
+  - props 선언 및 출력 결과 확인
+
+    ![alt text](./images/image_23.png)
+
+
 
 
 ## Component Events
 
 ### Emit
 
+- ![alt text](./images/image_24.png)
+
+  - 부모는 자식에게 데이터를 전달(Pass Props)하며, 자식은 자신에게 일어난 일을 부모에게 알림(Emit event)
+
+  - **부모가 props 데이터를 변경하도록 소리쳐야 한다.**
+
+
+- $emit()
+
+  - 자식 컴포넌트가 이벤트를 발생시켜 부모 컴포넌트로 데이터를 전달하는 역할의 메서드
+
+  - **'$** 표기는 Vue 인스턴스의 내부 변수들을 가리킴
+
+  - Lifecycle hooks, 인스턴스 메서드 등 내부 특정 속성에 접근할 때 사용
+
+
+
+- emit 메서드 구조
+
+  ![alt text](./images/image_25.png)
+
+  - event
+
+    - 커스텀 이벤트 이름
+
+  - args
+
+    - 추가 인자
+
+
+
 ### 이벤트 발신 및 수신
+
+- 이벤트 발신 및 수신 (Emitting and Listening to Events)
+
+  - $emit을 사용하여 템플릿 표현식에서 직접 사용자 정의 이벤트를 발신
+
+    ![alt text](./images/image_26.png)
+
+  - 그런 다음 부모는 v-on을 사용하여 수신할 수 있음
+
+    ![alt text](./images/image_27.png)
+
+
 
 ### emit 이벤트 선언
 
