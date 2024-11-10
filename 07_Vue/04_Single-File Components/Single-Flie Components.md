@@ -64,7 +64,7 @@
 
 - Single-File Components(SFC)
 
-  - 컴포넌트의 템플릿, 로직 및 스타일을 하나의 파일로 묶어낸 특수한 파일 형식(*.vue 파일)
+  - 컴포넌트의 템플릿(HTML), 로직(JavaScript) 및 스타일(CSS)을 하나의 파일로 묶어낸 특수한 파일 형식(*.vue 파일)
 
 
 - SFC 파일 예시
@@ -91,18 +91,18 @@
 
 - \<template> 블록
 
-  - 각 *.vue 파일은 최상위 \<template> 블록을 하나만 포함할 수 있음
+  - 각 *.vue 파일은 **최상위 \<template> 블록을 하나만 포함**할 수 있음
 
     ![alt text](./images/image_04.png)
 
 
 - \<script steup> 블록
 
-  - 각 *.vue 파일은 \<script setup> 블록을 하나만 포함할 수 있음(일반 \<script> 제외)
+  - 각 *.vue 파일은 **\<script setup> 블록을 하나만 포함**할 수 있음(일반 \<script> 제외)
 
   - 컴포넌트의 setup() 함수로 사용되며 컴포넌트의 각 인스턴스에 대해 실행
 
-  - 변수 및 함수는 동일한 컴포넌트의 템플릿에서 자동으로 사용 가능
+  - 변수 및 함수는 **동일한 컴포넌트의 템플릿에서 자동으로 사용 가능(return 필요 없음)**
 
 
 - \<style scoped> 블록
@@ -496,7 +496,7 @@
 
   - 실제 DOM에 직접 접근하지 말 것
 
-    - JavaScript에서 사용하는 DOM 접근 관련 메서드 사용 금지
+    - JavaScript에서 사용하는 **DOM 접근 관련 메서드 사용 금지**
 
     - querySelector, createElement, addEventListener 등
 
