@@ -45,7 +45,7 @@ const routeUpdate = function () {
 }
 
 onBeforeRouteUpdate((to, from) => {
-  userId.value = to.params.Id
+  userId.value = to.params.id
 })
 
 
