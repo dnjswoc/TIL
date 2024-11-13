@@ -590,9 +590,82 @@
     ![alt text](./images/image_54.png)
 
 
+- 토큰이 필요한 요청
+
+  1. 게시글 전체 목록 조회 시
+
+  2. 게시글 작성 시
+  
+
+- 게시글 전체 목록 조회 with token
+
+  - 게시글 전체 목록 조회 요청 함수 getArticles에 token 추가
+
+    ![alt text](./images/image_55.png)
+
+  - 401 상태 코드가 사라지고 게시글이 정상적으로 출력되는 것을 확인
+
+    ![alt text](./images/image_56.png)
+
+
+- 게시글 생성 with token
+
+  - 게시글 생성 요청 함수 createArticle에 token 추가
+
+    ![alt text](./images/image_57.png)
+
+  - 게시글 작성 확인
+
+    ![alt text](./images/image_58.png)
+
+
 
 
 ### 인증 여부 확인
+
+- 사용자의 인증(로그인) 여부에 따른 추가 기능 구현
+
+  1. 인증 되지 않은 사용자
+
+      ⇨ 메인 페이지 접근 제한
+
+  2. 인증된 사용자
+
+      ⇨ 회원가입 및 로그인 페이지에 접근 제한
+
+
+
+- 인증 상태 여부를 나타낼 속성 값 지정
+
+  - token 소유 여부에 따라 로그인 상태를 나타낼 isLogin 변수 작성
+
+  - 그리고 computed를 활용해 token 값이 변할 때만 상태를 계산하도록 함
+
+    ![alt text](./images/image_59.png)
+
+
+#### 1. 인증 되지 않은 사용자는 메인 페이지 접근 제한
+
+- 전역 네이게이션 가드 beforeEach를 활용해 다른 주소에서 메인 페이지로 이동 시 인증 되지 않은 사용자라면 로그인 페이지로 이동시키기
+
+  ![alt text](./images/image_60.png)
+
+- 브라우저 local storage에서 token을 삭제 후 메인 페이지 접속 시도
+
+  ![alt text](./images/image_61.png)
+
+
+
+#### 2. 인증된 사용자는 회원가입과 로그인 페이지에 접근 제한
+
+- 다른 주소에서 회원가입 또는 로그인 페이지로 이동 시 이미 인증된 사용자라면 메인 페이지로 이동시키기
+
+  ![alt text](./images/image_62.png)
+
+- 로그인 후 회원가입, 로그인 페이지 접속 시도
+
+  ![alt text](./images/image_63.png)
+
 
 
 
@@ -601,8 +674,91 @@
 
 ### 기타 기능 구현
 
+- 자연스러운 흐름을 위한 기타 기능 구현
+
+  1. 로그인 성공 후 자동으로 메인 페이지로 이동하기
+
+  2. 회원가입 성공 후 자동으로 로그인까지 진행하기
+
+
+#### 1. 로그인 성공 후 자동으로 메인 페이지로 이동하기
+
+  ![alt text](./images/image_64.png)
+
+
+#### 2. 회원가입 성공 후 자동으로 로그인까지 진행하기
+
+  ![alt text](./images/image_65.png)
+
+
+
+
 ### Django Signals
+
+- Django Signals
+
+  - "이벤트 알림 시스템"
+
+  - 애플리케이션 내에서 특정 이벤트가 발생할 때, 다른 부분에게 신호를 보내어 이벤트가 발생했음을 알릴 수 있음
+
+  - 주로 모델의 데이터 변경 또는 저장, 삭제와 같은 작업에 반응하여 추가적인 로직을 실행하고자 할 때 사용
+
+    - 예를 들어, 사용자가 새로운 게시글을 작성할 때마다 특정 작업(예: 이메일 알림 보내기)을 수행하려는 경우
+
+
 
 ### 환경 변수
 
+- 환경 변수(environment variable)
+
+  - 애플리케이션의 설정이나 동작을 제어하기 위해 사용되는 변수
+
+
+- 환경 변수의 목적
+
+  - 개발, 테스트 및 프로덕션 환경에서 다르게 설정되어야 하는 설정 값이나 민감한 정보(ex. API key)를 포함
+
+  - 환경 변수를 사용하여 애플리케이션의 설정을 관리하면, 다양한 환경에서 일관된 동작을 유지하면서 필요에 따라 변수를 쉽게 변경할 수 있음
+
+  - 보안적인 이슈를 피하고, 애플리케이션을 다양한 환경에 대응하기 쉽게 만들어 줌
+
+
+- Vite에서 환경변수를 사용하는 법
+
+  - .env.local 파일 생성 및 API 변수 작성
+
+  - 주의사항
+
+    - 변수명은 반드시 VITE_접두어를 작성해야 함
+
+    - 변수명과 값 사이에 공백이 없어야 함
+
+      ![alt text](./images/image_66.png)
+
+    - [https://vitejs.dev/guide/env-and-mode.html](https://vitejs.dev/guide/env-and-mode.html)
+
+
+
 ### Vue 참고 자료
+
+- Vue 프로젝트 진행 시 유용한 자료
+
+  - Awesome Vue.js
+
+    - Vue와 관련하여 선별된 유용한 자료를 아카이빙 및 관리하는 프로젝트
+
+    - [https://github.com/vuejs/awesome-vue](https://github.com/vuejs/awesome-vue)
+
+    - [https://awesome-vue.js.org/](https://awesome-vue.js.org/)
+
+
+  - Vuetify
+
+    - Vue를 위한 UI 라이브러리 (ex. 'Bootstrap')
+
+    - [https://vuetifyjs.com/en/](https://vuetifyjs.com/en/)
+
+
+### 설치한 라이브러리 정리
+
+  ![alt text](./images/image_67.png)
