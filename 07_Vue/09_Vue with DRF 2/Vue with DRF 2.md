@@ -473,11 +473,124 @@
     ![alt text](./images/image_33.png)
 
 
+
 ### 회원가입
+
+- 회원가입 로직 구현
+
+  - SignUpView route 관련 코드 주석 해제
+
+    ![alt text](./images/image_34.png)
+
+  - App 컴포넌트에 SignUpView 컴포넌트로 이동하는 RouterLink 작성
+
+    ![alt text](./images/image_35.png)
+
+  - 회원가입 form 작성
+
+    ![alt text](./images/image_36.png)
+
+  - 사용자 입력 데이터와 바인딩 될 반응형 변수 작성
+
+    ![alt text](./images/image_37.png)
+
+  - SignUpView 컴포넌트 출력 확인
+
+    ![alt text](./images/image_38.png)
+
+  - 회원가입 요청을 보내기 위한 signUp 함수가 해야 할 일
+
+    1. 사용자 입력 데이터를 받아
+
+    2. 서버로 회원가입 요청을 보냄
+
+    ![alt text](./images/image_39.png)
+
+  - 컴포넌트에 사용자 입력 데이터를 저장 후 store의 signUp 함수를 호출하는 함수 작성
+
+    ![alt text](./images/image_40.png)
+
+  - 실제 회원가입 요청을 보내는 store의 signUp 함수 작성
+
+    ![alt text](./images/image_41.png)
+
+  - 회원가입 테스트
+
+    ![alt text](./images/image_42.png)
+
+  - Django DB 확인
+
+    ![alt text](./images/image_43.png)
+
+
+
 
 ### 로그인
 
+- 로그인 로직 구현
+
+  - LogInView route 관련 코드 주석 해제
+
+    ![alt text](./images/image_44.png)
+
+  - App 컴포넌트에 LogInView 컴포넌트로 이동하는 RouterLink 작성
+
+    ![alt text](./images/image_45.png)
+
+  - 로그인 form 작성
+
+    ![alt text](./images/image_46.png)
+
+  - 사용자 입력 데이터와 바인딩 될 반응형 변수 작성
+
+    ![alt text](./images/image_47.png)
+
+  - LogInView 컴포넌트 출력 확인
+
+    ![alt text](./images/image_48.png)
+
+  - 로그인 요청을 보내기 위한 logIn 함수가 해야 할 일
+
+    1. 사용자 입력 데이터를 받아
+
+    2. 서버로 로그인 요청 및 응답 받은 **토큰 저장**
+
+    ![alt text](./images/image_49.png)
+
+  - 컴포넌트에 사용자 입력 데이터를 저장 후 store의 logIn 함수를 호출하는 함수 작성
+
+    ![alt text](./images/image_50.png)
+
+  - 실제 로그인 요청을 보내는 store의 logIn 함수 작성
+
+    ![alt text](./images/image_51.png)
+
+  - 로그인 테스트
+
+  - 응답 객체 안에 Django가 발급한 Token이 함께 온 것을 확인
+
+    ![alt text](./images/image_52.png)
+
+
+
+
 ### 요청과 토큰
+
+#### Token을 store에 저장하여 인증이 필요한 요청마다 함께 보낸다.
+
+
+- 토큰 저장 로직 구현
+
+  - 반응형 변수 token 선언 및 토큰 저장
+
+    ![alt text](./images/image_53.png)
+
+  - 다시 로그인 요청 후 store에 저장된 토큰 확인
+
+    ![alt text](./images/image_54.png)
+
+
+
 
 ### 인증 여부 확인
 
