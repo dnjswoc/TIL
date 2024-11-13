@@ -1,4 +1,4 @@
-# 2024년 11월 12일(화) 수업 내용 정리 - Stat Management
+# 2024년 11월 12일(화) 수업 내용 정리 - State Management
 
 
 - State Management
