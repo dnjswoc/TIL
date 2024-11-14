@@ -13,7 +13,8 @@ export const useCounterStore = defineStore('counter', () => {
       url: `${API_URL}/api/v1/articles/`
     })
       .then((res) => {
-        console.log(res)
+        // console.log(res.data)
+        articles.value = res.data
       })
       .catch((err) => {
         console.log(err)
