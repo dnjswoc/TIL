@@ -23,7 +23,7 @@ const options = {
   params: {language: 'ko'},
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMTY1YWYwNGVmODA3YmNmZTJjMzMxZDU5ZjAwODk5YSIsIm5iZiI6MTczMTU5MDQ2NS44NTk2NTQyLCJzdWIiOiI2NzMzMTA3NWJjNzhjZTJiOTRiYTRlYTkiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Dcq4HYC4XLkmOYkkN9-Q4acPTafIy9ZAE3xBGBKU8Ag'
+    Authorization: 'Bearer'
   }
 };
 

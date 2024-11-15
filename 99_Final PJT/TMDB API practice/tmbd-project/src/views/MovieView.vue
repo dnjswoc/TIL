@@ -33,7 +33,7 @@ for (let num = 1; num <= 5; num++) {
     },
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMTY1YWYwNGVmODA3YmNmZTJjMzMxZDU5ZjAwODk5YSIsIm5iZiI6MTczMTU2Nzg2OS4wMDMxNjc0LCJzdWIiOiI2NzMzMTA3NWJjNzhjZTJiOTRiYTRlYTkiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.zDAyiZEt3JDmLJtHfcIJMsyszLP0pwVvJLn4O_SsRhA'
+      Authorization: 'Bearer'
     }
   };
   
