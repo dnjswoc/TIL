@@ -11,7 +11,7 @@
 - [OOP 1](./python/04_OOP&Exception/OOP&Exception_1/OOP&Exception_1.md)
 - [OOP 2](./python/04_OOP&Exception/OOP&Exception_2/OOP&Exception_2.md)
 
-## 2. Algorithm 기본(2024.07.29. ~ 2024.08.16.)
+## 2. Algorithm 기본(2024.07.29. ~ 2024.08.16.) 
 
 - List
 - String
