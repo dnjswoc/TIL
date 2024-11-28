@@ -1,12 +1,8 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
+export const useMovieStore = defineStore('movie', () => {
+  const API_KEY = import.meta.env.VITE_TMDB_API_KEY
 
-  return { count, doubleCount, increment }
+  return { API_KEY }
 })

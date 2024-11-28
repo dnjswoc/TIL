@@ -12,10 +12,13 @@
 <script setup>
 import axios from 'axios'
 import { ref } from 'vue'
+import { useMovieStore } from '@/stores/counter'
 
 import GenreItem from '@/components/GenreItem.vue'
 
 const genreIds = ref([])
+
+const store = useMovieStore()
 
 const options = {
   method: 'GET',
@@ -23,7 +26,7 @@ const options = {
   params: {language: 'ko'},
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer'
+    Authorization: `Bearer ${store.API_KEY}`
   }
 };
 

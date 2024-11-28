@@ -11,11 +11,18 @@
 <script setup>
 import axios from 'axios'
 import { ref } from 'vue'
+import { useMovieStore } from '@/stores/counter'
 
 
 import MovieDetail from '@/components/MovieDetail.vue'
 
 const results = ref([])
+
+const store = useMovieStore()
+
+const API_KEY = store.API_KEY
+
+console.log(API_KEY)
 
 
 for (let num = 1; num <= 5; num++) {
@@ -33,7 +40,7 @@ for (let num = 1; num <= 5; num++) {
     },
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer'
+      Authorization: `Bearer ${API_KEY}`
     }
   };
   
