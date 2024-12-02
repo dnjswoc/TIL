@@ -1,0 +1,163 @@
+[
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$4naKoOUHYWoaUapHpTLSqv$MwLxJ1YUV9oCYCb8C29mP+VraU7WA2t7hvOQKn5OBD8=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-11-26T16:54:27.919Z",
+        "nickname": "",
+        "genre1": "",
+        "genre2": "",
+        "introduction": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$KAtWbdoMcfyRS2s311uMWa$miC8ySxcOcEYNlgEHqPNP5DmKnQiu8wBI3MOhdD2bjI=",
+        "last_login": "2024-11-26T18:19:02.637Z",
+        "is_superuser": false,
+        "username": "user1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-11-26T17:00:20.254Z",
+        "nickname": "송삼 이동진",
+        "genre1": "Jazz",
+        "genre2": "R&B",
+        "introduction": "모든 장르의 음악, 영화 가리지 않고 좋아합니다.",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$M6tQ8yJwSS3muYTmMVYkFM$p/PvyalKsY76WTQHv+9BTB4mDZbDasMfb2b0XWlacmc=",
+        "last_login": "2024-11-26T18:23:00.578Z",
+        "is_superuser": false,
+        "username": "user2",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-11-26T17:17:33.433Z",
+        "nickname": "카라멜 팝콘",
+        "genre1": "Pop",
+        "genre2": "",
+        "introduction": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$TNefmmEktcOXWtw4dQ0hbm$hsFzRseSaU4YtvbgsWjObVVp4fVehvaO2C7PeNZQAho=",
+        "last_login": "2024-11-26T18:26:48.955Z",
+        "is_superuser": false,
+        "username": "user3",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-11-26T17:21:05.874Z",
+        "nickname": "엔딩크레딧",
+        "genre1": "",
+        "genre2": "",
+        "introduction": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$GYkxeTfn4RnsrXdYJ6g3T1$T7cqaJnez4GVIPPXneokmNLBiFbxD1QoIJsmlCqadJo=",
+        "last_login": "2024-11-26T18:28:24.996Z",
+        "is_superuser": false,
+        "username": "user4",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-11-26T17:29:48.108Z",
+        "nickname": "비하인드컷",
+        "genre1": "",
+        "genre2": "",
+        "introduction": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$9gOOcWHHksGeF7mwS1PWVN$2Ko3Ku0drFRxTVWyWECx1kaC1znogvKDw/774alj1hw=",
+        "last_login": "2024-11-26T17:58:48.603Z",
+        "is_superuser": false,
+        "username": "user5",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-11-26T17:58:47.470Z",
+        "nickname": "이원재",
+        "genre1": "",
+        "genre2": "",
+        "introduction": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$PmZTFXMKEhD7eWXDVPVNT0$HhZBMIO+xCptWKMgKT8QynBR/BqniJyRQdy2Rks4fOo=",
+        "last_login": "2024-11-26T18:10:12.801Z",
+        "is_superuser": false,
+        "username": "user6",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-11-26T18:10:11.765Z",
+        "nickname": "OST수집가",
+        "genre1": "",
+        "genre2": "",
+        "introduction": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+}
+]

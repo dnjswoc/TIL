@@ -1,0 +1,482 @@
+[
+{
+    "model": "movies.comment",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "movie": 843527,
+        "content": "달디달고, 달디달고, 달디단, ‘너란 개념’을 완성시켜주는 앤 해서웨이의 모든 장면.\n오글오글 목적의 충실함을 지나서 앤 해서웨이 팬픽으로 보여진다. <빅 식>이라는 훌륭한 작품을 만든 감독 마이클 쇼월터의 ‘(아마도) 사심 가득 좋아!’ 연출이 아닐까.",
+        "score": 3,
+        "created_at": "2024-11-26T17:05:20.853Z",
+        "updated_at": "2024-11-26T17:05:20.853Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "movie": 639720,
+        "content": "모두의 마음속에 순수함이 어설프게 나마 남아있기를...",
+        "score": 3,
+        "created_at": "2024-11-26T17:06:16.702Z",
+        "updated_at": "2024-11-26T17:06:16.702Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 3,
+    "fields": {
+        "user": 2,
+        "movie": 1184918,
+        "content": "프로그래밍된 적 없는 임무를 완수하기 위해 열과 성을 다하는 모든 엄마들에게.",
+        "score": 4,
+        "created_at": "2024-11-26T17:07:09.859Z",
+        "updated_at": "2024-11-26T17:07:09.859Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 4,
+    "fields": {
+        "user": 2,
+        "movie": 653346,
+        "content": "무엇을 어떻게 계승할 것인지에 대한 숙고가 담긴 품격 높은 블록버스터의 재래.",
+        "score": 3,
+        "created_at": "2024-11-26T17:08:11.785Z",
+        "updated_at": "2024-11-26T17:08:11.785Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 5,
+    "fields": {
+        "user": 2,
+        "movie": 533535,
+        "content": "인수합병에 대한 재치있는 비즈니스영화, 경혈을 찾아 침을 놓아가며 갈증을 잠시 해결해주는 팬서비스무비.",
+        "score": 3,
+        "created_at": "2024-11-26T17:09:52.070Z",
+        "updated_at": "2024-11-26T17:09:52.070Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 6,
+    "fields": {
+        "user": 3,
+        "movie": 157336,
+        "content": "영화 재밌는데 어렵고 너무 길어요ㅠㅠ",
+        "score": 2,
+        "created_at": "2024-11-26T17:19:13.054Z",
+        "updated_at": "2024-11-26T17:19:13.054Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 7,
+    "fields": {
+        "user": 4,
+        "movie": 1184918,
+        "content": "정말 재밌게 봤습니다",
+        "score": 4,
+        "created_at": "2024-11-26T17:22:05.788Z",
+        "updated_at": "2024-11-26T17:22:05.788Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 8,
+    "fields": {
+        "user": 4,
+        "movie": 129,
+        "content": "명작입니다..",
+        "score": 4,
+        "created_at": "2024-11-26T17:23:32.774Z",
+        "updated_at": "2024-11-26T17:23:32.774Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 9,
+    "fields": {
+        "user": 4,
+        "movie": 496243,
+        "content": "재밌게 봤습니다",
+        "score": 4,
+        "created_at": "2024-11-26T17:24:02.673Z",
+        "updated_at": "2024-11-26T17:24:02.673Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 10,
+    "fields": {
+        "user": 5,
+        "movie": 533535,
+        "content": "마블이 두 쪽나도 데드풀은 계속되어야 한다",
+        "score": 4,
+        "created_at": "2024-11-26T17:32:03.950Z",
+        "updated_at": "2024-11-26T17:32:03.950Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 11,
+    "fields": {
+        "user": 5,
+        "movie": 1184918,
+        "content": "열어젖힌 마음의 문 사이로 보이는 활짝 펴진 날개",
+        "score": 3,
+        "created_at": "2024-11-26T17:34:01.404Z",
+        "updated_at": "2024-11-26T17:34:01.404Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 12,
+    "fields": {
+        "user": 5,
+        "movie": 786892,
+        "content": "뜨거운 사막과 차가운 복수의 이렇게까지도 극명한 온도차.",
+        "score": 4,
+        "created_at": "2024-11-26T17:42:13.647Z",
+        "updated_at": "2024-11-26T17:42:13.647Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 13,
+    "fields": {
+        "user": 5,
+        "movie": 843527,
+        "content": "말도 안되는 건 앤 해서웨이의 미모",
+        "score": 3,
+        "created_at": "2024-11-26T17:42:55.294Z",
+        "updated_at": "2024-11-26T17:42:55.294Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 14,
+    "fields": {
+        "user": 5,
+        "movie": 639720,
+        "content": "누구나 가슴 한켠에 상상의 친구 하나씩은 품고 살아가는 거니까",
+        "score": 3,
+        "created_at": "2024-11-26T17:43:30.198Z",
+        "updated_at": "2024-11-26T17:43:30.198Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 15,
+    "fields": {
+        "user": 5,
+        "movie": 933260,
+        "content": "멋진 영화지만 외모지상주의에 대한 모든 피해자를 품을 수 있는 영화인지는 끝까지 물음표로 남는다",
+        "score": 4,
+        "created_at": "2024-11-26T17:45:13.345Z",
+        "updated_at": "2024-11-26T17:45:13.345Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 16,
+    "fields": {
+        "user": 5,
+        "movie": 653346,
+        "content": "145분짜리 시저숭배영화. 튼튼하지만 밋밋한 중간다리",
+        "score": 2,
+        "created_at": "2024-11-26T17:46:00.285Z",
+        "updated_at": "2024-11-26T17:46:00.285Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 17,
+    "fields": {
+        "user": 5,
+        "movie": 917496,
+        "content": "비틀쥬스에 <인시디어스>까지 입혀 더 요란법석한 불량식품맛.",
+        "score": 3,
+        "created_at": "2024-11-26T17:46:57.496Z",
+        "updated_at": "2024-11-26T17:46:57.496Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 18,
+    "fields": {
+        "user": 5,
+        "movie": 519182,
+        "content": "슈퍼배드와 미니언즈 시리즈의 마침표이길.",
+        "score": 2,
+        "created_at": "2024-11-26T17:48:05.504Z",
+        "updated_at": "2024-11-26T17:48:05.504Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 19,
+    "fields": {
+        "user": 5,
+        "movie": 1034541,
+        "content": "광대공포증이 왜 생기는지 알거 같은..\n스너프 필름(?)에서 시작한 작품이 나름의 팬층과 흥행성과를 얻어 시리즈가 확장되고있다.\n국내개봉이 좌절될정도의 아찔한 수위를 자랑하지만, 독보적인 고어물로써 장르에 굉장히 충실한 태도를 보인다.",
+        "score": 3,
+        "created_at": "2024-11-26T17:48:41.777Z",
+        "updated_at": "2024-11-26T17:48:41.777Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 20,
+    "fields": {
+        "user": 6,
+        "movie": 1184918,
+        "content": "누구나 그렇게 엄마가 되어간다는 것, 모든 것을 잃을지라도 지키고 싶은 것이 생긴다는 것.",
+        "score": 5,
+        "created_at": "2024-11-26T18:00:24.871Z",
+        "updated_at": "2024-11-26T18:00:24.871Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 21,
+    "fields": {
+        "user": 6,
+        "movie": 533535,
+        "content": "병들어버린 마블이 자기비하적 반성과 함께 스스로에게 매콤한 불주사를 한 방!",
+        "score": 4,
+        "created_at": "2024-11-26T18:01:09.703Z",
+        "updated_at": "2024-11-26T18:01:09.703Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 22,
+    "fields": {
+        "user": 6,
+        "movie": 786892,
+        "content": "가장 폭발적인 동력은 복수지만 계속 나아가게 하는 건 희망.",
+        "score": 4,
+        "created_at": "2024-11-26T18:01:46.293Z",
+        "updated_at": "2024-11-26T18:01:46.293Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 23,
+    "fields": {
+        "user": 6,
+        "movie": 843527,
+        "content": "영화에 몇초씩 나오는 노래들이 모두 풀버전으로 있어서 재밌다",
+        "score": 4,
+        "created_at": "2024-11-26T18:02:07.821Z",
+        "updated_at": "2024-11-26T18:02:07.821Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 24,
+    "fields": {
+        "user": 6,
+        "movie": 639720,
+        "content": "내가 디즈니를 여전히 잊지 않고 있는 이유.",
+        "score": 4,
+        "created_at": "2024-11-26T18:02:30.784Z",
+        "updated_at": "2024-11-26T18:02:30.784Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 25,
+    "fields": {
+        "user": 6,
+        "movie": 933260,
+        "content": "무엇을 상상하든 그 이상을 보게 될 바디호러 장르의 신기원을 열다.",
+        "score": 5,
+        "created_at": "2024-11-26T18:03:00.072Z",
+        "updated_at": "2024-11-26T18:03:00.072Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 26,
+    "fields": {
+        "user": 6,
+        "movie": 917496,
+        "content": "지옥열차가 디스코라는 말은 없었잖아요 나부터 탈래",
+        "score": 4,
+        "created_at": "2024-11-26T18:03:38.697Z",
+        "updated_at": "2024-11-26T18:03:38.697Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 27,
+    "fields": {
+        "user": 6,
+        "movie": 519182,
+        "content": "점점 더 어린이용이 되어가는 느낌이라 약간 유치하게 느껴진다. 처음 미니언즈 봤을때 진짜 너무 재밌었는데...",
+        "score": 3,
+        "created_at": "2024-11-26T18:04:05.942Z",
+        "updated_at": "2024-11-26T18:04:05.942Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 28,
+    "fields": {
+        "user": 6,
+        "movie": 157336,
+        "content": "미친 영화. 살면서 이런 천재의 영화를 볼 수 있다니 행운이다. 3시간동안 난 미래에 있었다",
+        "score": 5,
+        "created_at": "2024-11-26T18:04:51.960Z",
+        "updated_at": "2024-11-26T18:04:51.960Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 29,
+    "fields": {
+        "user": 6,
+        "movie": 122,
+        "content": "완벽한 판타지! 완벽한 3부작! 이 영화의 유일한 단점은 다른 판타지영화를 못보게 되는 것...",
+        "score": 5,
+        "created_at": "2024-11-26T18:05:39.326Z",
+        "updated_at": "2024-11-26T18:05:39.326Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 30,
+    "fields": {
+        "user": 6,
+        "movie": 120,
+        "content": "전설의시작",
+        "score": 5,
+        "created_at": "2024-11-26T18:06:08.083Z",
+        "updated_at": "2024-11-26T18:06:08.083Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 31,
+    "fields": {
+        "user": 6,
+        "movie": 4935,
+        "content": "나의 오랜 낭만",
+        "score": 5,
+        "created_at": "2024-11-26T18:06:51.823Z",
+        "updated_at": "2024-11-26T18:06:51.823Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 32,
+    "fields": {
+        "user": 7,
+        "movie": 1184918,
+        "content": "황홀한 비주얼과 감동적인 스토리텔링이 결합된 드림웍스의 새로운 걸작 애니메이션!",
+        "score": 4,
+        "created_at": "2024-11-26T18:10:55.582Z",
+        "updated_at": "2024-11-26T18:10:55.582Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 33,
+    "fields": {
+        "user": 7,
+        "movie": 533535,
+        "content": "관객을 바라보면서 '미워도 다시 한번'을 두 시간 동안 울부짖는 MCU를 보았다.",
+        "score": 4,
+        "created_at": "2024-11-26T18:11:32.132Z",
+        "updated_at": "2024-11-26T18:11:32.132Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 34,
+    "fields": {
+        "user": 7,
+        "movie": 786892,
+        "content": "집에좀 가자고 거머리 자식들아 ㅜㅠㅜ",
+        "score": 5,
+        "created_at": "2024-11-26T18:12:02.534Z",
+        "updated_at": "2024-11-26T18:12:02.534Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 35,
+    "fields": {
+        "user": 7,
+        "movie": 843527,
+        "content": "장르가 앤 해서웨이",
+        "score": 3,
+        "created_at": "2024-11-26T18:12:39.034Z",
+        "updated_at": "2024-11-26T18:12:39.034Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 36,
+    "fields": {
+        "user": 7,
+        "movie": 639720,
+        "content": "아이도, 어른도 필요한 온기와 위로의 순간.",
+        "score": 4,
+        "created_at": "2024-11-26T18:13:04.805Z",
+        "updated_at": "2024-11-26T18:13:04.805Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 37,
+    "fields": {
+        "user": 7,
+        "movie": 157336,
+        "content": "놀란의 상상은 끝이 없고 같은 명작을 반복한다",
+        "score": 5,
+        "created_at": "2024-11-26T18:13:33.568Z",
+        "updated_at": "2024-11-26T18:13:33.568Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 38,
+    "fields": {
+        "user": 7,
+        "movie": 122,
+        "content": "어떤 감독은 영화를 만들지만 어떤 감독은 세계를 만든다.",
+        "score": 5,
+        "created_at": "2024-11-26T18:13:59.239Z",
+        "updated_at": "2024-11-26T18:13:59.239Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 39,
+    "fields": {
+        "user": 7,
+        "movie": 120,
+        "content": "다시는 예전으로 돌아갈 수 없게 만드는 위대한 여정의 첫 발 걸음.",
+        "score": 4,
+        "created_at": "2024-11-26T18:14:29.354Z",
+        "updated_at": "2024-11-26T18:14:29.354Z"
+    }
+},
+{
+    "model": "movies.comment",
+    "pk": 40,
+    "fields": {
+        "user": 7,
+        "movie": 4935,
+        "content": "부실한 서사를 압도하는 이 낭만",
+        "score": 4,
+        "created_at": "2024-11-26T18:14:51.697Z",
+        "updated_at": "2024-11-26T18:14:51.697Z"
+    }
+}
+]

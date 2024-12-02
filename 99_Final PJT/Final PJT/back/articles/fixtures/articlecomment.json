@@ -1,0 +1,167 @@
+[
+{
+    "model": "articles.freearticlecomment",
+    "pk": 1,
+    "fields": {
+        "content": "팝콘 거기서 거기 아니에요?",
+        "created_at": "2024-11-26T17:27:32.981Z",
+        "updated_at": "2024-11-26T17:27:32.981Z",
+        "article": 1,
+        "user": 2
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 2,
+    "fields": {
+        "content": "저도 그렇게 생각합니다",
+        "created_at": "2024-11-26T18:07:58.395Z",
+        "updated_at": "2024-11-26T18:07:58.395Z",
+        "article": 1,
+        "user": 4
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 3,
+    "fields": {
+        "content": "저는 코미디 영화 좋아합니다",
+        "created_at": "2024-11-26T18:08:42.932Z",
+        "updated_at": "2024-11-26T18:08:42.932Z",
+        "article": 2,
+        "user": 6
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 4,
+    "fields": {
+        "content": "울산 놀러오세요~~",
+        "created_at": "2024-11-26T18:09:02.812Z",
+        "updated_at": "2024-11-26T18:09:02.812Z",
+        "article": 3,
+        "user": 6
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 5,
+    "fields": {
+        "content": "책이 참 좋은 것 같습니다.",
+        "created_at": "2024-11-26T18:15:20.490Z",
+        "updated_at": "2024-11-26T18:15:20.490Z",
+        "article": 4,
+        "user": 7
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 6,
+    "fields": {
+        "content": "강릉은 어떠세요??",
+        "created_at": "2024-11-26T18:17:41.581Z",
+        "updated_at": "2024-11-26T18:17:41.581Z",
+        "article": 3,
+        "user": 7
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 7,
+    "fields": {
+        "content": "저는 판타지 영화 좋아합니다ㅎㅎ",
+        "created_at": "2024-11-26T18:18:05.357Z",
+        "updated_at": "2024-11-26T18:18:05.357Z",
+        "article": 2,
+        "user": 7
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 8,
+    "fields": {
+        "content": "저는 영화 보면서 스트레스 풉니다!",
+        "created_at": "2024-11-26T18:20:15.246Z",
+        "updated_at": "2024-11-26T18:20:15.246Z",
+        "article": 5,
+        "user": 2
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 9,
+    "fields": {
+        "content": "코딩 배워보시는건 어떠신가요?",
+        "created_at": "2024-11-26T18:21:16.012Z",
+        "updated_at": "2024-11-26T18:21:16.012Z",
+        "article": 4,
+        "user": 2
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 10,
+    "fields": {
+        "content": "제주도 추천드려요~",
+        "created_at": "2024-11-26T18:22:06.937Z",
+        "updated_at": "2024-11-26T18:22:06.937Z",
+        "article": 3,
+        "user": 2
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 11,
+    "fields": {
+        "content": "저는 요새 밴드 음악 즐겨 듣습니다!",
+        "created_at": "2024-11-26T18:23:34.699Z",
+        "updated_at": "2024-11-26T18:23:34.699Z",
+        "article": 6,
+        "user": 3
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 12,
+    "fields": {
+        "content": "저는 러닝하면서 잡생각을 날립니다",
+        "created_at": "2024-11-26T18:24:26.467Z",
+        "updated_at": "2024-11-26T18:24:26.467Z",
+        "article": 5,
+        "user": 3
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 13,
+    "fields": {
+        "content": "날도 추워지니 발라드 듣게 되네요ㅎㅎ",
+        "created_at": "2024-11-26T18:27:11.524Z",
+        "updated_at": "2024-11-26T18:27:11.524Z",
+        "article": 6,
+        "user": 2
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 14,
+    "fields": {
+        "content": "저도 종종 풋살하며서 스트레스 풀어요!",
+        "created_at": "2024-11-26T18:28:51.030Z",
+        "updated_at": "2024-11-26T18:28:51.030Z",
+        "article": 5,
+        "user": 4
+    }
+},
+{
+    "model": "articles.freearticlecomment",
+    "pk": 15,
+    "fields": {
+        "content": "로제 아파트 계속 듣고 있어요ㅋㅋㅋㅋ",
+        "created_at": "2024-11-26T18:32:08.897Z",
+        "updated_at": "2024-11-26T18:32:08.897Z",
+        "article": 6,
+        "user": 5
+    }
+}
+]

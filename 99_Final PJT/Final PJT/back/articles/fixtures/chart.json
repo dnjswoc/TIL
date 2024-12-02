@@ -1,0 +1,1602 @@
+[
+{
+    "model": "musics.chart",
+    "pk": 1,
+    "fields": {
+        "rank": 1,
+        "track_id": "7tI8dRuH2Yc6RuoTjxo4dU",
+        "artist_names": "Jimin",
+        "track_name": "Who",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 1,
+        "previous_rank": 1,
+        "weeks_on_chart": 18,
+        "streams": 1611866,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e02f02c451189a709b9a952aaec"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 2,
+    "fields": {
+        "rank": 2,
+        "track_id": "5vNRhkKd0yEAg8suGBpjeY",
+        "artist_names": "ROSÉ, Bruno Mars",
+        "track_name": "APT.",
+        "source": "Atlantic Records, THEBLACKLABEL",
+        "peak_rank": 2,
+        "previous_rank": 2,
+        "weeks_on_chart": 5,
+        "streams": 469430,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e02f8c8297efc6022534f1357e1"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 3,
+    "fields": {
+        "rank": 3,
+        "track_id": "3LWVXp636uLT356Rj08Jaz",
+        "artist_names": "Jimin",
+        "track_name": "Be Mine",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 2,
+        "previous_rank": 4,
+        "weeks_on_chart": 18,
+        "streams": 465493,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e02f02c451189a709b9a952aaec"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 4,
+    "fields": {
+        "rank": 4,
+        "track_id": "2HRgqmZQC0MC7GeNuDIXHN",
+        "artist_names": "Jung Kook, Latto",
+        "track_name": "Seven (feat. Latto) (Explicit Ver.)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 1,
+        "previous_rank": 5,
+        "weeks_on_chart": 71,
+        "streams": 420537,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 5,
+    "fields": {
+        "rank": 5,
+        "track_id": "50zAEIE4B1QqhPjRMK2Xmh",
+        "artist_names": "Jin",
+        "track_name": "Running Wild",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 5,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 418735,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e0202dd46d1f82ce19b5927b269"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 6,
+    "fields": {
+        "rank": 6,
+        "track_id": "7Cnpb1vBbC46RgVyyKLH7p",
+        "artist_names": "aespa",
+        "track_name": "Whiplash",
+        "source": "SM Entertainment",
+        "peak_rank": 3,
+        "previous_rank": 3,
+        "weeks_on_chart": 5,
+        "streams": 413034,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e02f0f92e8441e7fa0c60e00fb3"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 7,
+    "fields": {
+        "rank": 7,
+        "track_id": "2SR0alFA2oWYXSoePGTj0V",
+        "artist_names": "Jin",
+        "track_name": "I’ll Be There",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 7,
+        "previous_rank": 16,
+        "weeks_on_chart": 4,
+        "streams": 288037,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e020aa3d58774384527afb5df53"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 8,
+    "fields": {
+        "rank": 8,
+        "track_id": "1agDCV4zQqaFwJQNsTgmL1",
+        "artist_names": "Jimin, Loco",
+        "track_name": "Smeraldo Garden Marching Band (feat. Loco)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 2,
+        "previous_rank": 10,
+        "weeks_on_chart": 21,
+        "streams": 233576,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e02f02c451189a709b9a952aaec"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 9,
+    "fields": {
+        "rank": 9,
+        "track_id": "1k68vKHNQXU5CHqcM7Yp7N",
+        "artist_names": "DAY6",
+        "track_name": "HAPPY",
+        "source": "JYP Entertainment",
+        "peak_rank": 5,
+        "previous_rank": 8,
+        "weeks_on_chart": 15,
+        "streams": 222074,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e020309970945710645006b9c9e"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 10,
+    "fields": {
+        "rank": 10,
+        "track_id": "01qFKNWq73UfEslI0GvumE",
+        "artist_names": "Jung Kook, Jack Harlow",
+        "track_name": "3D (feat. Jack Harlow)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 2,
+        "previous_rank": 9,
+        "weeks_on_chart": 60,
+        "streams": 217299,
+        "album_image": "https://i.scdn.co/image/ab67616d00001e0299583bb32b47e87d55c6064b"
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 11,
+    "fields": {
+        "rank": 11,
+        "track_id": "5sjnkOfTLCLNfkkchI2re2",
+        "artist_names": "aespa",
+        "track_name": "UP - KARINA Solo",
+        "source": "SM Entertainment",
+        "peak_rank": 5,
+        "previous_rank": 7,
+        "weeks_on_chart": 7,
+        "streams": 208732,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 12,
+    "fields": {
+        "rank": 12,
+        "track_id": "4XsJiRJQAK8TWcZCn0Dxlh",
+        "artist_names": "G-DRAGON",
+        "track_name": "POWER",
+        "source": "Galaxy Corporation / EMPIRE",
+        "peak_rank": 4,
+        "previous_rank": 6,
+        "weeks_on_chart": 4,
+        "streams": 207858,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 13,
+    "fields": {
+        "rank": 13,
+        "track_id": "2KslE17cAJNHTsI2MI0jb2",
+        "artist_names": "Jung Kook",
+        "track_name": "Standing Next to You",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 4,
+        "previous_rank": 11,
+        "weeks_on_chart": 54,
+        "streams": 207222,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 14,
+    "fields": {
+        "rank": 14,
+        "track_id": "7gMfVc4zfNIxuMyMGglOHa",
+        "artist_names": "Jimin",
+        "track_name": "Rebirth (Intro)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 8,
+        "previous_rank": 20,
+        "weeks_on_chart": 18,
+        "streams": 206657,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 15,
+    "fields": {
+        "rank": 15,
+        "track_id": "3d2bsbugow8JiNvuaRupFH",
+        "artist_names": "Jimin, Sofia Carson",
+        "track_name": "Slow Dance (feat. Sofia Carson)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 6,
+        "previous_rank": 19,
+        "weeks_on_chart": 18,
+        "streams": 204964,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 16,
+    "fields": {
+        "rank": 16,
+        "track_id": "6qafqn8bBMy7t5c5WqpyRk",
+        "artist_names": "Jimin",
+        "track_name": "Closer Than This",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 2,
+        "previous_rank": 18,
+        "weeks_on_chart": 48,
+        "streams": 200953,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 17,
+    "fields": {
+        "rank": 17,
+        "track_id": "1MUZitHRpmng5NevrvNx4T",
+        "artist_names": "BABYMONSTER",
+        "track_name": "DRIP",
+        "source": "YG Entertainment",
+        "peak_rank": 12,
+        "previous_rank": 12,
+        "weeks_on_chart": 3,
+        "streams": 198735,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 18,
+    "fields": {
+        "rank": 18,
+        "track_id": "3Ua0m0YmEjrMi9XErKcNiR",
+        "artist_names": "Jimin",
+        "track_name": "Like Crazy",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 1,
+        "previous_rank": 23,
+        "weeks_on_chart": 87,
+        "streams": 188826,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 19,
+    "fields": {
+        "rank": 19,
+        "track_id": "21LtZQQMQYwVIxc9O9Ygq8",
+        "artist_names": "ILLIT",
+        "track_name": "Cherish (My Love)",
+        "source": "BELIFT LAB",
+        "peak_rank": 10,
+        "previous_rank": 14,
+        "weeks_on_chart": 5,
+        "streams": 187577,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 20,
+    "fields": {
+        "rank": 20,
+        "track_id": "2DbDefRFJ5YOfXCKOeCJJh",
+        "artist_names": "KISS OF LIFE",
+        "track_name": "Igloo",
+        "source": "S2 ENTERTAINMENT INC.",
+        "peak_rank": 15,
+        "previous_rank": 15,
+        "weeks_on_chart": 5,
+        "streams": 186368,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 21,
+    "fields": {
+        "rank": 21,
+        "track_id": "45zLrK0668WQ5JFMyiYmCS",
+        "artist_names": "Jimin",
+        "track_name": "Interlude : Showtime",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 10,
+        "previous_rank": 27,
+        "weeks_on_chart": 18,
+        "streams": 173228,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 22,
+    "fields": {
+        "rank": 22,
+        "track_id": "2plbrEY59IikOBgBGLjaoe",
+        "artist_names": "Lady Gaga, Bruno Mars",
+        "track_name": "Die With A Smile",
+        "source": "Interscope",
+        "peak_rank": 12,
+        "previous_rank": 17,
+        "weeks_on_chart": 14,
+        "streams": 161824,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 23,
+    "fields": {
+        "rank": 23,
+        "track_id": "4qUmNOnS81p8wrMdBHRbS3",
+        "artist_names": "Jin, WENDY",
+        "track_name": "Heart on the Window (with WENDY)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 23,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 160378,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 24,
+    "fields": {
+        "rank": 24,
+        "track_id": "2CspwnypzT7rcWI9RfsoSb",
+        "artist_names": "JENNIE",
+        "track_name": "Mantra",
+        "source": "OA Entertainment/Columbia",
+        "peak_rank": 2,
+        "previous_rank": 13,
+        "weeks_on_chart": 6,
+        "streams": 159772,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 25,
+    "fields": {
+        "rank": 25,
+        "track_id": "2JhbSmNAyM9kYiqwa8Tpla",
+        "artist_names": "aespa",
+        "track_name": "Supernova",
+        "source": "SM Entertainment",
+        "peak_rank": 1,
+        "previous_rank": 22,
+        "weeks_on_chart": 28,
+        "streams": 147921,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 26,
+    "fields": {
+        "rank": 26,
+        "track_id": "6oNLSQX8bcAdbCElZYju3v",
+        "artist_names": "fromis_9",
+        "track_name": "Supersonic",
+        "source": "PLEDIS Entertainment",
+        "peak_rank": 12,
+        "previous_rank": 21,
+        "weeks_on_chart": 15,
+        "streams": 147087,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 27,
+    "fields": {
+        "rank": 27,
+        "track_id": "1aKvZDoLGkNMxoRYgkckZG",
+        "artist_names": "ILLIT",
+        "track_name": "Magnetic",
+        "source": "BELIFT LAB",
+        "peak_rank": 1,
+        "previous_rank": 26,
+        "weeks_on_chart": 35,
+        "streams": 146116,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 28,
+    "fields": {
+        "rank": 28,
+        "track_id": "2N0SPREDYqILVEFSsWF5N5",
+        "artist_names": "V",
+        "track_name": "Love Me Again",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 3,
+        "previous_rank": 28,
+        "weeks_on_chart": 67,
+        "streams": 141907,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 29,
+    "fields": {
+        "rank": 29,
+        "track_id": "1YmY0HUm05BUpcHibc1bhB",
+        "artist_names": "Jin",
+        "track_name": "Another Level",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 29,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 140037,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 30,
+    "fields": {
+        "rank": 30,
+        "track_id": "5oSUmLelhXItguqPQ0Qn2b",
+        "artist_names": "Jin",
+        "track_name": "Falling",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 30,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 139290,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 31,
+    "fields": {
+        "rank": 31,
+        "track_id": "5s7flUAYsDmcUWtHsMCihv",
+        "artist_names": "Jin",
+        "track_name": "I will come to you",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 31,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 136876,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 32,
+    "fields": {
+        "rank": 32,
+        "track_id": "5ocSQW5sIUIOFojwXEz9Ki",
+        "artist_names": "NewJeans",
+        "track_name": "Supernatural",
+        "source": "ADOR",
+        "peak_rank": 2,
+        "previous_rank": 24,
+        "weeks_on_chart": 22,
+        "streams": 132897,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 33,
+    "fields": {
+        "rank": 33,
+        "track_id": "1lTBkwEm0wim9RsMXqtqWy",
+        "artist_names": "QWER",
+        "track_name": "My Name is Malguem",
+        "source": "TAMAGO PRODUCTION",
+        "peak_rank": 9,
+        "previous_rank": 25,
+        "weeks_on_chart": 9,
+        "streams": 132436,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 34,
+    "fields": {
+        "rank": 34,
+        "track_id": "38tXZcL1gZRfbqfOG0VMTH",
+        "artist_names": "NewJeans",
+        "track_name": "How Sweet",
+        "source": "ADOR",
+        "peak_rank": 1,
+        "previous_rank": 32,
+        "weeks_on_chart": 26,
+        "streams": 131185,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 35,
+    "fields": {
+        "rank": 35,
+        "track_id": "0dS2u2UFd88TIzDDaZDLvS",
+        "artist_names": "d4vd",
+        "track_name": "Here With Me",
+        "source": "Darkroom/Interscope Records",
+        "peak_rank": 35,
+        "previous_rank": 35,
+        "weeks_on_chart": 97,
+        "streams": 130807,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 36,
+    "fields": {
+        "rank": 36,
+        "track_id": "18x0Z8JUwLA2LhgsIHbNy3",
+        "artist_names": "DAY6",
+        "track_name": "한 페이지가 될 수 있게",
+        "source": "JYP Entertainment",
+        "peak_rank": 29,
+        "previous_rank": 30,
+        "weeks_on_chart": 104,
+        "streams": 130025,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 37,
+    "fields": {
+        "rank": 37,
+        "track_id": "1MC8JLPV4fbvVBqvGSLoDf",
+        "artist_names": "Jimin",
+        "track_name": "Who (Rock Remix)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 20,
+        "previous_rank": 36,
+        "weeks_on_chart": 18,
+        "streams": 125133,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 38,
+    "fields": {
+        "rank": 38,
+        "track_id": "10I5rhhFoWZDIN3kEc6Dbo",
+        "artist_names": "Jimin",
+        "track_name": "Who (Acoustic Remix)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 23,
+        "previous_rank": 37,
+        "weeks_on_chart": 18,
+        "streams": 124538,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 39,
+    "fields": {
+        "rank": 39,
+        "track_id": "04HGddGSz9qgxiFJkR7oMy",
+        "artist_names": "JAESSBEE",
+        "track_name": "Every Moment With You",
+        "source": "MMTG",
+        "peak_rank": 39,
+        "previous_rank": 64,
+        "weeks_on_chart": 2,
+        "streams": 123476,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 40,
+    "fields": {
+        "rank": 40,
+        "track_id": "1Px44tw80Q4rcCl8FxDGOi",
+        "artist_names": "Jimin",
+        "track_name": "Who (Instrumental)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 25,
+        "previous_rank": 42,
+        "weeks_on_chart": 18,
+        "streams": 120098,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 41,
+    "fields": {
+        "rank": 41,
+        "track_id": "6je5cTal6PyeITNrOzkCoS",
+        "artist_names": "DAY6",
+        "track_name": "Welcome to the Show",
+        "source": "JYP Entertainment",
+        "peak_rank": 24,
+        "previous_rank": 34,
+        "weeks_on_chart": 36,
+        "streams": 120008,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 42,
+    "fields": {
+        "rank": 42,
+        "track_id": "4gxEY3Mh5FZZDAJAKPNrCS",
+        "artist_names": "LE SSERAFIM",
+        "track_name": "CRAZY",
+        "source": "SOURCE MUSIC",
+        "peak_rank": 4,
+        "previous_rank": 29,
+        "weeks_on_chart": 12,
+        "streams": 119212,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 43,
+    "fields": {
+        "rank": 43,
+        "track_id": "6dOtVTDdiauQNBQEDOtlAB",
+        "artist_names": "Billie Eilish",
+        "track_name": "BIRDS OF A FEATHER",
+        "source": "Darkroom/Interscope Records",
+        "peak_rank": 20,
+        "previous_rank": 31,
+        "weeks_on_chart": 27,
+        "streams": 118614,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 44,
+    "fields": {
+        "rank": 44,
+        "track_id": "6lAvyeD3Nq43AjyCxZQj54",
+        "artist_names": "aespa",
+        "track_name": "Armageddon",
+        "source": "SM Entertainment",
+        "peak_rank": 5,
+        "previous_rank": 33,
+        "weeks_on_chart": 26,
+        "streams": 118442,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 45,
+    "fields": {
+        "rank": 45,
+        "track_id": "1ySWoGgrduSzvtJ3PUzO41",
+        "artist_names": "Jimin",
+        "track_name": "Who (Shibuyakei Remix)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 27,
+        "previous_rank": 38,
+        "weeks_on_chart": 18,
+        "streams": 117798,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 46,
+    "fields": {
+        "rank": 46,
+        "track_id": "3FR2yqZsG07NhXz7uPyUyC",
+        "artist_names": "DAY6",
+        "track_name": "예뻤어",
+        "source": "JYP Entertainment",
+        "peak_rank": 39,
+        "previous_rank": 39,
+        "weeks_on_chart": 96,
+        "streams": 115431,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 47,
+    "fields": {
+        "rank": 47,
+        "track_id": "7KZNgri6Jxw88FAfATw6i9",
+        "artist_names": "Jimin",
+        "track_name": "Who (Funky Remix)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 28,
+        "previous_rank": 43,
+        "weeks_on_chart": 18,
+        "streams": 114649,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 48,
+    "fields": {
+        "rank": 48,
+        "track_id": "3vnaEaDxMKdBhqA1t0uAwl",
+        "artist_names": "Lim Young Woong",
+        "track_name": "Warmth",
+        "source": "Mulgogi Music",
+        "peak_rank": 12,
+        "previous_rank": 40,
+        "weeks_on_chart": 29,
+        "streams": 114004,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 49,
+    "fields": {
+        "rank": 49,
+        "track_id": "2isRbZIIU4PqPrECffn7QO",
+        "artist_names": "Jimin",
+        "track_name": "Who (Beautiful Mind Remix)",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 28,
+        "previous_rank": 44,
+        "weeks_on_chart": 18,
+        "streams": 113362,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 50,
+    "fields": {
+        "rank": 50,
+        "track_id": "2PlsVMcOn6ujc2UEYs2Yat",
+        "artist_names": "Lim Young Woong",
+        "track_name": "Home",
+        "source": "Mulgogi Music",
+        "peak_rank": 13,
+        "previous_rank": 41,
+        "weeks_on_chart": 29,
+        "streams": 113277,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 51,
+    "fields": {
+        "rank": 51,
+        "track_id": "4WUpMUjdoi47LY7gBQBXe3",
+        "artist_names": "Lim Young Woong",
+        "track_name": "Grain of Sand",
+        "source": "물고기뮤직",
+        "peak_rank": 8,
+        "previous_rank": 46,
+        "weeks_on_chart": 77,
+        "streams": 112105,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 52,
+    "fields": {
+        "rank": 52,
+        "track_id": "21ewxM3YvcdTj7cC0XwznO",
+        "artist_names": "Lim Young Woong",
+        "track_name": "Do or Die",
+        "source": "Mulgogi Music",
+        "peak_rank": 6,
+        "previous_rank": 47,
+        "weeks_on_chart": 59,
+        "streams": 108545,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 53,
+    "fields": {
+        "rank": 53,
+        "track_id": "4xeugB5MqWh0jwvXZPxahq",
+        "artist_names": "WOODZ",
+        "track_name": "Drowning",
+        "source": "EDAM Entertainment",
+        "peak_rank": 51,
+        "previous_rank": 51,
+        "weeks_on_chart": 7,
+        "streams": 107751,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 54,
+    "fields": {
+        "rank": 54,
+        "track_id": "6auT8cRBu3BgPRBrdVBY15",
+        "artist_names": "Lim Young Woong",
+        "track_name": "London Boy",
+        "source": "물고기뮤직",
+        "peak_rank": 6,
+        "previous_rank": 50,
+        "weeks_on_chart": 105,
+        "streams": 104267,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 55,
+    "fields": {
+        "rank": 55,
+        "track_id": "0T6J3Ipbe06lm7p3grH2bg",
+        "artist_names": "DAY6",
+        "track_name": "녹아내려요 Melt Down",
+        "source": "JYP Entertainment",
+        "peak_rank": 17,
+        "previous_rank": 48,
+        "weeks_on_chart": 12,
+        "streams": 99942,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 56,
+    "fields": {
+        "rank": 56,
+        "track_id": "0hqj5JBnFt1BHEz2UCFwrl",
+        "artist_names": "AKMU",
+        "track_name": "How can I love the heartbreak, you're the one I love",
+        "source": "YG Entertainment",
+        "peak_rank": 37,
+        "previous_rank": 45,
+        "weeks_on_chart": 73,
+        "streams": 97530,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 57,
+    "fields": {
+        "rank": 57,
+        "track_id": "6aJn7Cst74cj4lNIiPRgav",
+        "artist_names": "KATSEYE",
+        "track_name": "Touch",
+        "source": "HYBE/Geffen",
+        "peak_rank": 17,
+        "previous_rank": 49,
+        "weeks_on_chart": 15,
+        "streams": 95177,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 58,
+    "fields": {
+        "rank": 58,
+        "track_id": "0a4MMyCrzT0En247IhqZbD",
+        "artist_names": "NewJeans",
+        "track_name": "Hype Boy",
+        "source": "ADOR",
+        "peak_rank": 1,
+        "previous_rank": 59,
+        "weeks_on_chart": 121,
+        "streams": 91837,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 59,
+    "fields": {
+        "rank": 59,
+        "track_id": "13z3GfR6WzmLUDxBHO3amM",
+        "artist_names": "DAY6",
+        "track_name": "Congratulations",
+        "source": "JYP Entertainment",
+        "peak_rank": 56,
+        "previous_rank": 56,
+        "weeks_on_chart": 19,
+        "streams": 91101,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 60,
+    "fields": {
+        "rank": 60,
+        "track_id": "3r8RuvgbX9s7ammBn07D3W",
+        "artist_names": "NewJeans",
+        "track_name": "Ditto",
+        "source": "ADOR",
+        "peak_rank": 1,
+        "previous_rank": 54,
+        "weeks_on_chart": 101,
+        "streams": 89761,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 61,
+    "fields": {
+        "rank": 61,
+        "track_id": "4UwsXGVppRRJpKBHy0mtyK",
+        "artist_names": "YENA",
+        "track_name": "NEMONEMO",
+        "source": "Genie Music Corporation, Stone Music Entertainment",
+        "peak_rank": 35,
+        "previous_rank": 52,
+        "weeks_on_chart": 7,
+        "streams": 88718,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 62,
+    "fields": {
+        "rank": 62,
+        "track_id": "0znsc67nMhP4X9hjhvoyeP",
+        "artist_names": "ILLIT",
+        "track_name": "Tick-Tack",
+        "source": "BELIFT LAB",
+        "peak_rank": 62,
+        "previous_rank": -1,
+        "weeks_on_chart": 2,
+        "streams": 88450,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 63,
+    "fields": {
+        "rank": 63,
+        "track_id": "0KKkJNfGyhkQ5aFogxQAPU",
+        "artist_names": "Bruno Mars",
+        "track_name": "That's What I Like",
+        "source": "Atlantic Records",
+        "peak_rank": 53,
+        "previous_rank": 53,
+        "weeks_on_chart": 29,
+        "streams": 87562,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 64,
+    "fields": {
+        "rank": 64,
+        "track_id": "7wLJ4xzxNss5abZ1kXs242",
+        "artist_names": "Car, the garden",
+        "track_name": "Closely Far Away",
+        "source": "니즈뮤직",
+        "peak_rank": 60,
+        "previous_rank": 60,
+        "weeks_on_chart": 10,
+        "streams": 86258,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 65,
+    "fields": {
+        "rank": 65,
+        "track_id": "56v8WEnGzLByGsDAXDiv4d",
+        "artist_names": "NewJeans",
+        "track_name": "ETA",
+        "source": "ADOR",
+        "peak_rank": 3,
+        "previous_rank": 61,
+        "weeks_on_chart": 70,
+        "streams": 84244,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 66,
+    "fields": {
+        "rank": 66,
+        "track_id": "2tA3NP12r4niSRhb9Y6AoY",
+        "artist_names": "Lim Young Woong",
+        "track_name": "Polaroid",
+        "source": "물고기뮤직",
+        "peak_rank": 10,
+        "previous_rank": 63,
+        "weeks_on_chart": 105,
+        "streams": 84185,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 67,
+    "fields": {
+        "rank": 67,
+        "track_id": "24ISyrkOgpc0IodIEUokog",
+        "artist_names": "데이먼스 이어 Damons year",
+        "track_name": "yours",
+        "source": "Akashic Records",
+        "peak_rank": 48,
+        "previous_rank": 79,
+        "weeks_on_chart": 112,
+        "streams": 83630,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 68,
+    "fields": {
+        "rank": 68,
+        "track_id": "2RLdkXSaiQjRbey5pvP8Kt",
+        "artist_names": "Lim Young Woong",
+        "track_name": "If We Ever Meet Again",
+        "source": "물고기뮤직",
+        "peak_rank": 5,
+        "previous_rank": 68,
+        "weeks_on_chart": 133,
+        "streams": 82066,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 69,
+    "fields": {
+        "rank": 69,
+        "track_id": "0PBTlQ84CBJF0tBnKGmQa6",
+        "artist_names": "V",
+        "track_name": "FRI(END)S",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 9,
+        "previous_rank": 67,
+        "weeks_on_chart": 36,
+        "streams": 79864,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 70,
+    "fields": {
+        "rank": 70,
+        "track_id": "3TQHPUEVdvdq8ejwEcHUlL",
+        "artist_names": "Nerd Connection",
+        "track_name": "If I have you only (My love X Nerd Connection)",
+        "source": "TOON STUDIO",
+        "peak_rank": 38,
+        "previous_rank": 58,
+        "weeks_on_chart": 54,
+        "streams": 79824,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 71,
+    "fields": {
+        "rank": 71,
+        "track_id": "0QzuaeCEEOV40Pn7IvKEny",
+        "artist_names": "Dhruv",
+        "track_name": "double take",
+        "source": "Little Worry/RCA Records",
+        "peak_rank": 42,
+        "previous_rank": 80,
+        "weeks_on_chart": 179,
+        "streams": 79537,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 72,
+    "fields": {
+        "rank": 72,
+        "track_id": "3Dah48XTdzVtbIl4dUn6l4",
+        "artist_names": "RIIZE",
+        "track_name": "Get A Guitar",
+        "source": "SM Entertainment",
+        "peak_rank": 17,
+        "previous_rank": 87,
+        "weeks_on_chart": 64,
+        "streams": 79174,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 73,
+    "fields": {
+        "rank": 73,
+        "track_id": "5XWlyfo0kZ8LF7VSyfS4Ew",
+        "artist_names": "aespa",
+        "track_name": "Drama",
+        "source": "SM Entertainment / Warner Records",
+        "peak_rank": 15,
+        "previous_rank": 77,
+        "weeks_on_chart": 54,
+        "streams": 76061,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 74,
+    "fields": {
+        "rank": 74,
+        "track_id": "19D8LNpWwIPpi6hs9BG7dq",
+        "artist_names": "NewJeans",
+        "track_name": "Bubble Gum",
+        "source": "ADOR",
+        "peak_rank": 4,
+        "previous_rank": 69,
+        "weeks_on_chart": 26,
+        "streams": 76017,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 75,
+    "fields": {
+        "rank": 75,
+        "track_id": "1Uxr0oBXAZRuLkAz27TkLc",
+        "artist_names": "TAEYEON",
+        "track_name": "Letter To Myself",
+        "source": "SM Entertainment",
+        "peak_rank": 75,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 75555,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 76,
+    "fields": {
+        "rank": 76,
+        "track_id": "5LlUJ3HHI2dS0xowdMDXC5",
+        "artist_names": "MEOVV",
+        "track_name": "MEOW",
+        "source": "THEBLACKLABEL",
+        "peak_rank": 12,
+        "previous_rank": 78,
+        "weeks_on_chart": 11,
+        "streams": 75228,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 77,
+    "fields": {
+        "rank": 77,
+        "track_id": "6rdkCkjk6D12xRpdMXy0I2",
+        "artist_names": "NewJeans",
+        "track_name": "New Jeans",
+        "source": "ADOR",
+        "peak_rank": 4,
+        "previous_rank": 65,
+        "weeks_on_chart": 72,
+        "streams": 74426,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 78,
+    "fields": {
+        "rank": 78,
+        "track_id": "1SS0WlKhJewviwEDZ6dWj0",
+        "artist_names": "ZICO, JENNIE",
+        "track_name": "SPOT!",
+        "source": "KOZ Entertainment",
+        "peak_rank": 2,
+        "previous_rank": 76,
+        "weeks_on_chart": 30,
+        "streams": 74320,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 79,
+    "fields": {
+        "rank": 79,
+        "track_id": "65FftemJ1DbbZ45DUfHJXE",
+        "artist_names": "NewJeans",
+        "track_name": "OMG",
+        "source": "ADOR",
+        "peak_rank": 1,
+        "previous_rank": 75,
+        "weeks_on_chart": 99,
+        "streams": 73716,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 80,
+    "fields": {
+        "rank": 80,
+        "track_id": "1YXot2MLAG9sttepCtBRM7",
+        "artist_names": "Vaundy",
+        "track_name": "踊り子",
+        "source": "SDR Inc.",
+        "peak_rank": 18,
+        "previous_rank": 86,
+        "weeks_on_chart": 46,
+        "streams": 73599,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 81,
+    "fields": {
+        "rank": 81,
+        "track_id": "1BxfuPKGuaTgP7aM0Bbdwr",
+        "artist_names": "Taylor Swift",
+        "track_name": "Cruel Summer",
+        "source": "Taylor Swift",
+        "peak_rank": 24,
+        "previous_rank": 74,
+        "weeks_on_chart": 76,
+        "streams": 72932,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 82,
+    "fields": {
+        "rank": 82,
+        "track_id": "4e1aewX6ATPcdfQIqr7gqO",
+        "artist_names": "KISS OF LIFE",
+        "track_name": "Sticky",
+        "source": "S2 ENTERTAINMENT INC.",
+        "peak_rank": 6,
+        "previous_rank": 71,
+        "weeks_on_chart": 21,
+        "streams": 72450,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 83,
+    "fields": {
+        "rank": 83,
+        "track_id": "5sdQOyqq2IDhvmx2lHOpwd",
+        "artist_names": "NewJeans",
+        "track_name": "Super Shy",
+        "source": "ADOR",
+        "peak_rank": 2,
+        "previous_rank": 83,
+        "weeks_on_chart": 72,
+        "streams": 72327,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 84,
+    "fields": {
+        "rank": 84,
+        "track_id": "39gaUtq2z4ejJbno7tWHbL",
+        "artist_names": "QWER",
+        "track_name": "T.B.H",
+        "source": "TAMAGO PRODUCTION",
+        "peak_rank": 11,
+        "previous_rank": 73,
+        "weeks_on_chart": 34,
+        "streams": 72174,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 85,
+    "fields": {
+        "rank": 85,
+        "track_id": "2i3HoDE1ZvQ2bh2ZmgpSug",
+        "artist_names": "Nerd Connection",
+        "track_name": "Silently Completely Eternally",
+        "source": "유어썸머",
+        "peak_rank": 85,
+        "previous_rank": 105,
+        "weeks_on_chart": 15,
+        "streams": 71522,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 86,
+    "fields": {
+        "rank": 86,
+        "track_id": "0VdwOoAKPe9aGahkpllfkH",
+        "artist_names": "BUMJIN",
+        "track_name": "A Letter",
+        "source": "JMG(더블엑스엔터테인먼트)",
+        "peak_rank": 68,
+        "previous_rank": 89,
+        "weeks_on_chart": 43,
+        "streams": 70965,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 87,
+    "fields": {
+        "rank": 87,
+        "track_id": "44hqFxUWsADWewEJELnncj",
+        "artist_names": "ENHYPEN",
+        "track_name": "No Doubt",
+        "source": "BELIFT LAB",
+        "peak_rank": 87,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 70829,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 88,
+    "fields": {
+        "rank": 88,
+        "track_id": "0aZG8KWrpRnsGL0loUkfSj",
+        "artist_names": "TWS",
+        "track_name": "plot twist",
+        "source": "PLEDIS Entertainment",
+        "peak_rank": 9,
+        "previous_rank": 100,
+        "weeks_on_chart": 44,
+        "streams": 69890,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 89,
+    "fields": {
+        "rank": 89,
+        "track_id": "4EwNWRBWdZ6bgvxRHlZ8OO",
+        "artist_names": "G-DRAGON",
+        "track_name": "CROOKED",
+        "source": "YG Entertainment",
+        "peak_rank": 47,
+        "previous_rank": 55,
+        "weeks_on_chart": 4,
+        "streams": 69586,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 90,
+    "fields": {
+        "rank": 90,
+        "track_id": "2gkVEnpahpE3bQuvGuCpAV",
+        "artist_names": "Jung Kook",
+        "track_name": "Yes or No",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 7,
+        "previous_rank": 93,
+        "weeks_on_chart": 55,
+        "streams": 69350,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 91,
+    "fields": {
+        "rank": 91,
+        "track_id": "2J194R0KIKbK7bTHfUHPDB",
+        "artist_names": "RIIZE",
+        "track_name": "Boom Boom Bass",
+        "source": "SM Entertainment",
+        "peak_rank": 17,
+        "previous_rank": 97,
+        "weeks_on_chart": 23,
+        "streams": 68177,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 92,
+    "fields": {
+        "rank": 92,
+        "track_id": "3yDRcs0Y4pPzkvMbUfeF9H",
+        "artist_names": "LISA",
+        "track_name": "Moonlit Floor (Kiss Me)",
+        "source": "Lloud Co./RCA Records",
+        "peak_rank": 24,
+        "previous_rank": 72,
+        "weeks_on_chart": 7,
+        "streams": 67981,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 93,
+    "fields": {
+        "rank": 93,
+        "track_id": "0bYg9bo50gSsH3LtXe2SQn",
+        "artist_names": "Mariah Carey",
+        "track_name": "All I Want for Christmas Is You",
+        "source": "Columbia",
+        "peak_rank": 5,
+        "previous_rank": 141,
+        "weeks_on_chart": 27,
+        "streams": 67837,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 94,
+    "fields": {
+        "rank": 94,
+        "track_id": "02mGPF4589DiiSdoH0pu1d",
+        "artist_names": "BIBI",
+        "track_name": "Derre",
+        "source": "FeelGhoodMusic",
+        "peak_rank": 94,
+        "previous_rank": -1,
+        "weeks_on_chart": 1,
+        "streams": 67279,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 95,
+    "fields": {
+        "rank": 95,
+        "track_id": "34DtDWmIUacoop6Md298vE",
+        "artist_names": "PLAVE",
+        "track_name": "Pump Up The Volume!",
+        "source": "VLAST",
+        "peak_rank": 26,
+        "previous_rank": 57,
+        "weeks_on_chart": 14,
+        "streams": 66940,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 96,
+    "fields": {
+        "rank": 96,
+        "track_id": "5FxasBmho2yEvgXrzp9MMW",
+        "artist_names": "G-DRAGON",
+        "track_name": "무제(無題) (Untitled, 2014)",
+        "source": "YG Entertainment",
+        "peak_rank": 64,
+        "previous_rank": 85,
+        "weeks_on_chart": 6,
+        "streams": 66833,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 97,
+    "fields": {
+        "rank": 97,
+        "track_id": "50xSycnGMDy0Wg5jJcOv3S",
+        "artist_names": "Lim Young Woong",
+        "track_name": "Rainbow",
+        "source": "물고기뮤직",
+        "peak_rank": 11,
+        "previous_rank": 102,
+        "weeks_on_chart": 132,
+        "streams": 66159,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 98,
+    "fields": {
+        "rank": 98,
+        "track_id": "2jidjmWNeRmKgLjXhW52Gz",
+        "artist_names": "Lim Young Woong",
+        "track_name": "Our Blues, Our Life",
+        "source": "물고기뮤직",
+        "peak_rank": 12,
+        "previous_rank": 101,
+        "weeks_on_chart": 133,
+        "streams": 65884,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 99,
+    "fields": {
+        "rank": 99,
+        "track_id": "5h1BN75CEh8wdSwE1xrbSe",
+        "artist_names": "V",
+        "track_name": "Slow Dancing",
+        "source": "BIGHIT MUSIC",
+        "peak_rank": 4,
+        "previous_rank": 103,
+        "weeks_on_chart": 62,
+        "streams": 63535,
+        "album_image": ""
+    }
+},
+{
+    "model": "musics.chart",
+    "pk": 100,
+    "fields": {
+        "rank": 100,
+        "track_id": "74X2u8JMVooG2QbjRxXwR8",
+        "artist_names": "LE SSERAFIM",
+        "track_name": "Perfect Night",
+        "source": "SOURCE MUSIC",
+        "peak_rank": 10,
+        "previous_rank": 90,
+        "weeks_on_chart": 56,
+        "streams": 62245,
+        "album_image": ""
+    }
+}
+]
