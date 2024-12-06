@@ -1,6 +1,9 @@
 # 2024년 12월 2일(월) 수업 내용 정리 - Introduction to Data - Centric AI
 
 
+## 데이터와 AI 모델 성능의 상관관계
+
+
 - 데이터와 AI 모델
 
   - 형식에 따른 데이터의 종류
@@ -184,3 +187,117 @@ AI = Code + Data
 - BERT, GPT, ResNet 등이 Model-Centric AI의 산물이라 볼 수 있음
 
   ![alt text](./images/image_12.png)
+
+
+#### Model-Centric AI - 주요 목적
+
+![alt text](./images/image_13.png)
+
+
+#### Model-Centric AI - 한계 및 사례
+
+![alt text](./images/image_14.png)
+
+
+#### 다른 방법론의 필요성
+
+- 과거 연구의 트렌드 : Task에 맞는 데이터를 대량으로 집어 넣고 **노이즈를 잘 걸러내는 모델**을 만드는 것 (BERT 등)
+- **최근 연구**의 트렌드 : 사전 학습 모델에 **소량의 고품질 데이터**를 확보하여 Fine-Tuning하는 것
+- AI 시스템에서 데이터가 차지하는 비율이 80%
+
+  ![alt text](./images/image_15.png)
+
+
+#### Data-Centric AI
+
+- AI 시스템 개발에서 **데이터를 중심으로 접근**하는 방법론
+- 데이터가 AI 성능의 핵심이라는 인식에서 출발
+- 모델의 구조를 고정 혹은 최소한의 조정 후 데이터 품질에 노력을 기울임
+- 2020년대에 들어 주목받기 시작한 접근 방식
+
+  ※ 필요성
+
+    - 모델 성능을 종합적으로 평가할 수 있는 데이터셋이 필요
+    - 실전에서는 소량의 데이터가 반복적으로 생성되므로 좋은 데이터셋을 생성하는 알고리즘 필요
+
+
+- Data-Centric AI의 3가지 주요 목표
+
+  ![alt text](./images/image_16.png)
+
+
+#### Data-Centric AI의 목표
+
+(1) Training Data Development
+
+- 훈련 데이터는 모델 학습의 기초로, 고품질의 데이터를 구성하는 것이 중요
+
+  ※ 종류
+
+  - Data Collection : 새로운 데이터 구축 또는 기존 데이터셋 통합
+  - Data Labeling : 수집한 데이터들에 라벨을 부여하여 학습 가능한 형태로 만듦
+  - Data Preparation : 데이터 정제, 특징 추출, 표준화 및 정규화를 통해 학습 준비
+  - Data Reduction : 특징 선택, 차원 축소 등을 통해 데이터의 크기와 복잡성감소
+  - Data Augmentation : 데이터를 더 수집하지 않고 다양성을 높임
+
+
+(2) Inference Data Development
+
+- 추론 데이터는 모델의 성능 평가를 위한 테스트와 검증 데이터로 사용됨
+
+  ※ 종류
+
+  - In Distribution Evaluation : training 데이터와 **같은 분포를 가진 데이터셋**으로 모델 성능 평가
+  - Out of Distribution Evaluation : **다른 분포를 가진 데이터셋**으로 성능 평가
+
+
+
+(3) Data Maintenance
+
+- AI 시스템 운영 환경에서는 데이터가 지속적으로 변화하며, 데이터 유지 관리가 필수
+
+  ※ 종류
+
+  - Data Understanding : 데이터의 특성을 전반적으로 이해할 수 있는 알고리즘
+  - Data Quality Assurance : 데이터의 퀄리티를 평가할 수 있는 Metric을 개발
+  - Data Storage & Retrieval : 데이터를 효율적으로 저장하고 빠르게 검색할 수 있도록 관리
+
+
+#### Model-Centric AI와 Data-Centric AI의 비교
+
+  |항목|Model-Centric AI|Data-Centric AI|
+  |:--:|:--:|:--:|
+  |목표|모델 성능 향상을 위한 구조 설계|데이터에서 최대 정보 추출|
+  |초점|모델 구조 및 알고리즘 개선|데이터 품질 개선 및 최적화|
+  |장점|고품질 데이터 없이도 성능 향상|일반화 성능 향상|
+  |단점|큰 성능 향상의 어려움|관리에 시간과 비용이 많이 듦|
+  |적용 영역|연구 및 혁신|실제 비즈니스 문제 해결|
+  <br>
+
+
+#### Model-Centric AI와 Data-Centric AI는 상호 보완적
+
+- AI 시스템 개발에서 데이터와 모델 모두 최적화 하는 것이 중요함
+- 적은 양의 데이터를 활용할 수 있는 Model-Centric AI도 중요함
+- Data-Centric AI의 중요도에 비해 연구가 부족한 상황
+
+  ![alt text](./images/image_17.png)
+
+
+### SUMMARY
+
+1. 데이터와 AI 모델
+
+    - 형식에 따른 데이터 종류 - 정형, 반정형, 비정형 데이터
+    - 모델 훈련에 따른 데이터 종류 - 지도학습 : 라벨 있는 데이터, 비지도학습 : 라벨 없는 데이터
+    - 데이터가 AI 모델에 미치는 영향 - 크기와 다양성이 부족하면 모델의 일반화 성능 감소
+
+2. Model-Centric AI, Data-Centric AI
+
+    - Model-Centric AI - 데이터를 고정하고 모델 구조에 집중하는 AI 시스템 개발 방식
+    - Data-Centric AI - 모델을 고정하고 데이터에 집중하는 AI 시스템 개발 방식
+
+
+
+
+## 좋은 데이터와 나쁜 데이터의 차이, 데이터 품질의 중요성
