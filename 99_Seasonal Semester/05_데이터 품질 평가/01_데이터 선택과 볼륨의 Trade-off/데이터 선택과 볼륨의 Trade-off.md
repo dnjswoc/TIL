@@ -38,3 +38,17 @@
 - 대규모 언어 모델(LLM) 학습에서 데이터 선택 방식은 데이터 파이프라인의 각 단계와 학습 목적에 따라 다양하게 적용
 
   ![alt text](./images/image_00.png)
+
+**각 학습 단계에 따라 데이터 선택 전략이 달라짐. 각 단계에서 어떤 데이터를 선택애햐 하는지 명확하게 이해해야 함**
+
+1. Pretraining
+2. Instruction Tuning
+3. Alignment
+4. Task-specific Fine-tuning
+
+(1) Pretraining(사전학습) 단계에서의 데이터 선택
+
+- Pretraining 단계는 언어 모델 학습의 초기 단계로, 범용성 있는 모델을 구축하기 위해 다양한 데이터 선택 방법을 사용.
+- 이 단계에서는 방대한 양의 데이터에서 **고품질, 효율적인 데이터**를 선정하고, **불필요한 노이즈와 중복 데이터**를 제거하는 것이 핵심
+
+  ![alt text](./images/image_01.png)
