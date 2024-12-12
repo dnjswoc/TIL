@@ -308,7 +308,56 @@ Alignment는 모델이 사용자 의도와 윤리적 기준에 맞춰 응답하�
 
 <hr>
 
+### 02 데이터 선택과 볼륨 간 Trade-off 사례
+
+- 학습 목표
+
+  - 데이터 선택과 볼륨 조정의 중요성을 이해한다
+  - 적절한 데이터 볼륨과 품질을 기반으로 LLM 학습 효율성을 높이는 방법을 구체적으로 설명할 수 있다
+
+<hr>
+
+#### 적절한 데이터 볼륨과 데이터 선택 사례
+
+(1) Pretraining
+
+- 최대한 방대한 데이터셋을 사용하되, 노이즈와 중복 데이터를 철저히 제거
+
+  ![alt text](./images/image_17.png)
+
+  ![alt text](./images/image_18.png)
+
+  ![alt text](./images/image_19.png)
 
 
 
+(2) Fine-Tuning
+
+- 데이터 볼륨보다는 목표 작업과의 관련성과 품질이 더 중요
+- 특정 도메인(의학, 법률)에서는 소량의 고품질 데이터가 대규모의 일반 데이터보다 더 효과적
+
+  ![alt text](./images/image_20.png)
+
+
+(3) Few-Shot 또는 In-Context Learning
+
+- 모델이 이미 Pretraining으로 충분한 지식을 학습했다면 소량의 샘플만으로도 성능을 크게 개선할 수 있음
+- 5~10개의 잘 설계된 예제로 높은 성능을 발휘
+
+  ![alt text](./images/image_21.png)
+
+<hr>
+
+### SUMMARY
+
+1. 데이터 선택과 볼륨
+
+    - 데이터 선택
+    - LLM에서의 데이터 선택
+    - 데이터 볼륨
+
+
+2. 데이터 선택과 데이터 볼륨 간 Trade-off 사례
+
+    - 적절한 데이터 볼륨과 데이터 선택 사례 - Pretraining, Fine-Tuning, Few-Shot or In-context Learning
 
