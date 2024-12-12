@@ -349,3 +349,69 @@ B. t-SNE 작동 원리 및 특징
 #### 실습 - 데이터 설명
 
 - **실습 데이터 설명** : 미국 인구 조사 데이터로 소득 데이터셋
+- **종속(목표) 변수** : income(연간 소득, ≤550K 또는 >50K)
+- **데이터 크기** : 32561행 X 15열
+- 수치형(int) 컬럼 6개, 범주형(object) 컬럼 9개 존재
+
+  ![alt text](./images/image_34.png)
+
+
+<hr>
+
+#### 실습 - EDA(Exploratory Data Analysis, 탐색적 데이터 분석)
+
+(1) 결측값 확인 및 대체
+
+- Null 값은 없지만, **'?' 표시된 결측값**이 존재함(workclass, occupation, native.country) → **Null 값으로 대체**
+
+  ![alt text](./images/image_35.png)
+
+- Null 값을 각 데이터의 **최빈값(mode)로 대체**해줌
+
+  ![alt text](./images/image_36.png)
+
+
+(2) 수치형 이상치 확인
+
+![alt text](./images/image_37.png)
+
+- 이상치가 존재하지만, **데이터 도메인에 따라 이상치가 아닌 경우**가 존재
+- 이번 데이터는 사람 관련 데이터로, 각 개인의 특성이 다르며 특정 값이 이상치로 보이더라도 이를 비정상적이라고 단정할 수 없음
+- 사람마다 고유한 특성이 있어 데이터의 도메인 특성상 정확히 특정 값을 이상치로 간주하기 어려움
+- 따라서, **데이터의 다양성과 특성을 보존하기 위해 이상치를 제거하지 않고 진행함**
+
+<hr>
+
+#### 실습 - 데이터 Split
+
+- 종속변수(income)을 제외하고 모든 변수를 독립변수로 둠
+
+  ![alt text](./images/image_38.png)
+
+- 훈련 데이터(training set)와 테스트 데이터(test set)으로 **7:3 비율**로 나눔
+
+  ![alt text](./images/image_39.png)
+
+<hr>
+
+#### 실습 -Feature Engineering
+
+(1) Feature Encoding
+
+- **범주형 데이터**를 모델이 처리할 수 있는 **수치형 데이터로 변환**하는 과정
+- Label Encoder를 사용해 각 범주형 변수를 정수로 변환함
+
+  ![alt text](./images/image_40.png)
+
+
+(2) Feature Scaling
+
+- 데이터의 변수들이 서로 다른 범위나 단위를 가지는 경우, 값의 크기가 큰 변수가 모델 학습에 더 큰 영향을 미칠 수 있어 모델이 왜곡될 가능성이 있음
+- 데이터 범위를 **표준화(Standardization)를 통해 평균을 0, 분산을 1로 맞춤으로써 동일한 스케일로 변환**
+
+  ![alt text](./images/image_41.png)
+
+
+(3) Feature 축소 - PCA
+
+
