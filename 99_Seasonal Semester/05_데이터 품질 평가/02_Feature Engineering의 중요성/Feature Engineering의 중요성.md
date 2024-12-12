@@ -155,20 +155,126 @@ B. 유전 알고리즘 절차
 
 
 
-(5) Feature(차원) 축소 - 주성분 분석(PCA, Principal Component Analysis)
+(5) Feature(차원) 축소
 
-① PCA 정의 및 목적
+① 주성분 분석(PCA, Principal Component Analysis)
 
 
+  A. PCA 정의 및 목적
 
-② PCA의 원리
+  - 고차원 데이터를 저차원으로 축소하면서 **데이터의 분산(정보)를 최대한 보존**하는 선형 차원 축소 기법
+  - 이는 데이터를 새로운 좌표계로 변환하여 데이터의 주요 패턴을 찾고, 불필요한 차원을 제거하는 데 사용
+  - 예. 3차원의 데이터를 2차원의 주성분 공간으로 사영(projection)시키면 원래 데이터가 가지고 있는 특정의 대부분이 보존
+
+    ![alt text](./images/image_18.png)
+
+
+B. PCA의 원리
 
 - 주성분(Principal Component)
+
+  ![alt text](./images/image_19.png)
 
 
 - 공분산 행렬(Covariance Matrix)
 
+  ![alt text](./images/image_20.png)
 
-③ PCA의 과정
+
+C. PCA의 과정
+
+![alt text](./images/image_21.png)
 
 
+② t-SNE(t-Distributed Stochastic Neighbor Embedding)
+
+A. t-SNE 정의
+
+- 고차원 공간에서 가까운 것은 저차원에서도 가깝게, 고차원에서 먼 것은 저차원에서도 멀게 유지하는 것
+- 즉, 고차원 데이터에서 데이터 포인트 간의 관계를 유지하면서 저차원으로 변환
+- **비선형 차원 축소 기법**으로, 비선형 변환을 사용하여 복잡한 데이터 구조를 효과적으로 표현
+- 데이터 간의 유사성(Similiarity)에 중점을 두며, 글로벌 구조(Global Structure)보다는 **로컬 구조(Local Structure)를 더 잘 반영함**
+
+  ![alt text](./images/image_22.png)
+
+
+B. t-SNE 작동 원리 및 특징
+
+![alt text](./images/image_23.png)
+
+- **로컬 구조(Local Structure) 보존** : 가까운 데이터 포인트 간의 관계를 최대한 유지하며, 저차원에서도 local 군집 유지됨
+- **글로벌 구조(Global Structure) 표현에 약함** : 멀리 떨어진 데이터 포인트 간의 관계는 왜곡될 가능성이 있음
+- **계산 비용이 높음** : 고차원 데이터가 계산량이 많고 학습 시간이 오래 걸림
+- **해석이 어려움** : 결과로 나온 저차원 데이터가 원래 데이터의 실제 분포를 완벽히 반영하지 않음
+
+
+![alt text](./images/image_24.png)
+
+
+<hr>
+
+### 02 모델 성능에 영향을 미치는 주요 Feature
+
+- 학습 목표
+
+  - 모델 해석이 왜 중요한지 이해하고, 실무에서 해석 가능한 모델이 요구되는 이유를 설명할 수 있다
+  - 모델 성능에 따라 직접적인 영향을 미치는 주요 Feature를 이해한다
+
+<hr>
+
+#### 모델 해석의 중요성
+
+![alt text](./images/image_25.png)
+
+![alt text](./images/image_26.png)
+
+<hr>
+
+#### Feature 선택 및 중요도 평가
+
+(1) Feature Importance(특성 중요도)
+
+① 특징
+
+- 모델이 학습하는 과정에서 **각 Feature가 예측에 얼마나 기여했는지**를 평가함
+- 주로 **트리 기반 모델**(예 : RandomForest, XGBoost)에 주로 사용됨
+- 각 Feature가 노드 분할에 얼마나 자주 사용되었는지, 분할로 인해 감소된 불순도(Gini impurity, Entropy 등) 기준으로 계산
+- **Feature의 중요도를 상대적인 값**으로 제공
+
+② 장점
+
+- **빠른 계산** : 모델 학습 과정에서 Feature Importance를 자동으로 계산
+- **직관적 해석** : 중요도가 높은 Feature를 바로 식별
+
+③ 단점
+
+- **Feature 상관성 문제** : 서로 상관관계가 높은 Feature가 있을 경우, 중요도가 왜곡될 수 있음(예 : 중복된 Feature가 높은 중요도를 나누어 가지는 경우)
+- **특정 모델에 의존** : 선형 모델이나 트리 기반 모델이 아닌 경우 직접 계산이 불가
+
+  ![alt text](./images/image_27.png)
+
+
+(2) Drop-Column Importance
+
+① 
+
+② 
+
+③ 
+
+
+(3) Permutation Importance
+
+① 
+
+② 
+
+③ 
+
+(4) SHAP(SHapley Additive exPlanations)
+
+① 
+
+② 
+
+③ 
