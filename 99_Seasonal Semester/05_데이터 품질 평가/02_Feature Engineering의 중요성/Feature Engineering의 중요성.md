@@ -415,3 +415,5 @@ B. t-SNE 작동 원리 및 특징
 (3) Feature 축소 - PCA
 
 
+
+
