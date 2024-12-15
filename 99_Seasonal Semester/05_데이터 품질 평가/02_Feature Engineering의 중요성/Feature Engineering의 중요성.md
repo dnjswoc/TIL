@@ -414,7 +414,92 @@ B. t-SNE 작동 원리 및 특징
 
 (3) Feature 축소 - PCA
 
+- PCA는 **원래 데이터의 컬럼을 조합하여 만든 새로운 축(Principal Component)**를 의미함
+- 이 축들은 데이터의 분산을 최대한 설명하도록 설계됨
+- Scikit-learn 라이브러리의 내장된 PCA를 사용
+
+  ![alt text](./images/image_42.png)
+
 - PCA를 통해 각 주성분이 데이터의 분산을 얼마나 설명하는 분석한 결과, **누적 설명 분산 비율(Cumulative Explained Variance Ratio)을 기준으로 적절한 주성분의 개수를 선택**할 수 있음
 - 일반적으로 **누적 분산 비율이 80~95%**이면 원래 데이터의 주요 패턴을 대부분 유지한다고 판단할 수 있음
 
+  ![alt text](./images/image_43.png)
 
+- **Loading Matrix**는 **각 주성분이 원래 Feature에 대해 얼마나 영향을 받는 지 알 수 있음**
+- **로딩 값의 절대값이 클수록 해당 특성이 주성분에 미치는 영향이 크며**, 주성분을 형성하는 데 중요한 역할을 함
+- PC1에서 relationship(가족 관계), sex(성별)이 가장 높은 로딩 값을 가지며, 이는 두 특성이 PC1에 강한 영향을 미친다는 것을 의미함
+
+  ![alt text](./images/image_44.png)
+
+  ![alt text](./images/image_45.png)
+
+
+<hr>
+
+#### 실습 - 모델링(RandomForest Classification)
+
+PCA 적용 전, 후 예측 비교
+
+- **PCA 적용 전(Feature Encoding, Scaling)**과 **PCA 적용 후(Feature Encoding, Scaling, PCA)**의 예측 성능을 비교함
+- **PCA 적용하기 전 모델이 더 높은 성능**을 보였음을 확인할 수 있음
+- **PCA 적용 후에는 데이터 차원을 축소하면서 일부 정보 손실이 발생**할 수 있으며, 이는 모델 성능에 영향을 미칠 가능성이 있음
+- Random Forest는 고차원 데이터에서 작동할 때, 차원을 축소하지 않아도 적절한 분할 규칙을 찾을 수 있음
+- 따라서 **트리 기반 모델에서는 차원 축소 없이도 대부분의 경우 잘 작동함**
+
+  ![alt text](./images/image_46.png)
+
+
+<hr>
+
+#### 실습 - Feature Importance
+
+(1) Feature Importance
+
+![alt text](./images/image_47.png)
+
+- Random Forest에 내장된 함수 'feature_importances_'를 사용
+- **어떤 특성이 모델의 예측에 많이 영향을 미쳤는지** 알 수 있음
+- 이 모델에서는 **'fnlwgt', 'age', 'capital.gain'** 순으로 중요하며, 모델의 예측 결과에 큰 영향을 미친다는 것을 알 수 있음
+- 반면, **'race', 'sex'**는 모델에서 예측에 거의 영향을 미치지 않음을 보여줌
+
+
+(2) Permutation Importance
+
+![alt text](./images/image_48.png)
+
+- Scikit-learn의 라이브러리인 permutation_importance 사용
+- 모델을 고정한 상태에서, **각 특성의 값을 랜덤하게 섞어(shuffle)** 모델 성능에 미치는 영향을 측정함
+- **정확도(accuracy)를 기준**으로 계산
+- 여기서는 **capital.gain, education.num, relationship** 순으로 해당 특성이 예측에 중요한 것으로 간주됨
+
+
+(3) Feature Importance vs Permutation Importance
+
+- Feature Importance, Permutation Importance는 서로 다른 방법론을 사용ㅇ하여 특성의 중요도를 평가하므로, 결과가 다를 수 있음
+- **모델 학습 과정과 특성의 중요도**를 이해하고 싶다면, **Feature Importance** 사용
+- **특성이 실제 예측에 미치는 영향**을 보고 싶다면, **Permutation Importance** 사용
+- **특성의 일반화 중요도를 확인**하려면, 테스트 데이터에서 평가하는 **Permutation Importance**가 적합함
+- **계산 비용**이 문제라면, **Feature Importance**를 빠르게 활용할 수 있음
+- **두 가지 방법을 모두 비교하여 공통적으로 중요한 특성을 확인할 수 있음**
+
+<hr>
+
+### SUMMARY
+
+1. Feature Engineering의 중요성
+
+    - Feature Engineering은 데이터의 Feature를 분석에 적합한 Feature로 변환하거나 새로운 Feature를 생성하는 과정
+    - Feature Engineering의 필요성 : 고차원 데이터, 차원의 저주
+    - Feature Engineering의 기법 : Feature 생성, 변환 Encoding, 선택, 축소
+
+
+2. 모델 성능에 영향을 미치는 주요 Feature
+
+    - 모델 해석의 중요성 : 모델 성능 향상, 설명 필요한 상황 발생
+    - Feature Importance, Drop-Column Importance, Permutation Importance, SHAP
+
+
+3. Feature Engineering 및 Feature 중요도 실습
+
+    - 실제 데이터를 통해 실습 진행
+    - EDA, Feature Engineering, RandomForest Classification, Feature Importance
