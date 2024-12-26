@@ -109,3 +109,89 @@
   - 플랫폼 + 활성화된 유저를 어떻게 모을 것인가?
 
   ![alt text](./images/image_04.png)
+
+<hr>
+
+#### LLM을 만들기 위해 알아야 하는 것들
+
+- Dataset
+
+  ![alt text](./images/image_05.png)
+
+  ![alt text](./images/image_06.png)
+
+- LLM architecture
+
+  ![alt text](./images/image_07.png)
+
+- Pre-training
+
+  ![alt text](./images/image_08.png)
+
+  ![alt text](./images/image_09.png)
+
+- Post-training
+
+  ![alt text](./images/image_10.png)
+
+  ![alt text](./images/image_11.png)
+
+- Evaluation
+
+  ![alt text](./images/image_12.png)
+
+<hr>
+
+### 3. LLM 구성요소 및 한계점
+
+#### LLM 구성요소
+
+- User Input
+
+  - LLM에게 보낼 질문 또는 입력
+
+- Prompt
+  - AI 모델에게 Input 질문과 함께 제공하는 "**지시사항(intruction)**"
+
+  - 혹은 답변 생성을 위해 도움을 주는 예제들
+
+- Output
+
+  - LLM이 생성해내는 "**답변**"
+
+  ![alt text](./images/image_13.png)
+
+<hr>
+
+#### LLM의 한계
+
+- Hallucination
+
+  ![alt text](./images/image_14.png)
+
+  ![alt text](./images/image_15.png)
+
+  - Hallucination : 모델이 사실과 무관하거나 존재하지 않는 정보를 생성하거나, 확인할 수 없는 정보를 생성하는 현상
+
+  - Intrinsic Hallucination
+
+    - Source에 있는 정보들을 사용해서 합성된 잘못된 정보가 결과로 나온 경우
+
+  - Extrinsic Hallucination
+
+    - Source에서 찾을 수 없는 정보가 등장한 경우 **Hallucination은 대부분 생성모델에서 발생**
+
+
+- Knowledge Cutoff
+
+  ![alt text](./images/image_16.png)
+
+<hr>
+
+#### 기존 한계점을 해결하는 기술, RAG
+
+- RAG(Retrieval-Augmented Generation) : 검색 엔진과 LLM을 결합한 것
+
+  - RAG를 쓰면, Hallucination과 Knowledge Cutoff 문제를 모두 완화할 수 있음!
+
+    ![alt text](./images/image_17.png)
