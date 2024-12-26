@@ -9,6 +9,8 @@
 
 - LLM의 개념 및 발달 과정
 
+<hr>
+
 
 ### 1. 언어모델(LM)이란?
 
@@ -23,6 +25,8 @@
     ![alt text](./images/image_00.png)
 
 
+<hr>
+
 #### 텍스트를 좋은 숫자로 표현하는 것
 
 - 언어모델이란?
@@ -32,6 +36,7 @@
     ![alt text](./images/image_01.png)
 
 
+<hr>
 
 ### 2. LLM의 개념 및 발달과정
 
@@ -45,6 +50,7 @@
 
   ![alt text](./images/image_02.png)
 
+<hr>
 
 #### NNLM : Neural Network-based Language Model
 
@@ -52,6 +58,7 @@
 
   ![alt text](./images/image_04.png)
 
+<hr>
 
 #### PLM : Pretrained Language Model
 
@@ -59,6 +66,7 @@
 
   ![alt text](./images/image_06.png)
 
+<hr>
 
 #### PLM : BERT
 
@@ -66,6 +74,7 @@
 
   ![alt text](./images/image_08.png)
 
+<hr>
 
 #### BERT vs GPT
 
@@ -83,22 +92,26 @@
 
 - **GPT WINs!**
 
+<hr>
 
 #### Scaling Law
 
   ![alt text](./images/image_09.png)
 
+<hr>
 
 
 #### 모든 문제를 LLM으로 해결해보자!
 
   ![alt text](./images/image_10.png)
 
+<hr>
 
 #### 모든 task를 Next Token Prediction으로!
 
   ![alt text](./images/image_11.png)
 
+<hr>
 
 #### Neural Language Modeling in Auto-Regressive manner
 
