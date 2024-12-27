@@ -161,3 +161,134 @@
     - 예시. Pinecone, Weaviate
 
 
+- FAISS
+  
+  - 2019년 Meta에서 개발된 CPU/GPU를 지원하는 벡터 인덱싱 기법
+
+  - 주요 component들이 C++로 구현되어 있으며, 가장 오랫동안 개발되어 다양한 기능 제공
+
+  - 대규모 임베딩 벡터의 인덱싱용으로 개발되었으며, GPU-Acceleration을 지원하기 때문에 엄청나게 빠른 속도
+
+  - 목적에 따라 IndexFlatL2, IndexIVFFlat, IndexHNSW, IndexPQ 등 다양한 인덱싱 기법 지원
+
+
+- FAISS 인덱싱 비교
+
+  ![alt text](./images/image_08.png)
+
+
+<hr>
+
+#### 여러 벡터 데이터베이스 비교하기
+
+  ![alt text](./images/image_06.png)
+
+  ![alt text](./images/image_07.png)
+
+
+<hr>
+
+### 3. Retriever 최적화
+
+#### Retriever
+
+- Vector Store에 저장된 벡터들과 user question 사이의 연관성을 찾기 위해서 kNN 수행
+
+- Retriever 방식에 따라 저장된 데이터를 기준으로 검색하는 방식 상이
+
+- Retriever 유형
+
+  - Sparse Retriever : 주로 키워드들 위주의 검색이 필요할 때 효율이 높음
+
+    - 적용 사례 : 의료, 법률 등 특정 도메인 용어가 있을 때 용이함
+    
+    - (예시) TF-IDF, BM25
+
+  - Dense Retriever : 임베딩 모델로 벡터화 후 유사도 검색
+
+    - 문맥 위주의 검색이 필요할 때 사용, 주로 Sparse Retriever보다 성능이 높은 편
+
+    - (예시) SentenceBERT
+
+<hr>
+
+#### Sparse Retriever : TF-IDF
+
+![alt text](./images/image_09.png)
+
+<hr>
+
+#### Dense Retriever : SentenceBERT
+
+![alt text](./images/image_10.png)
+
+<hr>
+
+#### Retriever 특징 정리
+
+- Sparse Retriever
+
+  - 메모리 적게 사용하며 연산이 빠르지만, 문맥을 파악하기 힘들어 성능이 떨어질 수 있음
+
+- Dense Retriever
+
+  - 대부분 GPU를 필요로 하며 리소스가 더 많이 필요함
+
+- 효율성을 극대화하기 위해서 두 방법의 장점을 합친 모델을 생각해볼 수 있음
+
+<hr>
+
+#### Ensemble Retriever
+
+![alt text](./images/image_11.png)
+
+- Ensemble Retriever : Sparse Retriever와 Dense Retriever와 결과를 합치는 방식
+
+- 단순하게 하자면, 각 Retriever마다 뽑은 K개의 문서들을 모두 RAG에 사용할 수 있음
+
+- 일반적으로 Reranking 방식을 사용하여 각 Retriever들의 결과를 종합하여 사용
+
+  - (예시) Reciprocal Rank Fusion(RRF)
+
+<hr>
+
+#### Reranking
+
+- 이전 검색 결과들을 질의에 적합하고 유용한 순서로 재정렬하는 방식
+
+- 검색 결과와 metadata의 결합 등으로 기존에 정의 계산 방식으로 score를 계산
+
+- Learning to Rank, Neural Reranking model 등을 사용하기도 함
+
+- Ensemble Retriever를 사용할 경우, Sparse Retriever의 결과와 Dense Retriever의 결과를 RRF를 사용해서 재정렬
+
+  ![alt text](./images/image_12.png)
+
+<hr>
+
+#### Reranking : Reciprocal Rank Fusion
+
+![alt text](./images/image_13.png)
+
+<hr>
+
+#### SUMMARY
+
+- 데이터 최적화
+
+  - 검색 정확도를 올리기 위해서는 Embedding Quality가 중요
+
+  - 이를 위해서는 텍스트를 잘 정제하고 (Preprocessing), 잘 나눠서(Chunking)하고, 좋은 임베딩 모델을 사용해야 함
+
+
+- 벡터 데이터베이스
+
+  - 로컬 vs 클라우드 차이점을 이해하고, 각자 원하는 특징에 따라 올바른 벡터 데이터베이스 선택 필요
+
+
+- Retriever
+
+  - 성능 보완을 위해 Sparse, Dense의 장점을 결합한 Reranking 방식의 Ensemble Retriever를 사용할 수 있음
+
+
+
