@@ -48,6 +48,12 @@
 
   ![alt text](./images/image_03.png)
 
+  - Encoder Self-Attention : encoder의 맥락 연산
+
+  - Masked Decoder Self-Attention : decoder의 제한된 맥락 연산
+  
+  - Encoder-Decoder Attention : decoder가 encdoer를 살펴봄
+
 
 <hr>
 
@@ -55,7 +61,7 @@
 
 - Attention을 활용한 구조로 더 많은 데이터와 더 많은 파라미터를 사용할 수 있게 됨
 
-- RNNLM은 병렬 연산을 사용할 파트가 적었는데, Transformer는 병렬 연산이 가능한 구조라 GPU를 충분히 활용할 수 있게 됨
+- RNNLM은 병렬 연산을 사용할 파트가 적었는데, Transformer는 병렬 연산이 가능한 구조라 GPU를 충분히 활용할 수 있게 됨 + multi-lingual
 
   - **Scalability UP**
 
