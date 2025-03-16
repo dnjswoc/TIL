@@ -1,6 +1,5 @@
 # 2024년 12월 27일(금) 수업 내용 정리 - Recent Trends and Real-Time RAG 시스템
 
-
 ## 최근 RAG 트렌드 소개
 
 - 최근 RAG 트렌드 소개
